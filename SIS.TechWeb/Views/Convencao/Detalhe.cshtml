@@ -1,0 +1,128 @@
+@model SIS.Tech.Domain.Model.Convencao
+
+@{
+    ViewData["Title"] = "Detalhe da CCTs";
+}
+
+<div class="card">
+
+    <div class="card-header border-bottom">
+
+        <h5 class="card-title mb-0">
+            <p class="card-text text-uppercase text-body-secondary small mb-0">DETALHE</p>
+        </h5>
+
+        <div class="d-flex justify-content-between align-items-center row pt-4 gap-4 gap-md-0">
+
+            <div class="row">
+
+                <div class="col-sm-6">
+                  
+                    <ul class="list-unstyled my-3 py-1">
+
+                        <li class="d-flex align-items-center mb-4">
+                            <span class="detalhe-view">
+                                Convenção:
+                            </span>
+                            <span>
+                                @Html.DisplayFor(model => Model.CodConvencao, new { @class = "form-control" })  &nbsp;&nbsp;  @Html.DisplayFor(model => Model.NomeConvencao, new { @class = "form-control" })
+                            </span>
+                        </li>
+
+                        <li class="d-flex align-items-center mb-4">
+                            <span class="detalhe-view">
+                                Tipo CCT:
+                            </span>
+                            <span>
+                                @Html.DisplayFor(model => Model.TipoCCT.Descricao, new { @class = "form-control" })
+                            </span>
+                        </li>
+
+                        <li class="d-flex align-items-center mb-4">
+                            <span class="detalhe-view">
+                                Status CCT:
+                            </span>
+                            <span>
+                                @Html.DisplayFor(model => Model.StatusCCT.Descricao, new { @class = "form-control" })
+                            </span>
+                        </li>
+                         
+                    </ul>
+
+                </div>
+
+                <div class="col-sm-6">
+
+                    <ul class="list-unstyled my-3 py-1">
+
+                        <li class="d-flex align-items-center mb-4">
+                            <span class="detalhe-view">
+                                Vigência Inicial:
+                            </span>
+                            <span>
+                                @Html.DisplayFor(model => Model.AnoVigenciaInicial, new { @class = "form-control" })
+                            </span>
+                        </li>
+
+                        <li class="d-flex align-items-center mb-4">
+                            <span class="detalhe-view">
+                                Vigência Final:
+                            </span>
+                            <span>
+                                @Html.DisplayFor(model => Model.AnoVigenciaFinal, new { @class = "form-control" })
+                            </span>
+                        </li>
+
+                        <li class="d-flex align-items-center mb-4">
+                            <span class="detalhe-view">
+                                Observação:
+                            </span>
+                            <span>
+                                @Html.DisplayFor(model => Model.Observacao, new { @class = "form-control" })
+                            </span>
+                        </li>
+
+                        <li class="d-flex align-items-center mb-4">
+                            <span class="detalhe-view">
+                               Situação:
+                            </span>
+                            <span>
+                                @if (Model.Ativo)
+                                {
+                                    <span class="label label-default">Ativo</span>
+                                }
+                                else
+                                {
+                                    <span class="label label-default">Inativo</span>
+                                }
+                            </span>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+            <br />
+            <div class="row">
+                <div class="col-sm-12" style="text-align:right;">
+                    <br />
+                    <div class="form-group">
+                        <div class="col-sm-12" style="text-align:right;">
+
+                            <a href="@Url.Action("Index", "Convencao")" class="btn btn-primary btn-sm">
+                                <i class="icon-base ti tabler-arrow-back icon-22px"></i>
+                                &nbsp;&nbsp;Voltar
+                            </a>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>

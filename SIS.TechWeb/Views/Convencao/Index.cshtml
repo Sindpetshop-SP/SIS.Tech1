@@ -1,0 +1,319 @@
+﻿@model SIS.Tech.Domain.Model.Convencao
+
+@{
+    ViewData["Title"] = "Lista de CCTs";
+
+    var tipoCCts = (SelectList)ViewBag.ViewTipoCCt;
+    var statusCCT = (SelectList)ViewBag.ViewStatusCCt;
+}
+
+@section VendorStyles {
+    <link rel="stylesheet" href="~/vendor/libs/datatables-bs5/datatables.bootstrap5.css" />
+    <link rel="stylesheet" href="~/vendor/libs/datatables-responsive-bs5/responsive.bootstrap5.css" />
+    <link rel="stylesheet" href="~/vendor/libs/datatables-buttons-bs5/buttons.bootstrap5.css" />
+    <link rel="stylesheet" href="~/vendor/libs/select2/select2.css" />
+    <link rel="stylesheet" href="~/vendor/libs/&#64;form-validation/form-validation.css" />
+    <link rel="stylesheet" href="~/vendor/libs/bs-stepper/bs-stepper.css" />
+}
+
+@section VendorScripts {
+
+    <script src="~/vendor/libs/select2/select2.js"></script>
+    <script src="~/vendor/libs/&#64;form-validation/popular.js"></script>
+    <script src="~/vendor/libs/&#64;form-validation/bootstrap5.js"></script>
+    <script src="~/vendor/libs/&#64;form-validation/auto-focus.js"></script>
+    <script src="~/vendor/libs/datatables-bs5/datatables-bootstrap5.js"></script>
+    <script src="~/vendor/libs/cleave-zen/cleave-zen.js"></script>
+    <script src="~/vendor/libs/bs-stepper/bs-stepper.js"></script>
+}
+
+@section PageScripts {
+    <script src="~/js/controllers/convencao-list.js"></script>
+    <script src="~/js/controllers/convencao-modal-insertedit.js"></script> 
+    <script src="~/js/controllers/sindMasks.js"></script>
+}
+
+@* ************** Content ************** *@
+
+<div class="row g-6 mb-6">
+
+    <div class="col-sm-6 col-xl-3">
+        <div class="card">
+            <div class="card-body">
+                <div class="d-flex align-items-start justify-content-between">
+                    <div class="content-left">
+                        <span class="text-heading">Total Geral</span>
+                        <div class="d-flex align-items-center my-1">
+
+                            <h4 class="mb-0 me-2">
+                                @Model.TotalGeral
+                            </h4>
+
+                            @* <p class="text-success mb-0">(+29%)</p> *@
+                        </div>
+                        <small class="mb-0">CCTs</small>
+                    </div>
+                    <div class="avatar">
+                        <span class="avatar-initial rounded bg-label-primary">
+                            <i class="icon-base ti tabler-file-like icon-26px"></i>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-6 col-xl-3">
+        <div class="card">
+            <div class="card-body">
+                <div class="d-flex align-items-start justify-content-between">
+                    <div class="content-left">
+                        <span class="text-heading">Total Assinadas</span>
+                        <div class="d-flex align-items-center my-1">
+                            <h4 class="mb-0 me-2">
+                                @Model.TotalAssinadas
+                            </h4>
+                            @* <p class="text-danger mb-0">(-14%)</p> *@
+                        </div>
+                        <small class="mb-0">CCTs</small>
+                    </div>
+                    <div class="avatar">
+                        <span class="avatar-initial rounded bg-label-success">
+                            <i class="icon-base ti tabler-file-check icon-26px"></i>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-6 col-xl-3">
+        <div class="card">
+            <div class="card-body">
+                <div class="d-flex align-items-start justify-content-between">
+                    <div class="content-left">
+                        <span class="text-heading">Total Em Negociação</span>
+                        <div class="d-flex align-items-center my-1">
+                            <h4 class="mb-0 me-2">
+                                @Model.TotalEmNegociacao
+                            </h4>
+                            @* <p class="text-success mb-0">(+18%)</p> *@
+                        </div>
+                        <small class="mb-0">CCTs </small>
+                    </div>
+                    <div class="avatar">
+                        <span class="avatar-initial rounded bg-label-danger">
+                            <i class="icon-base ti tabler-file-neutral icon-26px"></i>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-6 col-xl-3">
+        <div class="card">
+            <div class="card-body">
+                <div class="d-flex align-items-start justify-content-between">
+                    <div class="content-left">
+                        <span class="text-heading">Total Em Negociação</span>
+                        <div class="d-flex align-items-center my-1" style="height: 57px; padding-top:15px;">
+                            <h4 class="mb-0 me-2">
+                                <p class="text-success mb-0" style="font-size: 16px;">
+                                    @Model.TotalEmNegociacaoPacifico &nbsp; - &nbsp; PACÍFICO
+                                </p>
+                                <p class="text-danger mb-0" style="font-size: 16px;">
+                                    @Model.TotalEmNegociacaoJuridico &nbsp; - &nbsp; JURÍDICO
+                                </p>
+                            </h4>
+                        </div>
+
+                    </div>
+                    <div class="avatar">
+                        <span class="avatar-initial rounded bg-label-danger">
+                            <i class="icon-base ti tabler-file-diff-filled icon-26px"></i>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<!-- Users List Table -->
+
+<div class="card">
+
+    <div class="card-header border-bottom">
+        <h5 class="card-title mb-0">Filtros</h5>
+        <div class="d-flex justify-content-between align-items-center row pt-4 gap-4 gap-md-0">
+
+            @using (Html.BeginForm("Index", "Convencao", FormMethod.Get, new { @enctype = "multipart/form-data", @id = "FormConvencao" }))
+            {
+                <div class="row">
+
+                    <div class="col-sm-3">
+                        <label>Nome Convenção</label>
+                        @Html.TextBox("nomeConvencao", "", new { @class = "form-control", @placeholder = "Digite o Nome da CCT", tabindex = "1", autocomplete = "off" })
+                    </div>
+
+                    <div class="col-sm-2">
+                        <label>Tipo CCT</label>
+                        @Html.DropDownList("codTipoCCT", tipoCCts, "Todos", new { @id = "ddlTipoCCT", @class = "form-control", tabindex = "2" })
+                    </div>
+
+                    <div class="col-sm-2">
+                        <label>Fases CCT</label>
+                        @Html.DropDownList("codStatusCCT", statusCCT, "Todos", new { @id = "ddlStatusCCT", @class = "form-control", tabindex = "2" })
+                    </div>
+
+                    <div class="col-sm-1">
+                        <label>Vig.Inicial</label>
+                        @Html.TextBox("anoVigenciaInicial", "", new { @class = "form-control", @placeholder = "", @onkeypress = "return somenteNumeros(event)", @maxlength = "4", tabindex = "3", autocomplete = "off" })
+                    </div>
+
+                    <div class="col-sm-1">
+                        <label>Vige.Final</label>
+                        @Html.TextBox("anoVigenciaFinal", "", new { @class = "form-control", @placeholder = "", @onkeypress = "return somenteNumeros(event)", @maxlength = "4", tabindex = "4", autocomplete = "off" })
+                    </div>
+
+                    <div class="col-sm-3" style="text-align:right;">
+
+                        <br />
+                        @if (ViewBag.PermitidoPesquisar)
+                        {
+                            <button class="btn btn-primary btn-sm" type="submit">
+                                <i class="icon-base ti tabler-file-search"></i>&nbsp;
+                                Pesquisar
+                            </button>
+                        }
+                        &nbsp;&nbsp;&nbsp;
+                        @if (ViewBag.PermitidoInserir)
+                        {
+                            <a href="#" onclick="loadModalConvencao('0')" class="btn btn-light btn-sm">
+                                <i class="icon-base ti tabler-clipboard-plus"></i>&nbsp;
+                                Novo
+                            </a>
+                        }
+
+                    </div>
+
+                </div>
+
+            }
+
+        </div>
+    </div>
+
+    <div class="card-datatable">
+
+        <table class="datatables-generic table">
+
+            <thead class="border-top">
+                <tr>
+                    <th>Código</th>
+                    <th>Nome CCT</th>
+                    <th>Tipo CCT</th>
+                    <th>Fase CCT</th>
+                    <th>Vigência Inicial</th>
+                    <th>Vigência Final</th>
+                    <th>Ativa?</th>
+                    <th>ACTIONS</th>
+                </tr>
+            </thead>
+            <tbody>
+
+                @if (Model.lstConvencao != null)
+                {
+
+                    foreach (var item in Model.lstConvencao)
+                    {
+                        <tr class="gradeX">
+                            <td>
+                                @Html.DisplayFor(modelItem => item.CodConvencao)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.NomeConvencao)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.TipoCCT.Descricao)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.StatusCCT.Descricao)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.AnoVigenciaInicial)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.AnoVigenciaFinal)
+                            </td>
+                            <td style="text-align:center;">
+
+                                @if (item.Ativo)
+                                {
+                                    <span class="label label-default">Ativo</span>
+                                }
+                                else
+                                {
+                                    <span class="label label-default">Inativo</span>
+                                }
+
+                            </td>
+                            <td>
+
+                                <div class="d-inline-block text-nowrap">
+
+                                    @if (ViewBag.PermitidoDetalhe)
+                                    {
+                                        <a href="@Url.Action("Detalhe", "Convencao", new { codConvencao = item.CodConvencao })" class="btn btn-text-secondary rounded-pill waves-effect btn-icon" data-toggle="tooltip" data-placement="top" title="Detalhe">
+                                            <i class="icon-base ti tabler-zoom icon-22px"></i>
+                                        </a>
+                                    }
+
+                                    <button class="btn btn-text-secondary rounded-pill waves-effect btn-icon dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
+                                        <i class="icon-base ti tabler-dots-vertical icon-22px"></i>
+                                    </button>
+
+                                    <div class="dropdown-menu dropdown-menu-end m-0">
+
+                                        @if (ViewBag.PermitidoEditar)
+                                        {
+                                            <a href="#" onclick="loadModalConvencao(@item.CodConvencao)" class="dropdown-item" data-toggle="tooltip" data-placement="top" title="Editar">
+                                                <i class="icon-base ti tabler-edit"></i>&nbsp;
+                                                Editar
+                                            </a>
+                                        }
+
+                                        @if (item.Ativo)
+                                        {
+                                            if (ViewBag.PermitidoExcluir)
+                                            {
+
+                                                <a href="#" onclick="loadModalDeleteConvencao(@item.CodConvencao)" class="dropdown-item" data-toggle="tooltip" data-placement="top" title="Excluir">
+                                                    <i class="icon-base ti tabler-clipboard-plus"></i>&nbsp;
+                                                    Excluir
+                                                </a>
+
+                                            }
+                                        }
+
+                                    </div>
+                                </div>
+
+                            </td>
+
+                        </tr>
+                    }
+
+                  }
+
+            </tbody>
+        </table>
+
+    </div>
+
+</div>
+
+<!-- Modal -->
+@await Html.PartialAsync("_ModalAddConvencao")
+@await Html.PartialAsync("_ModalDeleteConvencao") 

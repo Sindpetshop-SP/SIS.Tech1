@@ -1,0 +1,307 @@
+@model SIS.Tech.Models.Access.ControleAcessoViewModels
+
+@{
+    ViewData["Title"] = "Lista de Controle de Acesso";
+
+    var perfis = (SelectList)ViewBag.ViewPerfis;
+}
+
+@section VendorStyles {
+    <link rel="stylesheet" href="~/vendor/libs/datatables-bs5/datatables.bootstrap5.css" />
+    <link rel="stylesheet" href="~/vendor/libs/datatables-responsive-bs5/responsive.bootstrap5.css" />
+    <link rel="stylesheet" href="~/vendor/libs/datatables-buttons-bs5/buttons.bootstrap5.css" />
+    <link rel="stylesheet" href="~/vendor/libs/select2/select2.css" />
+    <link rel="stylesheet" href="~/vendor/libs/&#64;form-validation/form-validation.css" />
+}
+
+@section VendorScripts {
+    <script src="~/vendor/libs/moment/moment.js"></script>
+    <script src="~/vendor/libs/datatables-bs5/datatables-bootstrap5.js"></script>
+    <script src="~/vendor/libs/select2/select2.js"></script>
+    <script src="~/vendor/libs/&#64;form-validation/popular.js"></script>
+    <script src="~/vendor/libs/&#64;form-validation/bootstrap5.js"></script>
+    <script src="~/vendor/libs/&#64;form-validation/auto-focus.js"></script>
+    <script src="~/vendor/libs/cleave-zen/cleave-zen.js"></script>
+}
+
+@section PageScripts {
+    <script src="~/js/controllers/app-user-list.js"></script>
+    <script src="~/js/controllers/sindMasks.js"></script>
+
+}
+
+
+<div class="card">
+
+    <div class="card-header border-bottom">
+        <h5 class="card-title mb-0">Filtros</h5>
+        <div class="d-flex justify-content-between align-items-center row pt-4 gap-4 gap-md-0">
+
+            @using (Html.BeginForm("Controls", "Access", FormMethod.Get, new { @enctype = "multipart/form-data", @id = "FormListarControles" }))
+            {
+                <div class="row">
+
+                    <div class="col-md-3">
+                        <label>Nome Usuário</label>
+                        @Html.TextBox("nomeUsuario", "", new { @class = "form-control", @placeholder = "Nome", tabindex = "1", autocomplete = "off" })
+                    </div>
+
+                    <div class="col-md-3">
+                        <label>Login Usuário</label>
+                        @Html.TextBox("nmeLoginUsuario", "", new { @class = "form-control", @placeholder = "Login", tabindex = "2", autocomplete = "off" })
+                    </div>
+
+                    <div class="col-md-3">
+                        <label>Perfil</label>
+                        @Html.DropDownList("codPerfil", perfis, "Todos", new { @class = "form-control", tabindex = "3" })
+                    </div>
+
+                    <div class="col-md-3" style="text-align:right;">
+
+                        <br />
+
+                        @if (ViewBag.PermitidoPesquisar)
+                        {
+                            <button class="btn btn-secondary btn-sm" type="submit">
+                                <i class="fa fa-search"></i>&nbsp;
+                                Pesquisar
+                            </button>
+                        }
+
+                    </div>
+
+                </div>
+
+            }
+
+        </div>
+    </div>
+
+    @if (Model.ControleAcesso.lstControleAcessos != null)
+    {
+        if (Model.ControleAcesso.lstControleAcessos.Count > 0)
+        {
+            if (Model.ControleAcesso.lstControleAcessos[0].NomeUsuario != "")
+            {
+                <div class="container-fluid flex-grow-1" style="font-weight: 600;background-color: #e58334;text-align: center;height: 40px;padding-top: 9px !important;">
+
+                    <div class="col-12">
+
+
+                        <span style="color:#fff !important">** &nbsp; Controle referente ao Usuário Pesquisado: ** &nbsp; @Model.ControleAcesso.lstControleAcessos[0].NomeUsuario  </span>
+
+
+                    </div>
+
+                </div>
+            }
+        }
+    }
+
+    <div class="card-datatable">
+
+        <table class="datatables-generic table">
+
+            <thead class="border-top">
+                <tr>
+                    <th>Código</th>
+                    <th>Perfil</th>
+                    <th>Código</th>
+                    <th>Formulário</th>
+                    <th></th>
+                    <th>Código</th>
+                    <th>Controle</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+
+                @if (Model.ControleAcesso.lstControleAcessos != null)
+                {
+
+                    foreach (var item in Model.ControleAcesso.lstControleAcessos)
+                    {
+
+                        if (item.NmeControle == "Permite Acesso a tela")
+                        {
+
+                            <tr class="gradeX" style=" font-weight: 600; background-color: #e58334; color: #ffffff !important; --bs-table-color: #fff !important;">
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.CodPerfil)
+                                </td>
+
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.NmePerfil)
+                                </td>
+
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.CodFormulario)
+                                </td>
+
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.NmeFormulario)
+                                </td>
+
+                                <td style="text-align:center;">
+
+                                    @*ADMIN E TI*@
+
+                                    @if (item.CodPerfil != 1)
+                                    {
+                                        if (item.FlgTemAcesso)
+                                        {
+                                            if (ViewBag.PermitidoBloquearAcessoControle)
+                                            {
+                                                <a href="@Url.Action("BloquearAcesso", "Access", new { codFormulario = @item.CodFormulario, codControle = "0", codPerfil = @item.CodPerfil, codUsusario = @item.CodUsuario })" class="btn btn-white btn-sm" data-toggle="tooltip" data-placement="top" title="Bloquear Acesso">
+                                                    <i style="color:#FF6F0F;" class="icon-base ti tabler-lock-open-2"></i>&nbsp;
+                                                </a>
+                                            }
+                                        }
+                                        else
+                                        {
+                                            if (ViewBag.PermitidoLiberarAcessoControle)
+                                            {
+                                                <a href="@Url.Action("LiberarAcesso", "Access", new { codFormulario = @item.CodFormulario, codControle = "0", codPerfil = @item.CodPerfil, codUsusario = @item.CodUsuario })" class="btn btn-white btn-sm" data-toggle="tooltip" data-placement="top" title="Liberar Acesso">
+                                                    <i style="color:#FF6F0F;" class="icon-base ti tabler-lock"></i>&nbsp;
+                                                </a>
+                                            }
+                                        }
+                                    }
+
+                                </td>
+
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.CodControle)
+                                </td>
+
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.NmeControle)
+                                </td>
+
+                                <td style="text-align:center;">
+
+                                    @if (item.CodPerfil != 1)
+                                    {
+
+                                        if (item.FlgTemAcesso)
+                                        {
+                                            if (ViewBag.PermitidoBloquearAcessoControle)
+                                            {
+                                                <a href="@Url.Action("BloquearAcesso", "Access", new { codFormulario = "0", codControle = @item.CodControle, codPerfil = @item.CodPerfil, codUsusario = @item.CodUsuario })" class="btn btn-white btn-sm" data-toggle="tooltip" data-placement="top" title="Bloquear Usuário">
+                                                    <i style="color:#FF6F0F;" class="icon-base ti tabler-lock-open-2"></i>&nbsp;
+                                                </a>
+                                            }
+                                        }
+                                        else
+                                        {
+                                            if (ViewBag.PermitidoLiberarAcessoControle)
+                                            {
+                                                <a href="@Url.Action("LiberarAcesso", "Access", new { codFormulario = "0", codControle = @item.CodControle, codPerfil = @item.CodPerfil, codUsusario = @item.CodUsuario })" class="btn btn-white btn-sm" data-toggle="tooltip" data-placement="top" title="Liberar Acesso">
+                                                    <i style="color:#FF6F0F;" class="icon-base ti tabler-lock"></i>&nbsp;
+                                                </a>
+                                            }
+                                        }
+                                    }
+
+                                </td>
+
+                            </tr>
+
+                        }
+                        else
+                        {
+
+                            <tr class="gradeX">
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.CodPerfil)
+                                </td>
+
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.NmePerfil)
+                                </td>
+
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.CodFormulario)
+                                </td>
+
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.NmeFormulario)
+                                </td>
+
+                                <td style="text-align:center;">
+
+                                    @*ADMIN E TI*@
+
+                                    @if (item.CodPerfil != 1)
+                                    {
+                                        if (item.FlgTemAcesso)
+                                        {
+                                            if (ViewBag.PermitidoBloquearAcessoControle)
+                                            {
+                                                <a href="@Url.Action("BloquearAcesso", "Access", new { codFormulario = @item.CodFormulario, codControle = "0", codPerfil = @item.CodPerfil, codUsusario = @item.CodUsuario })" class="btn btn-white btn-sm" data-toggle="tooltip" data-placement="top" title="Bloquear Acesso">
+                                                    <i style="color:#FF6F0F;" class="icon-base ti tabler-lock-open-2"></i>&nbsp;
+                                                </a>
+                                            }
+                                        }
+                                        else
+                                        {
+                                            if (ViewBag.PermitidoLiberarAcessoControle)
+                                            {
+                                                <a href="@Url.Action("LiberarAcesso", "Access", new { codFormulario = @item.CodFormulario, codControle = "0", codPerfil = @item.CodPerfil, codUsusario = @item.CodUsuario })" class="btn btn-white btn-sm" data-toggle="tooltip" data-placement="top" title="Liberar Acesso">
+                                                    <i style="color:#FF6F0F;" class="icon-base ti tabler-lock"></i>&nbsp;
+                                                </a>
+                                            }
+                                        }
+
+                                    }
+
+                                </td>
+
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.CodControle)
+                                </td>
+
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.NmeControle)
+                                </td>
+
+                                <td style="text-align:center;">
+
+                                    @if (item.CodPerfil != 1)
+                                    {
+
+                                        if (item.FlgTemAcesso)
+                                        {
+                                            if (ViewBag.PermitidoBloquearAcessoControle)
+                                            {
+                                                <a href="@Url.Action("BloquearAcesso", "Access", new { codFormulario = "0", codControle = @item.CodControle, codPerfil = @item.CodPerfil, codUsusario = @item.CodUsuario })" class="btn btn-white btn-sm" data-toggle="tooltip" data-placement="top" title="Bloquear Usuário">
+                                                    <i style="color:#FF6F0F;" class="icon-base ti tabler-lock-open-2"></i>&nbsp;
+                                                </a>
+                                            }
+                                        }
+                                        else
+                                        {
+                                            if (ViewBag.PermitidoLiberarAcessoControle)
+                                            {
+                                                <a href="@Url.Action("LiberarAcesso", "Access", new { codFormulario = "0", codControle = @item.CodControle, codPerfil = @item.CodPerfil, codUsusario = @item.CodUsuario })" class="btn btn-white btn-sm" data-toggle="tooltip" data-placement="top" title="Liberar Acesso">
+                                                    <i style="color:#FF6F0F;" class="icon-base ti tabler-lock"></i>&nbsp;
+                                                </a>
+                                            }
+                                        }
+                                    }
+
+                                </td>
+
+                            </tr>
+
+                        }
+
+                    }
+                }
+
+            </tbody>
+        </table>
+
+    </div>
+
+</div>

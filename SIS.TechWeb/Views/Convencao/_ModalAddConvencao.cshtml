@@ -1,0 +1,121 @@
+﻿@model SIS.Tech.Domain.Model.Convencao
+
+@{
+
+    ViewData["Title"] = "Cadastro de CCTs";
+
+    var tipoCCT = (SelectList)ViewBag.ViewTipoCCt;
+    var statusCCT = (SelectList)ViewBag.ViewStatusCCt;
+}
+
+<!-- Add Convencao Modal -->
+
+
+<div class="modal fade" id="convencaoInsertEditModal" data-bs-backdrop="static" tabindex="-1">
+
+    <div class="modal-dialog modal-xl">
+
+        @using (Html.BeginForm("InsertEdit", "Convencao", FormMethod.Post, new { @id = "formEditConvencao", @class = "modal-content", @enctype = "multipart/form-data" }))
+        {
+            @Html.Hidden("hdnConvencao", Model.CodConvencao)
+            @Html.TextBoxFor(model => model.CodConvencao, new { @id = "CodConvencao", @class = "form-control", @style = "display: none;", autocomplete = "off" })
+
+
+
+            <div class="modal-header">
+                <h5 class="modal-title" id="backDropModalTitle">
+
+                    @if (Model.CodConvencao > 0)
+                    {
+                        <h5 class="modal-title" id="exampleModalLabel4">Editar - CCT</h5>
+                    }
+                    else
+                    {
+                        <h5 class="modal-title" id="exampleModalLabel4">Inserir - CCT</h5>
+                    }
+
+                </h5>
+                <button type="button" onclick="closeModalConvencao()" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+
+            <div class="modal-body">
+
+                <div class="row g-4">
+                    <!-- Basic -->
+                    <div class="col-md-5">
+                        <label for="select2Basic" class="form-label">Tipo CCT</label>
+                        @* <select id="CodTipoCCT" name="CodTipoCCT" asp-items="tipoCCT" asp-for="TipoCCT.CodTipoCCT" class="select2 form-select required"></select> *@
+                        @Html.DropDownListFor(model => model.TipoCCT.CodTipoCCT, tipoCCT, "-- Selecione --", new { @id = "CodTipoCCT", @Name = "CodTipoCCT", @class = "select2 form-select required" })
+
+                    </div>
+
+                    <div class="col-md-5">
+                        <label for="select2Basic" class="form-label">Status CCT</label>
+                        @Html.DropDownListFor(model => model.StatusCCT.CodStatusCCT, statusCCT, "-- Selecione --", new { @id = "CodStatusCCT", @Name = "CodStatusCCT", @class = "select2 form-select" })
+
+                    </div>
+
+                    <div class="col-md-2">
+                        <div class="small fw-medium mb-4">CCT Ativa?</div>
+                        <label class="switch">
+                            @Html.CheckBoxFor(model => model.Ativo, new { @class = "switch-input", @checked = "checked" })
+                            <span class="switch-toggle-slider">
+                                <span class="switch-on"></span>
+                                <span class="switch-off"></span>
+                            </span>
+                        </label>
+                    </div>
+
+                </div>
+
+                <div class="row g-4" style="margin-top:5px;">
+
+                    <div class="col-6 form-control-validation">
+
+                        <label class="form-label" for="modalNomeConvencao">Nome da Convenção</label>
+
+                        @Html.TextBoxFor(model => model.NomeConvencao, new { @id = "NomeConvencao", @Name = "NomeConvencao", @class = "form-control", @maxlength = "100", autocomplete = "off" })
+                    </div>
+
+                    <div class="col-3 form-control-validation">
+
+                        <label class="form-label" for="modalAnoVigInicial">Vigência Inicial</label>
+                        @Html.TextBoxFor(model => model.AnoVigenciaInicial, new { @id = "AnoVigenciaInicial", @Name = "AnoVigenciaInicial", @class = "form-control", @onkeypress = "return somenteNumeros(event)", @maxlength = "4", autocomplete = "off" })
+                    </div>
+
+                    <div class="col-3 form-control-validation">
+
+                        <label class="form-label" for="modalAnoVigFinal">Vigência Final</label>
+                        @Html.TextBoxFor(model => model.AnoVigenciaFinal, new { @id = "AnoVigenciaFinal", @Name = "AnoVigenciaFinal", @class = "form-control", @onkeypress = "return somenteNumeros(event)", @maxlength = "4", autocomplete = "off" })
+
+                    </div>
+
+                </div>
+
+
+                <div class="row g-4" style="margin-top:5px;">
+
+                    <div class="col-12 form-control-validation">
+
+                        <label class="form-label" for="modalObservacao">Observação</label>
+                        @Html.TextAreaFor(model => model.Observacao, new { @id = "Observacao", @Name = "Observacao", @class = "form-control", @maxlength = "255", autocomplete = "off" })
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-primary">Salvar</button>
+                <button type="reset" onclick="closeModalConvencao()" class="btn btn-label-secondary" data-bs-dismiss="modal" aria-label="Close">Fechar</button>
+            </div>
+        }
+
+    </div>
+
+</div>
+
+<script src="~/js/scripts/jquery.validate.js"></script>
+<script src="~/js/scripts/jquery.validate.unobtrusive.js"></script>

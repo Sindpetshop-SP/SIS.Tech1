@@ -1,0 +1,196 @@
+@using SIS.Tech.Models.Login
+@model LoginViewModels
+
+@{
+    Layout = "_BlankLayout";
+
+    ViewData["Title"] = "Login Sindpetshop-SP";
+}
+
+@section VendorStyles {
+    <link rel="stylesheet" href="~/vendor/libs/&#64;form-validation/form-validation.css" />
+    <link rel="stylesheet" href="~/vendor/libs/animate-css/animate.css" />
+    <link rel="stylesheet" href="~/vendor/libs/sweetalert2/sweetalert2.css" charset="utf-8" />
+}
+
+@section VendorScripts {
+    <script src="~/vendor/libs/&#64;form-validation/popular.js"></script>
+    <script src="~/vendor/libs/&#64;form-validation/bootstrap5.js"></script>
+    <script src="~/vendor/libs/&#64;form-validation/auto-focus.js"></script>
+    <script src="~/vendor/libs/sweetalert2/sweetalert2.js" charset="utf-8" type="text/javascript"></script>
+
+
+}
+
+@section PageStyles {
+    <link rel="stylesheet" href="~/vendor/css/pages/page-auth.css" />
+}
+
+@section PageScripts {
+    <script src="~/js/pages-auth.js"></script>
+    <script src="~/js/extended-ui-sweetalert2.js" charset="utf-8" type="text/javascript"></script>
+
+    @if (TempData["MSG"] != null)
+    {
+        <script charset="utf-8" type="text/javascript">
+
+            $(document).ready(function () {
+
+                var titulo = "";
+                var icon = "";
+
+                switch ("@TempData["MSG"].ToString().Split('|')[0]") {
+
+                    case "success":
+                        titulo = "Sucesso";
+                        icon = "success";
+                        break;
+                    case "warning":
+                        titulo = "Atenção";
+                        icon = "warning";
+                        break;
+                    case "error":
+                        titulo = "Erro";
+                        icon = "error";
+                        break;
+                    case "info":
+                        titulo = "Informação";
+                        icon = "info";
+                        break;
+                }
+
+                Swal.fire({
+                            title: titulo,
+                            @* text: '@TempData["MSG"].ToString().Split('|')[1]', *@
+                            icon: icon,
+                            html: '@TempData["MSG"].ToString().Split('|')[1]',
+                            timer: 5000,
+                            customClass: {
+                              confirmButton: 'btn btn-primary waves-effect waves-light'
+                            },
+                            buttonsStyling: false
+                          });               
+            });
+
+        </script>
+    }
+
+}
+
+@* ************** Content ************** *@
+
+<div class="authentication-wrapper authentication-cover">
+
+    <!-- Logo -->
+    <a href="https://sindpetshop.org.br/" target="_blank" class="app-brand auth-cover-brand">
+
+        <span class="app-brand-logo demo">@await Html.PartialAsync("../_Partials/_Macros")</span>
+
+        <span class="app-brand-text demo text-heading fw-bold">@TempData.Peek("appName")</span>
+
+    </a>
+    <!-- /Logo -->
+
+    <div class="authentication-inner row m-0">
+
+        <!-- /Left Text -->
+        <div class="d-none d-xl-flex col-xl-8 p-0">
+
+            <div class="auth-cover-bg d-flex justify-content-center align-items-center">
+
+                <img src="~/img/illustrations/auth-login-illustration-light.png" alt="auth-login-cover" class="my-5 auth-illustration" data-app-light-img="illustrations/auth-login-illustration-light.png" data-app-dark-img="illustrations/auth-login-illustration-dark.png" />
+                <img src="~/img/illustrations/bg-shape-image-light.png" alt="auth-login-cover" class="platform-bg" data-app-light-img="illustrations/bg-shape-image-light.png" data-app-dark-img="illustrations/bg-shape-image-dark.png" />
+
+            </div>
+
+        </div>
+        <!-- /Left Text -->
+        <!-- Login -->
+
+        <div class="d-flex col-12 col-xl-4 align-items-center authentication-bg p-sm-12 p-6">
+
+            <div class="w-px-400 mx-auto mt-12 pt-5">
+
+                <h4 class="mb-1">Bem-vindo ao @TempData.Peek("appName")! 👋</h4>
+                <p class="mb-6">Por favor, faça login na sua conta</p>
+
+                @using (Html.BeginForm("EfetuarLogin", "Auth", FormMethod.Post, new { enctype = "multipart/form-data", @id = "formAuthentication", @Class = "mb-6", @autocomplete = "off" }))
+                {
+                    @Html.AntiForgeryToken()
+                    @Html.ValidationSummary()
+
+                    <div class="mb-6 form-control-validation">
+
+                        <label for="Usuario" class="form-label">Usuário</label>
+                        @Html.TextBoxFor(model => model.Usuario, new { @class = "form-control", placeholder = "Digite seu Usuário", tabindex = "1" })
+                        @Html.ValidationMessageFor(model => model.Usuario, "", new { @class = "text-danger" })
+
+                    </div>
+
+                    <div class="mb-6 form-password-toggle form-control-validation">
+
+                        <label class="form-label" for="Senha">Password</label>
+                        <div class="input-group input-group-merge">
+
+                            @Html.PasswordFor(x => x.Senha, new { @class = "form-control", @name = "senha", placeholder = "Digite sua Senha", tabindex = "2" })
+                            <span class="input-group-text cursor-pointer"><i class="icon-base ti tabler-eye-off"></i></span>
+
+                        </div>
+
+                    </div>
+
+                    <button class="btn btn-primary d-grid w-100">Entrar</button>
+
+                    <div class="my-8">
+                        <div class="d-flex justify-content-between">
+                            @* <div class="form-check mb-0 ms-2">
+                                <input class="form-check-input" type="checkbox" id="remember-me" />
+                                <label class="form-check-label" for="remember-me"> Remember Me </label>
+                            </div> *@
+                            <a href="/Auth/ForgotPassword">
+                                <p class="mb-0">
+                                    Esqueceu sua senha?
+                                </p>
+                            </a>
+                        </div>
+                    </div>
+
+                }
+
+                <p>
+                    <span>Quer criar uma conta no SIS TECH?</span>
+                    
+                    <a href="/Auth/RegisterCover" class="text-center">
+                        <span>Crie uma conta</span>
+                    </a>
+                </p>
+
+                <div class="divider my-6">
+                    <div class="divider-text">ou acesse!</div>
+                </div>
+
+                <div class="d-flex justify-content-center">
+                    <a href="https://www.facebook.com/sindpetshop.org.br" target="_blank" class="btn btn-icon rounded-circle btn-text-facebook me-1_5">
+                        <i class="icon-base ti tabler-brand-facebook-filled icon-20px"></i>
+                    </a>
+
+                    <a href="https://www.instagram.com/sindpetshop_sp/" target="_blank" class="btn btn-icon rounded-circle btn-text-instagram me-1_5">
+                        <i class="icon-base ti tabler-brand-instagram-filled icon-20px"></i>
+                    </a>
+
+                    <a href="https://www.youtube.com/%40tvsindpetshop7689" target="_blank" class="btn btn-icon rounded-circle btn-text-youtube me-1_5">
+                        <i class="icon-base ti tabler-brand-youtube-filled icon-20px"></i>
+                    </a>
+
+                    <a href="https://www.tiktok.com/%40sindpetshopsp" target="_blank" class="btn btn-icon rounded-circle btn-text-youtube">
+                        <i class="icon-base ti tabler-brand-tiktok-filled icon-20px"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- /Login -->
+    </div>
+</div>
+
+
+

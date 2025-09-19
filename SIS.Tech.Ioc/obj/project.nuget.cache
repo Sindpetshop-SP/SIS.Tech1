@@ -1,0 +1,105 @@
+{
+  "version": 2,
+  "dgSpecHash": "6qqGwurdYVc=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\User\\Documents\\SINDPETSHOP\\SIND PROJECTS\\SIS.Tech\\SIS.Tech.Ioc\\SIS.Tech.Ioc.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\User\\.nuget\\packages\\microsoft.aspnet.mvc\\3.0.20105.1\\microsoft.aspnet.mvc.3.0.20105.1.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\microsoft.aspnet.razor\\1.0.20105.408\\microsoft.aspnet.razor.1.0.20105.408.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\microsoft.aspnet.webpages\\1.0.20105.408\\microsoft.aspnet.webpages.1.0.20105.408.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\microsoft.aspnetcore.http.features\\5.0.17\\microsoft.aspnetcore.http.features.5.0.17.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\microsoft.extensions.primitives\\5.0.1\\microsoft.extensions.primitives.5.0.1.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\microsoft.netcore.platforms\\1.0.1\\microsoft.netcore.platforms.1.0.1.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\microsoft.netcore.targets\\1.0.1\\microsoft.netcore.targets.1.0.1.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\microsoft.web.infrastructure\\1.0.0\\microsoft.web.infrastructure.1.0.0.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\runtime.win-x64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\runtime.win-x86.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x86.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\simpleinjector\\5.5.0\\simpleinjector.5.5.0.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\simpleinjector.integration.web\\5.5.0\\simpleinjector.integration.web.5.5.0.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\simpleinjector.integration.web.mvc\\5.5.0\\simpleinjector.integration.web.mvc.5.5.0.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\system.componentmodel\\4.0.1\\system.componentmodel.4.0.1.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\system.configuration.configurationmanager\\9.0.9\\system.configuration.configurationmanager.9.0.9.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\system.data.sqlclient\\4.9.0\\system.data.sqlclient.4.9.0.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\system.diagnostics.eventlog\\9.0.9\\system.diagnostics.eventlog.9.0.9.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\system.io.pipelines\\5.0.2\\system.io.pipelines.5.0.2.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\system.runtime\\4.1.0\\system.runtime.4.1.0.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\system.security.cryptography.protecteddata\\9.0.9\\system.security.cryptography.protecteddata.9.0.9.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "message": "Package 'Microsoft.AspNet.Mvc 3.0.20105.1' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net8.0'. This package may not be fully compatible with your project.",
+      "projectPath": "C:\\Users\\User\\Documents\\SINDPETSHOP\\SIND PROJECTS\\SIS.Tech\\SIS.Tech.Ioc\\SIS.Tech.Ioc.csproj",
+      "warningLevel": 1,
+      "filePath": "C:\\Users\\User\\Documents\\SINDPETSHOP\\SIND PROJECTS\\SIS.Tech\\SIS.Tech.Ioc\\SIS.Tech.Ioc.csproj",
+      "libraryId": "Microsoft.AspNet.Mvc",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "message": "Package 'Microsoft.AspNet.Razor 1.0.20105.408' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net8.0'. This package may not be fully compatible with your project.",
+      "projectPath": "C:\\Users\\User\\Documents\\SINDPETSHOP\\SIND PROJECTS\\SIS.Tech\\SIS.Tech.Ioc\\SIS.Tech.Ioc.csproj",
+      "warningLevel": 1,
+      "filePath": "C:\\Users\\User\\Documents\\SINDPETSHOP\\SIND PROJECTS\\SIS.Tech\\SIS.Tech.Ioc\\SIS.Tech.Ioc.csproj",
+      "libraryId": "Microsoft.AspNet.Razor",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "message": "Package 'Microsoft.AspNet.WebPages 1.0.20105.408' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net8.0'. This package may not be fully compatible with your project.",
+      "projectPath": "C:\\Users\\User\\Documents\\SINDPETSHOP\\SIND PROJECTS\\SIS.Tech\\SIS.Tech.Ioc\\SIS.Tech.Ioc.csproj",
+      "warningLevel": 1,
+      "filePath": "C:\\Users\\User\\Documents\\SINDPETSHOP\\SIND PROJECTS\\SIS.Tech\\SIS.Tech.Ioc\\SIS.Tech.Ioc.csproj",
+      "libraryId": "Microsoft.AspNet.WebPages",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "message": "Package 'Microsoft.Web.Infrastructure 1.0.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net8.0'. This package may not be fully compatible with your project.",
+      "projectPath": "C:\\Users\\User\\Documents\\SINDPETSHOP\\SIND PROJECTS\\SIS.Tech\\SIS.Tech.Ioc\\SIS.Tech.Ioc.csproj",
+      "warningLevel": 1,
+      "filePath": "C:\\Users\\User\\Documents\\SINDPETSHOP\\SIND PROJECTS\\SIS.Tech\\SIS.Tech.Ioc\\SIS.Tech.Ioc.csproj",
+      "libraryId": "Microsoft.Web.Infrastructure",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "message": "Package 'SimpleInjector.Integration.Web 5.5.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net8.0'. This package may not be fully compatible with your project.",
+      "projectPath": "C:\\Users\\User\\Documents\\SINDPETSHOP\\SIND PROJECTS\\SIS.Tech\\SIS.Tech.Ioc\\SIS.Tech.Ioc.csproj",
+      "warningLevel": 1,
+      "filePath": "C:\\Users\\User\\Documents\\SINDPETSHOP\\SIND PROJECTS\\SIS.Tech\\SIS.Tech.Ioc\\SIS.Tech.Ioc.csproj",
+      "libraryId": "SimpleInjector.Integration.Web",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "message": "Package 'SimpleInjector.Integration.Web.Mvc 5.5.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net8.0'. This package may not be fully compatible with your project.",
+      "projectPath": "C:\\Users\\User\\Documents\\SINDPETSHOP\\SIND PROJECTS\\SIS.Tech\\SIS.Tech.Ioc\\SIS.Tech.Ioc.csproj",
+      "warningLevel": 1,
+      "filePath": "C:\\Users\\User\\Documents\\SINDPETSHOP\\SIND PROJECTS\\SIS.Tech\\SIS.Tech.Ioc\\SIS.Tech.Ioc.csproj",
+      "libraryId": "SimpleInjector.Integration.Web.Mvc",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,427 @@
+﻿@using Newtonsoft.Json;
+@using Microsoft.AspNetCore.Http;
+@using SIS.ControleAcesso.Model
+@using SIS.Tech.Models.Login
+
+@inject IHttpContextAccessor HttpContextAccessor
+@{
+    string sessionvalue = HttpContextAccessor.HttpContext.Session.GetString(SessoesViewModels.Logado);
+    var usuario = JsonConvert.DeserializeObject<UsuarioSistemaPerfilInfo>(sessionvalue);
+    var nomeUsuario = usuario == null ? string.Empty : usuario.mUsuario.nmeUsuario;
+    var nomeDepartamento = usuario == null ? string.Empty : usuario.mUsuario.mDepartamento.nmeDepto;
+
+
+    var FormLoginACESSO = false;
+    var FormRegistroACESSO = false;
+    var FormProfileACESSO = false;
+    var FormSettingsACESSO = false;
+    var FormAlterarSenhaACESSO = false;
+    var FormRolesACESSO = false;
+    var FormControlsACESSO = false;
+    var FormPermissionACESSO = false;
+    var FormListUserACESSO = false;
+    var FormConvencaoACESSO = false;
+    var FormHistConvencaoACESSO = false;
+
+    if (usuario != null)
+    {
+        foreach (var item in usuario.mUsuario.mControle)
+        {
+            if (item.mFormulario.nmeFormulario == "Login")
+            {
+                if (item.mControle.nmeControle == "ACESSO")
+                {
+                    FormLoginACESSO = true;
+                }
+            }
+
+            if (item.mFormulario.nmeFormulario == "Registro")
+            {
+                if (item.mControle.nmeControle == "ACESSO")
+                {
+                    FormRegistroACESSO = true;
+                }
+            }
+
+            if (item.mFormulario.nmeFormulario == "Profile")
+            {
+                if (item.mControle.nmeControle == "ACESSO")
+                {
+                    FormProfileACESSO = true;
+                }
+            }
+
+            if (item.mFormulario.nmeFormulario == "Settings")
+            {
+                if (item.mControle.nmeControle == "ACESSO")
+                {
+                    FormSettingsACESSO = true;
+                }
+            }
+
+            if (item.mFormulario.nmeFormulario == "AlterarSenha")
+            {
+                if (item.mControle.nmeControle == "ACESSO")
+                {
+                    FormAlterarSenhaACESSO = true;
+                }
+            }
+
+            if (item.mFormulario.nmeFormulario == "Roles")
+            {
+                if (item.mControle.nmeControle == "ACESSO")
+                {
+                    FormRolesACESSO = true;
+                }
+            }
+
+            if (item.mFormulario.nmeFormulario == "Controls")
+            {
+                if (item.mControle.nmeControle == "ACESSO")
+                {
+                    FormControlsACESSO = true;
+                }
+            }
+
+            if (item.mFormulario.nmeFormulario == "Permission")
+            {
+                if (item.mControle.nmeControle == "ACESSO")
+                {
+                    FormPermissionACESSO = true;
+                }
+            }
+
+
+            if (item.mFormulario.nmeFormulario == "ListUser")
+            {
+                if (item.mControle.nmeControle == "ACESSO")
+                {
+                    FormListUserACESSO = true;
+                }
+            }
+
+            if (item.mFormulario.nmeFormulario == "Convencao")
+            {
+                if (item.mControle.nmeControle == "ACESSO")
+                {
+                    FormConvencaoACESSO = true;
+                }
+            }
+
+            if (item.mFormulario.nmeFormulario == "HistConvencao")
+            {
+                if (item.mControle.nmeControle == "ACESSO")
+                {
+                    FormHistConvencaoACESSO = true;
+                }
+            }
+
+        }
+    }
+}
+
+@{
+    TempData.Keep();
+    string? currentPage = ViewContext.HttpContext.Request.Path;
+}
+
+<!-- Menu -->
+@* ! Do this simple *@
+<aside id="layout-menu" class="layout-menu menu-vertical menu">
+
+    @* ! Hide app brand if navbar-full *@
+    <div class='app-brand demo @((@ViewData["navbarFull"] != null && Convert.ToBoolean(@ViewData["navbarFull"])) ? "d-xl-none" : "")'>
+        <a asp-controller="Dashboards" asp-action="Index" class="app-brand-link">
+            <span class="app-brand-logo demo">
+                @await Html.PartialAsync("../_Partials/_Macros")
+            </span>
+            <span class="app-brand-text demo menu-text fw-bold ms-3">@TempData.Peek("appName")</span>
+        </a>
+
+        <a href="javascript:void(0);" class="layout-menu-toggle menu-link text-large ms-auto">
+            <i class="icon-base ti menu-toggle-icon d-none d-xl-block"></i>
+            <i class="icon-base ti tabler-x d-block d-xl-none"></i>
+        </a>
+    </div>
+
+    <div class="menu-inner-shadow"></div>
+
+    @* ! Full version menu-items *@
+    <ul class="menu-inner py-1">
+
+
+
+        <!-- Users -->
+        <li class="menu-header small">
+            <span class="menu-header-text" data-i18n="Usuários & Permissões">Usuários & Permissões</span>
+        </li>
+
+        <li class='menu-item@(currentPage.StartsWith("/User") ? " active open" : "")'>
+
+            <a href="javascript:void(0);" class="menu-link menu-toggle">
+                <i class="menu-icon icon-base ti tabler-users"></i>
+                <div data-i18n="Usuários">Usuários</div>
+            </a>
+
+            <ul class="menu-sub">
+
+                @if (FormListUserACESSO)
+                {
+                    <li class='menu-item@(currentPage == "/User/List" ? " active" : "")'>
+                        <a asp-controller="User" asp-action="List" class="menu-link">
+                            <div data-i18n="Lista">Lista</div>
+                        </a>
+                    </li>
+
+                }
+
+                <li class='menu-item@(currentPage.StartsWith("/User/View") ? " active open" : "")'>
+
+                    <a href="javascript:void(0);" class="menu-link menu-toggle">
+                        <div data-i18n="Configurações">Configurações</div>
+                    </a>
+
+                    <ul class="menu-sub">
+
+                        @if (FormAlterarSenhaACESSO)
+                        {
+                            <li class='menu-item@(currentPage == "/User/AlterarSenha" ? " active" : "")'>
+                                <a asp-controller="User" asp-action="AlterarSenha" class="menu-link">
+                                    <div data-i18n="Alterar Senha">Alterar Senha</div>
+                                </a>
+                            </li>
+                        }
+
+                    </ul>
+                </li>
+
+            </ul>
+        </li>
+
+
+        @if (FormRolesACESSO)
+        {
+            <li class='menu-item@(currentPage.StartsWith("/Access") ? " active open" : "")'>
+
+                <a href="javascript:void(0);" class="menu-link menu-toggle">
+                    <i class="menu-icon icon-base ti tabler-users"></i>
+                    <div data-i18n="Permissões">Permissões</div>
+                </a>
+
+                <ul class="menu-sub">
+
+                    @if (FormRolesACESSO)
+                    {
+                        <li class='menu-item@(currentPage == "/Access/Roles" ? " active" : "")'>
+                            <a asp-controller="Access" asp-action="Roles" class="menu-link">
+                                <div data-i18n="Perfil">Perfil</div>
+                            </a>
+                        </li>
+                    }
+
+                    @if (FormControlsACESSO)
+                    {
+                        <li class='menu-item@(currentPage == "/Access/Controls" ? " active" : "")'>
+                            <a asp-controller="Access" asp-action="Controls" class="menu-link">
+                                <div data-i18n="Controles">Controles</div>
+                            </a>
+                        </li>
+                    }
+
+                    @if (FormPermissionACESSO)
+                    {
+                        <li class='menu-item@(currentPage == "/Access/Permission" ? " active" : "")'>
+                            <a asp-controller="Access" asp-action="Permission" class="menu-link">
+                                <div data-i18n="Permissões">Permissões</div>
+                            </a>
+                        </li>
+                    }
+
+                </ul>
+            </li>
+        }
+
+        <!-- Funções & Permissões -->
+        <!-- Cadastros  -->
+        <li class="menu-header small">
+            <span class="menu-header-text" data-i18n="Cadastros">Cadastros</span>
+        </li>
+
+        @if (FormConvencaoACESSO)
+        {
+
+            <li class='menu-item@(currentPage.StartsWith("/Empresa") ? " active open" : "")'>
+                <a href="javascript:void(0);" class="menu-link menu-toggle">
+                    <i class="menu-icon icon-base ti tabler-building"></i>
+
+                    <div data-i18n="Empresas">Empresas</div>
+                </a>
+                <ul class="menu-sub">
+                    <li class='menu-item@(currentPage == "/Empresa/Index" ? " active" : "")'>
+                        <a asp-controller="Empresa" asp-action="Index" class="menu-link">
+                            <div data-i18n="Empresas">Empresas</div>
+                        </a>
+                    </li>
+
+                    @if (FormHistConvencaoACESSO)
+                    {
+                        <li class='menu-item@(currentPage == "/Empresa/Hist" ? " active" : "")'>
+                            <a asp-controller="Empresa" asp-action="Hist" class="menu-link">
+                                <div data-i18n="Histórico Empresas">Histórico Empresas</div>
+                            </a>
+                        </li>
+                    }
+                </ul>
+            </li>
+        }
+
+        @if (FormConvencaoACESSO)
+        {
+
+            <li class='menu-item@(currentPage.StartsWith("/Pessoa") ? " active open" : "")'>
+                <a href="javascript:void(0);" class="menu-link menu-toggle">
+                    <i class="menu-icon icon-base ti tabler-user-plus"></i>
+
+                    <div data-i18n="Funcionários">Funcionários</div>
+                </a>
+                <ul class="menu-sub">
+                    <li class='menu-item@(currentPage == "/Funcionario/Index" ? " active" : "")'>
+                        <a asp-controller="Empresa" asp-action="Index" class="menu-link">
+                            <div data-i18n="Funcionários">Funcionários</div>
+                        </a>
+                    </li>
+
+                    @if (FormHistConvencaoACESSO)
+                    {
+                        <li class='menu-item@(currentPage == "/Funcionario/Hist" ? " active" : "")'>
+                            <a asp-controller="Empresa" asp-action="Hist" class="menu-link">
+                                <div data-i18n="Histórico Funcionários">Histórico Funcionários</div>
+                            </a>
+                        </li>
+                    }
+                </ul>
+            </li>
+        }
+
+
+        @if (FormConvencaoACESSO)
+        {
+
+            <li class='menu-item@(currentPage.StartsWith("/Convencao") ? " active open" : "")'>
+                <a href="javascript:void(0);" class="menu-link menu-toggle">
+                    <i class="menu-icon icon-base ti tabler-clipboard-copy"></i>
+
+                    <div data-i18n="CCT">CCT's</div>
+                </a>
+                <ul class="menu-sub">
+                    <li class='menu-item@(currentPage == "/Convencao/Index" ? " active" : "")'>
+                        <a asp-controller="Convencao" asp-action="Index" class="menu-link">
+                            <div data-i18n="CCTs">CCTs</div>
+                        </a>
+                    </li>
+
+                    @if (FormHistConvencaoACESSO)
+                    {
+                        <li class='menu-item@(currentPage == "/Convencao/Hist" ? " active" : "")'>
+                            <a asp-controller="Convencao" asp-action="Hist" class="menu-link">
+                                <div data-i18n="Histórico CCTs">Histórico CCTs</div>
+                            </a>
+                        </li>
+                    }
+                </ul>
+            </li>
+        }
+
+
+
+        <!-- Cadastros  -->
+        <!-- Funções & Permissões -->
+        @* <li class='menu-item@(currentPage.StartsWith("/Access") ? " active open" : "")'>
+            <a href="javascript:void(0);" class="menu-link menu-toggle">
+                <i class="menu-icon icon-base ti tabler-settings"></i>
+                <div data-i18n="Permissões">Permissões</div>
+            </a>
+            <ul class="menu-sub">
+                <li class='menu-item@(currentPage == "/Access/Roles" ? " active" : "")'>
+                    <a asp-controller="Access" asp-action="Roles" class="menu-link">
+                        <div data-i18n="Funções">Funções</div>
+                    </a>
+                </li>
+                <li class='menu-item@(currentPage == "/Access/Permission" ? " active" : "")'>
+                    <a asp-controller="Access" asp-action="Permission" class="menu-link">
+                        <div data-i18n="Permissões">Permissões</div>
+                    </a>
+                </li>
+            </ul>
+        </li> *@
+
+
+
+
+        @* <li class='menu-item@(currentPage == "/Apps/Email" ? " active" : "")'>
+            <a asp-controller="Apps" asp-action="Email" class="menu-link">
+                <i class="menu-icon icon-base ti tabler-mail"></i>
+                <div data-i18n="Email">Email</div>
+            </a>
+        </li>
+
+        <li class='menu-item@(currentPage == "/Apps/Chat" ? " active" : "")'>
+            <a asp-controller="Apps" asp-action="Chat" class="menu-link">
+                <i class="menu-icon icon-base ti tabler-messages"></i>
+                <div data-i18n="Chat">Chat</div>
+            </a>
+        </li>
+
+        <li class='menu-item@(currentPage == "/Apps/Agenda" ? " active" : "")'>
+            <a asp-controller="Apps" asp-action="Agenda" class="menu-link">
+                <i class="menu-icon icon-base ti tabler-calendar"></i>
+                <div data-i18n="Agenda">Agenda</div>
+            </a>
+        </li>
+
+        <li class='menu-item@(currentPage == "/Apps/Kanban" ? " active" : "")'>
+            <a asp-controller="Apps" asp-action="Kanban" class="menu-link">
+                <i class="menu-icon icon-base ti tabler-layout-kanban"></i>
+                <div data-i18n="Kanban">Kanban</div>
+            </a>
+        </li> *@
+
+
+        <!-- Charts & Maps -->
+        <li class="menu-header small">
+            <span class="menu-header-text" data-i18n="Mapas">Mapas</span>
+        </li>
+
+        @* <li class='menu-item@(currentPage == "/Maps/Index" ? " active" : "")'>
+            <a asp-controller="Maps" asp-action="Global" class="menu-link">
+                <i class="menu-icon icon-base ti tabler-map"></i>
+                <div data-i18n="Global">Global Maps</div>
+            </a>
+        </li> *@
+
+        <!-- Charts & Maps -->
+        <!-- Suporte -->
+        <li class="menu-header small">
+            <span class="menu-header-text" data-i18n="Suporte">Suporte</span>
+        </li>
+
+        <li class="menu-item">
+            <a href='@TempData.Peek("support")' target="_blank" class="menu-link">
+                <i class="menu-icon icon-base ti tabler-lifebuoy"></i>
+                <div data-i18n="Support">Support</div>
+            </a>
+        </li>
+
+        <!-- Suporte -->
+
+    </ul>
+
+</aside>
+
+<div class="menu-mobile-toggler d-xl-none rounded-1">
+    <a href="javascript:void(0);" class="layout-menu-toggle menu-link text-large text-bg-secondary p-2 rounded-1">
+        <i class="ti tabler-menu icon-base"></i>
+        <i class="ti tabler-chevron-right icon-base"></i>
+    </a>
+</div>
+<!-- / Menu -->

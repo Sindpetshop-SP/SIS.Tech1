@@ -1,0 +1,205 @@
+@model SIS.Tech.Models.Empresas.EmpresaViewModel
+
+@{
+    ViewData["Title"] = "Lista de Empresas";
+
+    var departamentos = (SelectList)ViewBag.ViewDepartamento;
+}
+
+@{
+    ViewData["Title"] = "eCommerce Customer All - Apps";
+}
+
+@section VendorStyles {
+    <link rel="stylesheet" href="~/vendor/fonts/flag-icons.css" />
+    <link rel="stylesheet" href="~/vendor/libs/datatables-bs5/datatables.bootstrap5.css" />
+    <link rel="stylesheet" href="~/vendor/libs/datatables-responsive-bs5/responsive.bootstrap5.css" />
+    <link rel="stylesheet" href="~/vendor/libs/datatables-buttons-bs5/buttons.bootstrap5.css" />
+    <link rel="stylesheet" href="~/vendor/libs/select2/select2.css" />
+    <link rel="stylesheet" href="~/vendor/libs/&#64;form-validation/form-validation.css" />
+}
+
+@section VendorScripts {
+    <script src="~/vendor/libs/moment/moment.js"></script>
+    <script src="~/vendor/libs/datatables-bs5/datatables-bootstrap5.js"></script>
+    <script src="~/vendor/libs/select2/select2.js"></script>
+    <script src="~/vendor/libs/&#64;form-validation/popular.js"></script>
+    <script src="~/vendor/libs/&#64;form-validation/bootstrap5.js"></script>
+    <script src="~/vendor/libs/&#64;form-validation/auto-focus.js"></script>
+    <script src="~/vendor/libs/cleave-zen/cleave-zen.js"></script>
+}
+
+@section PageScripts {
+    <script src="~/js/controllers/app-empresa-all.js"></script>
+    <script src="~/js/controllers/sindmasks.js"></script>
+}
+
+<div class="card">
+
+    <div class="card-header border-bottom">
+        <h5 class="card-title mb-0">Filtros</h5>
+        <div class="d-flex justify-content-between align-items-center row pt-4 gap-4 gap-md-0">
+
+            @using (Html.BeginForm("Index", "Empresa", FormMethod.Get, new { @enctype = "multipart/form-data", @id = "FormListarEmpresas" }))
+            {
+                <div class="row">
+
+                    <div class="col-md-3">
+                        <label>CNPJ</label>
+                        @Html.TextBox("Cnpj", "", new { @id = "Cnpj", placeholder = "Cnpj", @class = "form-control", @onkeypress = "return somenteNumeros(event)", @onfocus = "javascript: retirarFormatacao(this);", @onblur = "javascript: formatarCampo(this);", @maxlength = "18", autocomplete = "off", tabindex = "1" })
+                    </div>
+
+                    <div class="col-md-3">
+                        <label>Nome Usuário</label>
+                        @Html.TextBox("RazaoSocial", "", new { @class = "form-control", @placeholder = "Razão Social", tabindex = "2", autocomplete = "off" })
+                    </div>
+
+                    <div class="col-md-3">
+                        <label>Nome Usuário</label>
+                        @Html.TextBox("NomeFantasia", "", new { @class = "form-control", @placeholder = "Nome Fantasia", tabindex = "3", autocomplete = "off" })
+                    </div>
+
+                    <div class="col-md-3" style="text-align:right;">
+
+                        <br />
+
+                        @if (ViewBag.PermitidoPesquisar)
+                        {
+                            <button class="btn btn-secondary btn-sm" type="submit">
+                                <i class="icon-base ti tabler-search"></i>&nbsp;
+                                Pesquisar
+                            </button>
+                        }
+                        &nbsp;&nbsp;&nbsp;
+                        @if (ViewBag.PermitidoInserir)
+                        {
+                            <a href="#" onclick="loadModalEmpresa('0')" class="btn btn-light btn-sm">
+                                <i class="icon-base ti tabler-clipboard-plus"></i>&nbsp;
+                                Novo
+                            </a>
+                        }
+
+                    </div>
+
+                </div>
+
+            }
+
+        </div>
+    </div>
+
+    <div class="card-datatable">
+
+        <table class="datatables-generic table">
+
+            <thead class="border-top">
+                <tr>
+                    <th>Código</th>
+                    <th>Razão Social</th>
+                    <th>Nome Fantasia</th>
+                    <th>CNPJ</th>
+                    <th>Sindicalizada?</th>
+                    <th>Ativo</th>
+                    @*  <th></th> *@
+                    <th></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+
+                @if (Model.Empresa.lstEmpresa != null)
+                {
+
+                    foreach (var item in Model.Empresa.lstEmpresa)
+                    {
+                        <tr class="gradeX">
+                            <td>
+                                @Html.DisplayFor(modelItem => item.CodEmpresa)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.RazaoSocial)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.NomeFantasia)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Cnpj)
+                            </td>
+                            <td>
+
+                                @if (item.Sindicalizada)
+                                {
+                                    <span class="badge bg-label-success me-4">SIM</span>
+                                }
+                                else
+                                {
+                                    <span class="badge bg-label-danger me-4">NÃO</span>
+                                }
+                            </td>
+
+                            <td style="text-align:center;">
+
+                                @if (item.Ativo)
+                                {
+                                    <span class="badge bg-label-success me-4">Ativo</span>
+                                }
+                                else
+                                {
+                                    <span class="badge bg-label-danger me-4">Inativo</span>
+                                }
+
+                            </td>
+
+                            <td style="text-align:center;">
+
+                                @if (ViewBag.PermitidoDetalhe)
+                                {
+                                    <a href="@Url.Action("DetailsOverview", "Empresa", new { codEmpresa = item.CodEmpresa })" class="btn btn-white btn-sm" data-toggle="tooltip" data-placement="top" title="Visualizar Empresa">
+                                        <i style="color:#FF6F0F;" class="icon-base ti tabler-search"></i>&nbsp;
+                                    </a>
+                                }
+
+                            </td>
+
+                           @*  <td style="text-align:center;">
+
+                                @if (ViewBag.PermitidoEditar)
+                                {
+                                    <a href="#" onclick="loadModalEmpresa(@item.CodEmpresa)" class="dropdown-item" data-toggle="tooltip" data-placement="top" title="Editar">
+                                        <i style="color:#FF6F0F;" class="icon-base ti tabler-edit"></i>&nbsp;
+                                    </a>
+
+                                    <a href="@Url.Action("DetailsOverview", "Empresa", new { codEmpresa = item.CodEmpresa })" class="btn btn-white btn-sm" data-toggle="tooltip" data-placement="top" title="Visualizar Empresa">
+                                        <i style="color:#FF6F0F;" class="icon-base ti tabler-edit"></i>&nbsp;
+                                    </a>
+                                }
+
+                            </td> *@
+
+                            <td style="text-align:center;">
+
+                                @if (item.Ativo)
+                                {
+                                    if (ViewBag.PermitidoExcluir)
+                                    {
+
+                                        <a href="#" onclick="loadModalDeleteConvencao(@item.CodEmpresa)" class="dropdown-item" data-toggle="tooltip" data-placement="top" title="Excluir">
+                                            <i style="color:#FF6F0F;" class="icon-base ti tabler-trash"></i>&nbsp;
+                                        </a>
+
+                                    }
+                                }
+
+                            </td>
+
+                        </tr>
+                    }
+                }
+
+            </tbody>
+        </table>
+
+    </div>
+
+</div>
+

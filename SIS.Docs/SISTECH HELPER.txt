@@ -1,0 +1,32 @@
+cor 1-  #FF6F0F 
+cor 2 -  #e58334
+cor 3- #c75818
+cor 4-  #3f1309
+
+--foi
+
+SindpetShop
+YKMPRaJEQDt2nyhI1Lq2/A==
+
+
+
+
+
+https://www.youtube.com/@cafecombug
+
+
+gerar chave secreta pra api
+
+abra node.js
+
+node -e "console.log(require('crypto').randomBytes(32).toString('hex'))"
+
+chave >> 
+
+
+CONTROLLERLogin
+
+/api/Autenticacao/,
+
+
+http://localhost:8083//api/Autenticacao/LoginUsuario?codSistema=%201&nmeLoginUsuario=cd0001&vlrSenhaUsuario=1

@@ -1,0 +1,128 @@
+,
+          formValidationEmail: {
+            validators: {
+              notEmpty: {
+                message: 'The Email is required'
+              },
+              emailAddress: {
+                message: 'The value is not a valid email address'
+              }
+            }
+          },
+          formValidationConfirmPass: {
+            validators: {
+              notEmpty: {
+                message: 'The Confirm Password is required'
+              },
+              identical: {
+                compare: function () {
+                  return wizardValidationFormStep1.querySelector('[name="formValidationPass"]').value;
+                },
+                message: 'The password and its confirm are not the same'
+              }
+            }
+          },
+          billingEmail: {
+            validators: {
+              notEmpty: {
+                message: 'Please enter billing email'
+              },
+              emailAddress: {
+                message: 'Please enter valid email address'
+              }
+            }
+          },
+
+          formValidationFacebook: {
+            validators: {
+              notEmpty: {
+                message: 'The Facebook URL is required'
+              },
+              uri: {
+                message: 'The URL is not proper'
+              }
+            }
+          },
+          formValidationGoogle: {
+            validators: {
+              notEmpty: {
+                message: 'The Google URL is required'
+              },
+              uri: {
+                message: 'The URL is not proper'
+              }
+            }
+          },
+          formValidationLinkedIn: {
+            validators: {
+              notEmpty: {
+                message: 'The LinkedIn URL is required'
+              },
+              uri: {
+                message: 'The URL is not proper'
+              }
+            }
+          },
+          modalAddressFirstName: {
+            validators: {
+              notEmpty: {
+                message: 'Please enter your first name'
+              },
+              regexp: {
+                regexp: /^[a-zA-Zs]+$/,
+                message: 'The first name can only consist of alphabetical'
+              }
+            }
+          },
+          modalAddressLastName: {
+            validators: {
+              notEmpty: {
+                message: 'Please enter your last name'
+              },
+              regexp: {
+                regexp: /^[a-zA-Zs]+$/,
+                message: 'The last name can only consist of alphabetical'
+              }
+            }
+          },
+          modalEditCard: {
+            validators: {
+              notEmpty: {
+                message: 'Please enter your credit card number'
+              }
+            }
+          },
+
+          eventTitle: {
+            validators: {
+              notEmpty: {
+                message: 'Please enter event title '
+              },
+              emailAddress: {
+                message: 'The value is not a valid email address'
+              },
+              regexp: {
+                regexp: /^[a-zA-Z0-9 ]+$/,
+                message: 'The name can only consist of alphabetical, number and space'
+              },
+              identical: {
+                compare: function () {
+                  return formValidationExamples.querySelector('[name="formValidationPass"]').value;
+                },
+                message: 'The password and its confirm are not the same'
+              },
+              date: {
+                format: 'DD/MM/YYYY',
+                message: 'The value is not a valid date'
+              },
+			  date: {
+                format: 'DD.MM.YYYY',
+                message: 'The value is not a valid date'
+              },
+              stringLength: {
+                min: 100,
+                max: 500,
+                message: 'The bio must be more than 100 and less than 500 characters long'
+              },
+            }
+          }

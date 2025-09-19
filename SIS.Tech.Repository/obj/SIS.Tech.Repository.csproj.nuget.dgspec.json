@@ -1,0 +1,305 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\User\\Documents\\SINDPETSHOP\\SIND PROJECTS\\SIS.Tech\\SIS.Tech.Repository\\SIS.Tech.Repository.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\User\\Documents\\SINDPETSHOP\\SIND PROJECTS\\SIS.Tech\\SIS.Tech.Domain.Model\\SIS.Tech.Domain.Model.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\User\\Documents\\SINDPETSHOP\\SIND PROJECTS\\SIS.Tech\\SIS.Tech.Domain.Model\\SIS.Tech.Domain.Model.csproj",
+        "projectName": "SIS.Tech.Domain.Model",
+        "projectPath": "C:\\Users\\User\\Documents\\SINDPETSHOP\\SIND PROJECTS\\SIS.Tech\\SIS.Tech.Domain.Model\\SIS.Tech.Domain.Model.csproj",
+        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\User\\Documents\\SINDPETSHOP\\SIND PROJECTS\\SIS.Tech\\SIS.Tech.Domain.Model\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Http.Features": {
+              "target": "Package",
+              "version": "[5.0.17, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\User\\Documents\\SINDPETSHOP\\SIND PROJECTS\\SIS.Tech\\SIS.Tech.IRepository\\SIS.Tech.IRepository.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\User\\Documents\\SINDPETSHOP\\SIND PROJECTS\\SIS.Tech\\SIS.Tech.IRepository\\SIS.Tech.IRepository.csproj",
+        "projectName": "SIS.Tech.IRepository",
+        "projectPath": "C:\\Users\\User\\Documents\\SINDPETSHOP\\SIND PROJECTS\\SIS.Tech\\SIS.Tech.IRepository\\SIS.Tech.IRepository.csproj",
+        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\User\\Documents\\SINDPETSHOP\\SIND PROJECTS\\SIS.Tech\\SIS.Tech.IRepository\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\User\\Documents\\SINDPETSHOP\\SIND PROJECTS\\SIS.Tech\\SIS.Tech.Domain.Model\\SIS.Tech.Domain.Model.csproj": {
+                "projectPath": "C:\\Users\\User\\Documents\\SINDPETSHOP\\SIND PROJECTS\\SIS.Tech\\SIS.Tech.Domain.Model\\SIS.Tech.Domain.Model.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\User\\Documents\\SINDPETSHOP\\SIND PROJECTS\\SIS.Tech\\SIS.Tech.Repository\\SIS.Tech.Repository.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\User\\Documents\\SINDPETSHOP\\SIND PROJECTS\\SIS.Tech\\SIS.Tech.Repository\\SIS.Tech.Repository.csproj",
+        "projectName": "SIS.Tech.Repository",
+        "projectPath": "C:\\Users\\User\\Documents\\SINDPETSHOP\\SIND PROJECTS\\SIS.Tech\\SIS.Tech.Repository\\SIS.Tech.Repository.csproj",
+        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\User\\Documents\\SINDPETSHOP\\SIND PROJECTS\\SIS.Tech\\SIS.Tech.Repository\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\User\\Documents\\SINDPETSHOP\\SIND PROJECTS\\SIS.Tech\\SIS.Tech.IRepository\\SIS.Tech.IRepository.csproj": {
+                "projectPath": "C:\\Users\\User\\Documents\\SINDPETSHOP\\SIND PROJECTS\\SIS.Tech\\SIS.Tech.IRepository\\SIS.Tech.IRepository.csproj"
+              },
+              "C:\\Users\\User\\Documents\\SINDPETSHOP\\SIND PROJECTS\\SIS.Tech\\SIS.Tech.Util\\SIS.Tech.Util.csproj": {
+                "projectPath": "C:\\Users\\User\\Documents\\SINDPETSHOP\\SIND PROJECTS\\SIS.Tech\\SIS.Tech.Util\\SIS.Tech.Util.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.9.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\User\\Documents\\SINDPETSHOP\\SIND PROJECTS\\SIS.Tech\\SIS.Tech.Util\\SIS.Tech.Util.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\User\\Documents\\SINDPETSHOP\\SIND PROJECTS\\SIS.Tech\\SIS.Tech.Util\\SIS.Tech.Util.csproj",
+        "projectName": "SIS.Tech.Util",
+        "projectPath": "C:\\Users\\User\\Documents\\SINDPETSHOP\\SIND PROJECTS\\SIS.Tech\\SIS.Tech.Util\\SIS.Tech.Util.csproj",
+        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\User\\Documents\\SINDPETSHOP\\SIND PROJECTS\\SIS.Tech\\SIS.Tech.Util\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.9.0, )"
+            },
+            "System.Diagnostics.EventLog": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

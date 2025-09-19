@@ -1,0 +1,37 @@
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJETOS GIT\SIS.Tech\SIS.Tech.IApp\bin\Debug\net8.0\SIS.Tech.IApp.deps.json
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJETOS GIT\SIS.Tech\SIS.Tech.IApp\bin\Debug\net8.0\SIS.Tech.IApp.dll
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJETOS GIT\SIS.Tech\SIS.Tech.IApp\bin\Debug\net8.0\SIS.Tech.IApp.pdb
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJETOS GIT\SIS.Tech\SIS.Tech.IApp\bin\Debug\net8.0\SIS.Tech.Domain.Model.dll
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJETOS GIT\SIS.Tech\SIS.Tech.IApp\bin\Debug\net8.0\SIS.Tech.IServices.dll
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJETOS GIT\SIS.Tech\SIS.Tech.IApp\bin\Debug\net8.0\SIS.ControleAcesso.Model.dll
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJETOS GIT\SIS.Tech\SIS.Tech.IApp\bin\Debug\net8.0\SIS.Tech.Domain.Model.pdb
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJETOS GIT\SIS.Tech\SIS.Tech.IApp\bin\Debug\net8.0\SIS.Tech.IServices.pdb
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJETOS GIT\SIS.Tech\SIS.Tech.IApp\obj\Debug\net8.0\SIS.Tech.IApp.csproj.AssemblyReference.cache
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJETOS GIT\SIS.Tech\SIS.Tech.IApp\obj\Debug\net8.0\SIS.Tech.IApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJETOS GIT\SIS.Tech\SIS.Tech.IApp\obj\Debug\net8.0\SIS.Tech.IApp.AssemblyInfoInputs.cache
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJETOS GIT\SIS.Tech\SIS.Tech.IApp\obj\Debug\net8.0\SIS.Tech.IApp.AssemblyInfo.cs
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJETOS GIT\SIS.Tech\SIS.Tech.IApp\obj\Debug\net8.0\SIS.Tech.IApp.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJETOS GIT\SIS.Tech\SIS.Tech.IApp\obj\Debug\net8.0\SIS.Tech.IApp.sourcelink.json
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJETOS GIT\SIS.Tech\SIS.Tech.IApp\obj\Debug\net8.0\SIS.Tech.667DB75F.Up2Date
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJETOS GIT\SIS.Tech\SIS.Tech.IApp\obj\Debug\net8.0\SIS.Tech.IApp.dll
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJETOS GIT\SIS.Tech\SIS.Tech.IApp\obj\Debug\net8.0\refint\SIS.Tech.IApp.dll
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJETOS GIT\SIS.Tech\SIS.Tech.IApp\obj\Debug\net8.0\SIS.Tech.IApp.pdb
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJETOS GIT\SIS.Tech\SIS.Tech.IApp\obj\Debug\net8.0\ref\SIS.Tech.IApp.dll
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJECTS\SIS.Tech\SIS.Tech.IApp\bin\Debug\net8.0\SIS.Tech.IApp.deps.json
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJECTS\SIS.Tech\SIS.Tech.IApp\bin\Debug\net8.0\SIS.Tech.IApp.dll
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJECTS\SIS.Tech\SIS.Tech.IApp\bin\Debug\net8.0\SIS.Tech.IApp.pdb
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJECTS\SIS.Tech\SIS.Tech.IApp\bin\Debug\net8.0\SIS.Tech.Domain.Model.dll
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJECTS\SIS.Tech\SIS.Tech.IApp\bin\Debug\net8.0\SIS.Tech.IServices.dll
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJECTS\SIS.Tech\SIS.Tech.IApp\bin\Debug\net8.0\SIS.ControleAcesso.Model.dll
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJECTS\SIS.Tech\SIS.Tech.IApp\bin\Debug\net8.0\SIS.Tech.Domain.Model.pdb
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJECTS\SIS.Tech\SIS.Tech.IApp\bin\Debug\net8.0\SIS.Tech.IServices.pdb
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJECTS\SIS.Tech\SIS.Tech.IApp\obj\Debug\net8.0\SIS.Tech.IApp.csproj.AssemblyReference.cache
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJECTS\SIS.Tech\SIS.Tech.IApp\obj\Debug\net8.0\SIS.Tech.IApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJECTS\SIS.Tech\SIS.Tech.IApp\obj\Debug\net8.0\SIS.Tech.IApp.AssemblyInfoInputs.cache
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJECTS\SIS.Tech\SIS.Tech.IApp\obj\Debug\net8.0\SIS.Tech.IApp.AssemblyInfo.cs
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJECTS\SIS.Tech\SIS.Tech.IApp\obj\Debug\net8.0\SIS.Tech.IApp.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJECTS\SIS.Tech\SIS.Tech.IApp\obj\Debug\net8.0\SIS.Tech.667DB75F.Up2Date
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJECTS\SIS.Tech\SIS.Tech.IApp\obj\Debug\net8.0\SIS.Tech.IApp.dll
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJECTS\SIS.Tech\SIS.Tech.IApp\obj\Debug\net8.0\refint\SIS.Tech.IApp.dll
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJECTS\SIS.Tech\SIS.Tech.IApp\obj\Debug\net8.0\SIS.Tech.IApp.pdb
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJECTS\SIS.Tech\SIS.Tech.IApp\obj\Debug\net8.0\ref\SIS.Tech.IApp.dll

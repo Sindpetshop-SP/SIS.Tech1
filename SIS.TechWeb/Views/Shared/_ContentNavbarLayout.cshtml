@@ -1,0 +1,152 @@
+﻿@await Html.PartialAsync("Sections/_Variables")
+@{
+    TempData.Keep();
+    Layout = "_CommonMasterLayout";
+
+    TempData["menuHorizontal"] = false;
+    ViewData["contentNavbar"] = false;
+
+    @* Display elements *@
+    ViewData["isNavbar"] = (ViewData["isNavbar"] ??= true);
+    ViewData["isMenu"] = (ViewData["isMenu"] ??= true);
+    ViewData["isFlex"] = (ViewData["isFlex"] ??= false);
+    ViewData["isFooter"] = (ViewData["isFooter"] ??= true);
+    @* ViewData["customizerHidden"] = (ViewData["customizerHidden"] ??= "customizer-hide"); *@
+
+
+    @*HTML Classes *@
+    ViewData["navbarDetached"] = (ViewData["navbarDetached"] ?? "navbar-detached");
+    ViewData["menuFixed"] = (ViewData["menuFixed"] ?? "layout-menu-fixed");
+    ViewData["navbarType"] = (ViewData["navbarType"] ?? "layout-navbar-fixed");
+
+    @*Content classes *@
+    // ViewData["container"] = (ViewData["container"] ?? "container-xxl");
+    // ViewData["containerNav"] = (ViewData["containerNav"] ?? "container-xxl");
+
+    ViewData["container"] = "container-fluid";
+    ViewData["containerNav"] = "container-fluid";
+
+
+}
+
+@section VendorStyles {
+
+    <link rel="stylesheet" href="~/vendor/libs/sweetalert2/sweetalert2.css" charset="utf-8" />
+
+    @RenderSection("VendorStyles", required: false)
+}
+
+@section PageStyles {
+    @RenderSection("PageStyles", required: false)
+}
+
+@section VendorScripts {
+
+    <script src="~/vendor/libs/sweetalert2/sweetalert2.js" charset="utf-8" type="text/javascript"></script>
+
+    @RenderSection("VendorScripts", required: false)
+}
+
+@section PageScripts {
+
+    <script src="~/js/extended-ui-sweetalert2.js" charset="utf-8" type="text/javascript"></script>
+
+    @if (TempData["MSG"] != null)
+    {
+        <script charset="utf-8" type="text/javascript">
+
+            $(document).ready(function () {
+
+                var titulo = "";
+                var icon = "";
+
+                switch ("@TempData["MSG"].ToString().Split('|')[0]") {
+
+                    case "success":
+                        titulo = "Sucesso";
+                        icon = "success";
+                        break;
+                    case "warning":
+                        titulo = "Atenção";
+                        icon = "warning";
+                        break;
+                    case "error":
+                        titulo = "Erro";
+                        icon = "error";
+                        break;
+                    case "info":
+                        titulo = "Informação";
+                        icon = "info";
+                        break;
+                }
+
+                Swal.fire({
+                            title: titulo,
+                            @* text: '@TempData["MSG"].ToString().Split('|')[1]', *@
+                            icon: icon,
+                            html: '@TempData["MSG"].ToString().Split('|')[1]',
+                            timer: 15000,
+                            customClass: {
+                              confirmButton: 'btn btn-primary waves-effect waves-light'
+                            },
+                            buttonsStyling: false
+                          });
+            });
+
+        </script>
+
+        TempData["MSG"] = null;
+    }
+
+    @RenderSection("PageScripts", required: false)
+}
+
+@{
+    bool isMenu = ViewData["isMenu"] != null && Convert.ToBoolean(ViewData["isMenu"]);
+}
+
+<div class='layout-wrapper layout-content-navbar @(isMenu ? "" : "layout-without-menu")'>
+    <div class='layout-container'>
+
+        @if (isMenu)
+        {
+            @await Html.PartialAsync("Sections/Menu/_VerticalMenu")
+        }
+
+        <!-- Layout page -->
+        <div class="layout-page">
+            <!-- Navbar -->
+            @if (@ViewData["isNavbar"] != null && Convert.ToBoolean(@ViewData["isNavbar"]))
+            {
+                @await Html.PartialAsync("Sections/Navbar/_Navbar")
+            }
+            <!-- / Navbar -->
+            <!-- Content wrapper -->
+            <div class="content-wrapper">
+
+                <!-- Content -->
+                <div class='@ViewData["container"] @(Convert.ToBoolean(@ViewData["isFlex"]) ? "d-flex align-items-stretch flex-grow-1 p-0" : "flex-grow-1 container-p-y")'>
+                    @RenderBody()
+                </div>
+                <!-- / Content -->
+                <!-- Footer -->
+                @if (@ViewData["isFooter"] != null && Convert.ToBoolean(@ViewData["isFooter"]))
+                {
+                    @await Html.PartialAsync("Sections/Footer/_Footer")
+                }
+                <!-- / Footer -->
+                <div class="content-backdrop fade"></div>
+            </div>
+            <!--/ Content wrapper -->
+        </div>
+        <!-- / Layout page -->
+    </div>
+
+    <!-- Overlay -->
+    @if (@ViewData["isMenu"] != null && Convert.ToBoolean(@ViewData["isMenu"]))
+    {
+        <div class="layout-overlay layout-menu-toggle"></div>
+    }
+    <!-- Drag Target Area To SlideIn Menu On Small Screens -->
+    <div class="drag-target"></div>
+</div>

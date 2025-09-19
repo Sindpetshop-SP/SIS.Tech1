@@ -1,0 +1,464 @@
+@model SIS.Tech.Models.Empresas.EmpresaViewModel
+
+@{
+    ViewData["Title"] = "Detalhe da Empresa";
+
+    var codEmpresa = @Model.Empresa.CodEmpresa;
+
+    var sindicalizada = @Model.Empresa.Sindicalizada;
+    var qtdeFunc = @Model.Empresa.QuantidadeFUncionarios;
+    var ativo = @Model.Empresa.Ativo;
+    var devedor = @Model.Empresa.Ativo;
+}
+@section VendorStyles {
+    <link rel="stylesheet" href="~/vendor/libs/datatables-bs5/datatables.bootstrap5.css" />
+    <link rel="stylesheet" href="~/vendor/libs/datatables-responsive-bs5/responsive.bootstrap5.css" />
+    <link rel="stylesheet" href="~/vendor/libs/datatables-buttons-bs5/buttons.bootstrap5.css" />
+    <link rel="stylesheet" href="~/vendor/libs/sweetalert2/sweetalert2.css" />
+    <link rel="stylesheet" href="~/vendor/libs/select2/select2.css" />
+    <link rel="stylesheet" href="~/vendor/libs/&#64;form-validation/form-validation.css" />
+}
+@section VendorScripts {
+    <script src="~/vendor/libs/moment/moment.js"></script>
+    <script src="~/vendor/libs/datatables-bs5/datatables-bootstrap5.js"></script>
+    <script src="~/vendor/libs/sweetalert2/sweetalert2.js"></script>
+    <script src="~/vendor/libs/cleave-zen/cleave-zen.js"></script>
+    <script src="~/vendor/libs/select2/select2.js"></script>
+    <script src="~/vendor/libs/&#64;form-validation/popular.js"></script>
+    <script src="~/vendor/libs/&#64;form-validation/bootstrap5.js"></script>
+    <script src="~/vendor/libs/&#64;form-validation/auto-focus.js"></script>
+}
+@section PageScripts {
+
+    <script src="~/js/controllers/empresa-details-overview.js"></script>
+    <script src="~/js/controllers/empresa-modal-insertedit.js"></script>
+    <script src="~/js/controllers/sindmasks.js"></script>
+}
+
+@* ************** Content ************** *@
+@* <div class="d-flex flex-column flex-sm-row align-items-center justify-content-sm-between mb-6 text-center text-sm-start gap-2">
+    <div class="mb-2 mb-sm-0">
+        <h4 class="mb-1">Empresa ID #@Model.Empresa.CodEmpresa</h4>
+        <p class="mb-0">Data Abertura: @Model.Empresa.DataCadastro</p>
+    </div>
+    <button type="button" class="btn btn-label-danger delete-customer">Excluir Empresa</button>
+</div> *@
+
+<div class="row">
+
+    <!--/ DIV EMPRESA Sidebar -->
+    <div class="col-xl-4 col-lg-5 col-md-5 order-1 order-md-0">
+
+        <!-- EMPRESA -->
+        <div class="card mb-6">
+
+            <div class="card-body pt-3">
+
+                <div class="customer-avatar-section">
+                    <div class="d-flex align-items-center flex-column">
+
+                        @if (sindicalizada)
+                        {
+                            <img class="img-fluid rounded mb-4" src="~/img/avatars/1.png" height="60" width="60" alt="User avatar" />
+                        }
+                        else
+                        {
+                            <img class="img-fluid rounded mb-4" src="~/img/avatars/4.png" height="60" width="60" alt="User avatar" />
+                        }
+
+                        <div class="customer-info text-center mb-6">
+                            <h5 class="mb-0">@Model.Empresa.NomeFantasia</h5>
+                            <span>Empresa ID #@Model.Empresa.CodEmpresa</span><br />
+                            <span>Data Cadastro: @Model.Empresa.DataCadastro.ToString("dd/MM/yyyy")</span>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="d-flex justify-content-around flex-wrap mb-6 gap-0 gap-md-3 gap-lg-4">
+                    <div class="d-flex align-items-center gap-4 me-5">
+                        <div class="avatar">
+                            <div class="avatar-initial rounded bg-label-primary">
+                                <i class="icon-base ti tabler-users icon-lg"></i>
+                            </div>
+                        </div>
+                        <div>
+                            <h5 class="mb-0">@Model.Empresa.QuantidadeFUncionarios</h5>
+                            <span>Funcionários</span>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center gap-4">
+                        <div class="avatar">
+                            <div class="avatar-initial rounded bg-label-primary">
+
+                                @if (qtdeFunc <= 50)
+                                {
+                                    <i class="icon-base ti tabler-user-down icon-lg"></i>
+                                }
+                                else
+                                {
+                                    <i class="icon-base ti tabler-user-check icon-lg"></i>
+                                }
+
+                            </div>
+                        </div>
+                        <div>
+
+                            @if (qtdeFunc <= 50)
+                            {
+                                <h5 class="mb-0">5</h5>
+                                <span class="badge bg-label-success">Contribuintes</span>
+                            }
+                            else
+                            {
+                                <h5 class="mb-0">5</h5>
+                                <span class="badge bg-label-danger">Contribuintes</span>
+                            }
+
+
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="info-container">
+                    <h5 class="pb-2 border-bottom text-capitalize mt-2 mb-2">Dados</h5>
+
+                    <ul class="list-unstyled mb-6">
+                        <li class="mb-2">
+                            <span class="h6 me-1">Razão Social:</span>
+                            <span>
+                                <div class="card-big-text">
+                                    @Model.Empresa.RazaoSocial
+                                </div>
+                            </span>
+                        </li>
+
+                        <li class="mb-2">
+                            <span class="h6 me-1">Cnpj:</span>
+                            <span>@Model.Empresa.Cnpj</span>
+                        </li>
+
+                        <li class="mb-2">
+                            <span class="h6 me-1">Tipo:</span>
+                            <span>
+                                @Model.Empresa.TipoPessoa.Descricao
+                            </span>
+                        </li>
+
+                        <li class="mb-2">
+                            <span class="h6 me-1">Segmento:</span>
+                            <span>
+                                @Model.Empresa.RamoAtividade.Descricao
+                            </span>
+                        </li>
+
+                        <li class="mb-2">
+
+                            <span class="h6 me-1">Situação:</span>
+                            @if (ativo)
+                            {
+                                <span class="badge bg-label-success">Ativa</span>
+                            }
+                            else
+                            {
+                                <span class="badge bg-label-danger">Inativa</span>
+                            }
+
+                        </li>
+
+                        <li class="mb-2">
+                            <span class="h6 me-1">Data Abertura:</span>
+                            <span>
+                                @Model.Empresa.DataCadastro.ToString("dd/MM/yyyy")
+                            </span>
+                        </li>
+
+                    </ul>
+
+                    <br>
+                    <div class="d-flex justify-content-center">
+
+                        <a href="#" onclick="loadModalEmpresa(@Model.Empresa.CodEmpresa)" class="btn btn-primary w-100" data-toggle="tooltip" data-placement="top" title="Editar">
+                            <i style="color:#FFF;" class="icon-base ti tabler-edit"></i>&nbsp;
+                            Editar Empresa
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- EMPRESA -->
+        <!-- CONVENCOES -->
+        <div class="card mb-4 bg-gradient-primary">
+
+            <div class="card-body">
+
+                <div class="row justify-content-between mb-4">
+
+                    <div class="col-md-12 col-lg-7 col-xl-12 col-xxl-7 text-center text-lg-start text-xl-center text-xxl-start order-1  order-lg-0 order-xl-1 order-xxl-0">
+                        <h5 class="card-title text-white text-nowrap mb-4">@* Upgrade to premium *@</h5>
+                        <p class="card-text text-white">@* Upgrade customer to premium membership to access pro features. *@</p>
+                    </div>
+
+                    <span class="col-md-12 col-lg-5 col-xl-12 col-xxl-5 text-center mx-auto mx-md-0 mb-2"><img src="~/img/illustrations/rocket.png" class="w-px-75 m-2" alt="3dRocket" /></span>
+
+                </div>
+
+                <button class="btn btn-white text-primary w-100 fw-medium shadow-xs" data-bs-target="#upgradePlanModal" data-bs-toggle="modal">Sindpetshop-SP em construção</button>
+
+            </div>
+
+        </div>
+        <!-- CONVENCOES -->
+
+    </div>
+    <!--/ DIV EMPRESA Sidebar -->
+    <!-- DIV EMPRESA GRIDS -->
+    <div class="col-xl-8 col-lg-7 col-md-7 order-0 order-md-1">
+        <!-- BOTOES EMPRESA -->
+        <div class="nav-align-top">
+            <ul class="nav nav-pills flex-column flex-md-row mb-6 row-gap-2 flex-wrap">
+                <li class="nav-item">
+                    <a class="nav-link active" href="/Empresa/DetailsOverview?codEmpresa=@Model.Empresa.CodEmpresa"><i class="icon-base ti tabler-user icon-sm me-1_5"></i>Dados Principais</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/Empresa/DetailsContacts?codEmpresa=@Model.Empresa.CodEmpresa"><i class="icon-base ti tabler-map-pin icon-sm me-1_5"></i>Contato & Endereço</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/Empresa/CustomerDetailsSecurity"><i class="icon-base ti tabler-files icon-sm me-1_5"></i>Documentos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/Empresa/CustomerDetailsSecurity"><i class="icon-base ti tabler-gavel icon-sm me-1_5"></i>Jurídico</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/Empresa/CustomerDetailsNotifications"><i class="icon-base ti tabler-bell icon-sm me-1_5"></i>Notifications</a>
+                </li>
+            </ul>
+        </div>
+        <!-- BOTOES EMPRESA -->
+        <!-- / BOXES PRINCIPAIS -->
+        <div class="row text-nowrap">
+            <div class="col-md-6 mb-6">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <div class="card-icon mb-2">
+                            <div class="avatar">
+
+
+                                @if (devedor)
+                                {
+                                    <div class="avatar-initial rounded bg-label-danger">
+                                        <i class="text-danger icon-base ti tabler-currency-dollar icon-lg"></i>
+                                    </div>
+                                }
+                                else
+                                {
+                                    <div class="avatar-initial rounded bg-label-success">
+                                        <i class="text-success icon-base ti tabler-currency-dollar icon-lg"></i>
+                                    </div>
+                                }
+
+
+
+                            </div>
+                        </div>
+                        <div class="card-info">
+                            <h5 class="card-title mb-2">Saldo da conta</h5>
+                            <div class="d-flex align-items-baseline gap-1">
+
+                                @if (devedor)
+                                {
+                                    <h5 class="text-danger mb-0">$2345</h5>
+                                    <p class="mb-0">Em Débito</p>
+                                }
+                                else
+                                {
+                                    <h5 class="text-success mb-0">$2345</h5>
+                                    <p class="mb-0">Em dia</p>
+                                }
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 mb-6">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="card-icon mb-2">
+                            <div class="avatar">
+                                <div class="avatar-initial rounded bg-label-warning">
+                                    <i class="icon-base ti tabler-star icon-lg"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-info">
+                            <h5 class="card-title mb-2">Funcionários</h5>
+
+                            <div class="d-flex align-items-baseline gap-1">
+                                <h5 class="text-success mb-0">15</h5>
+                                <p class="mb-0">Associados</p>
+                            </div>
+
+                            <div class="d-flex align-items-baseline gap-1">
+                                <h5 class="text-danger mb-0">5</h5>
+                                <p class="mb-0">Opositores</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- / BOXES PRINCIPAIS -->
+        <!-- FUNCIONARIOS -->
+        <div class="card mb-4">
+
+            <div class="card-body">
+
+                <div class="row mb-2">
+
+                    <div class="col-md-12">
+                        <h5 class="card-title text-black text-nowrap mb-4"> Lista de Funcionários</h5>
+
+                        <div class="table-responsive mb-4">
+
+                            <table class="datatables-funcionario table">
+
+                                <thead class="border-top">
+                                    <tr>
+                                        <th>Código</th>
+                                        <th>Nome</th>
+                                        <th>Cpf</th>
+                                        <th></th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+
+                                    @if (Model.Empresa != null)
+                                    {
+                                        if (Model.Empresa.Funcionario != null)
+                                        {
+
+                                            if (Model.Empresa.Funcionario.lstFuncionarios.Count > 0)
+                                            {
+
+                                                foreach (var item in Model.Empresa.Funcionario.lstFuncionarios)
+                                                {
+                                                    <tr class="gradeX">
+                                                        <td>
+                                                            @Html.DisplayFor(modelItem => item.CodFuncionario)
+                                                        </td>
+                                                        <td>
+                                                            @Html.DisplayFor(modelItem => item.Nome)
+                                                        </td>
+                                                        <td>
+                                                            @Html.DisplayFor(modelItem => item.Cpf)
+                                                        </td>
+                                                        <td>
+                                                            <a href="javascript:void(0);"><i class="icon-base ti tabler-edit text-body icon-md"></i></a>
+                                                        </td>
+                                                        <td>
+                                                            <a href="javascript:void(0);"><i class="icon-base ti tabler-trash text-body icon-md"></i></a>
+                                                        </td>
+
+                                                    </tr>
+                                                }
+                                            }
+                                        }
+                                    }
+
+
+                                </tbody>
+                            </table>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+        <!-- FUNCIONARIOS -->
+        <!-- SOCIOS -->
+        <div class="card mb-4">
+
+            <div class="card-body">
+
+                <div class="row mb-2">
+
+                    <div class="col-md-12">
+                        <h5 class="card-title text-black text-nowrap mb-4"> Lista de Sócios</h5>
+
+                        <div class="table-responsive mb-4">
+
+                            <table class="datatables-socio table">
+
+                                <thead class="border-top">
+                                    <tr>
+                                        <th>Código</th>
+                                        <th>Nome</th>
+                                        <th>Cpf</th>
+                                        <th></th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+
+                                    @if (Model.Empresa != null)
+                                    {
+                                        if (Model.Empresa.Socio != null)
+                                        {
+
+                                            if (Model.Empresa.Socio.lstSocios.Count > 0)
+                                            {
+
+                                                foreach (var item in Model.Empresa.Socio.lstSocios)
+                                                {
+                                                    <tr class="gradeX">
+                                                        <td>
+                                                            @Html.DisplayFor(modelItem => item.CodSocio)
+                                                        </td>
+                                                        <td>
+                                                            @Html.DisplayFor(modelItem => item.Nome)
+                                                        </td>
+                                                        <td>
+                                                            @Html.DisplayFor(modelItem => item.Cpf)
+                                                        </td>
+                                                        <td>
+                                                            <a href="javascript:void(0);"><i class="icon-base ti tabler-edit text-body icon-md"></i></a>
+                                                        </td>
+                                                        <td>
+                                                            <a href="javascript:void(0);"><i class="icon-base ti tabler-trash text-body icon-md"></i></a>
+                                                        </td>
+                                                    </tr>
+                                                }
+                                            }
+                                        }
+                                    }
+
+
+                                </tbody>
+                            </table>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+        <!-- SOCIOS -->
+
+
+    </div>
+    <!-- DIV EMPRESA GRIDS -->
+</div>
+
+@await Html.PartialAsync("_ModalInsertEdit")

@@ -1,0 +1,1282 @@
+{
+  "version": 3,
+  "targets": {
+    "net8.0": {
+      "Microsoft.AspNet.Mvc/3.0.20105.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNet.Razor": "1.0.20105.408",
+          "Microsoft.AspNet.WebPages": "1.0.20105.408"
+        },
+        "compile": {
+          "lib/net40/System.Web.Mvc.dll": {}
+        },
+        "runtime": {
+          "lib/net40/System.Web.Mvc.dll": {}
+        }
+      },
+      "Microsoft.AspNet.Razor/1.0.20105.408": {
+        "type": "package",
+        "compile": {
+          "lib/net40/System.Web.Razor.dll": {}
+        },
+        "runtime": {
+          "lib/net40/System.Web.Razor.dll": {}
+        }
+      },
+      "Microsoft.AspNet.WebPages/1.0.20105.408": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNet.Razor": "1.0.20105.408",
+          "Microsoft.Web.Infrastructure": "1.0.0"
+        },
+        "compile": {
+          "lib/net40/System.Web.Helpers.dll": {},
+          "lib/net40/System.Web.WebPages.Deployment.dll": {},
+          "lib/net40/System.Web.WebPages.Razor.dll": {},
+          "lib/net40/System.Web.WebPages.dll": {}
+        },
+        "runtime": {
+          "lib/net40/System.Web.Helpers.dll": {},
+          "lib/net40/System.Web.WebPages.Deployment.dll": {},
+          "lib/net40/System.Web.WebPages.Razor.dll": {},
+          "lib/net40/System.Web.WebPages.dll": {}
+        }
+      },
+      "Microsoft.AspNetCore.Http.Features/5.0.17": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Primitives": "5.0.1",
+          "System.IO.Pipelines": "5.0.2"
+        },
+        "compile": {
+          "lib/net5.0/Microsoft.AspNetCore.Http.Features.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net5.0/Microsoft.AspNetCore.Http.Features.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Microsoft.Extensions.Primitives/5.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/netcoreapp3.0/Microsoft.Extensions.Primitives.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netcoreapp3.0/Microsoft.Extensions.Primitives.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Microsoft.NETCore.Platforms/1.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard1.0/_._": {}
+        },
+        "runtime": {
+          "lib/netstandard1.0/_._": {}
+        }
+      },
+      "Microsoft.NETCore.Targets/1.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard1.0/_._": {}
+        },
+        "runtime": {
+          "lib/netstandard1.0/_._": {}
+        }
+      },
+      "Microsoft.Web.Infrastructure/1.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net40/Microsoft.Web.Infrastructure.dll": {}
+        },
+        "runtime": {
+          "lib/net40/Microsoft.Web.Infrastructure.dll": {}
+        }
+      },
+      "Newtonsoft.Json/13.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "runtime.native.System.Data.SqlClient.sni/4.4.0": {
+        "type": "package",
+        "dependencies": {
+          "runtime.win-arm64.runtime.native.System.Data.SqlClient.sni": "4.4.0",
+          "runtime.win-x64.runtime.native.System.Data.SqlClient.sni": "4.4.0",
+          "runtime.win-x86.runtime.native.System.Data.SqlClient.sni": "4.4.0"
+        }
+      },
+      "runtime.win-arm64.runtime.native.System.Data.SqlClient.sni/4.4.0": {
+        "type": "package",
+        "runtimeTargets": {
+          "runtimes/win-arm64/native/sni.dll": {
+            "assetType": "native",
+            "rid": "win-arm64"
+          }
+        }
+      },
+      "runtime.win-x64.runtime.native.System.Data.SqlClient.sni/4.4.0": {
+        "type": "package",
+        "runtimeTargets": {
+          "runtimes/win-x64/native/sni.dll": {
+            "assetType": "native",
+            "rid": "win-x64"
+          }
+        }
+      },
+      "runtime.win-x86.runtime.native.System.Data.SqlClient.sni/4.4.0": {
+        "type": "package",
+        "runtimeTargets": {
+          "runtimes/win-x86/native/sni.dll": {
+            "assetType": "native",
+            "rid": "win-x86"
+          }
+        }
+      },
+      "SimpleInjector/5.5.0": {
+        "type": "package",
+        "dependencies": {
+          "System.ComponentModel": "4.0.1"
+        },
+        "compile": {
+          "lib/netstandard2.1/SimpleInjector.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.1/SimpleInjector.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "SimpleInjector.Integration.Web/5.5.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Web.Infrastructure": "1.0.0",
+          "SimpleInjector": "[5.5.0, 6.0.0)"
+        },
+        "compile": {
+          "lib/net45/SimpleInjector.Integration.Web.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net45/SimpleInjector.Integration.Web.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "SimpleInjector.Integration.Web.Mvc/5.5.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNet.Mvc": "3.0.20105.1",
+          "SimpleInjector": "[5.5.0, 6.0.0)",
+          "SimpleInjector.Integration.Web": "[5.5.0, 6.0.0)"
+        },
+        "compile": {
+          "lib/net45/SimpleInjector.Integration.Web.Mvc.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net45/SimpleInjector.Integration.Web.Mvc.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "System.ComponentModel/4.0.1": {
+        "type": "package",
+        "dependencies": {
+          "System.Runtime": "4.1.0"
+        },
+        "compile": {
+          "ref/netstandard1.0/System.ComponentModel.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard1.3/System.ComponentModel.dll": {}
+        }
+      },
+      "System.Configuration.ConfigurationManager/9.0.9": {
+        "type": "package",
+        "dependencies": {
+          "System.Diagnostics.EventLog": "9.0.9",
+          "System.Security.Cryptography.ProtectedData": "9.0.9"
+        },
+        "compile": {
+          "lib/net8.0/System.Configuration.ConfigurationManager.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/System.Configuration.ConfigurationManager.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
+        }
+      },
+      "System.Data.SqlClient/4.9.0": {
+        "type": "package",
+        "dependencies": {
+          "runtime.native.System.Data.SqlClient.sni": "4.4.0"
+        },
+        "compile": {
+          "lib/net8.0/System.Data.SqlClient.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/System.Data.SqlClient.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net6.0/_._": {}
+        },
+        "runtimeTargets": {
+          "runtimes/unix/lib/net8.0/System.Data.SqlClient.dll": {
+            "assetType": "runtime",
+            "rid": "unix"
+          },
+          "runtimes/win/lib/net8.0/System.Data.SqlClient.dll": {
+            "assetType": "runtime",
+            "rid": "win"
+          }
+        }
+      },
+      "System.Diagnostics.EventLog/9.0.9": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/System.Diagnostics.EventLog.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/System.Diagnostics.EventLog.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/net8.0/System.Diagnostics.EventLog.Messages.dll": {
+            "assetType": "runtime",
+            "rid": "win"
+          },
+          "runtimes/win/lib/net8.0/System.Diagnostics.EventLog.dll": {
+            "assetType": "runtime",
+            "rid": "win"
+          }
+        }
+      },
+      "System.IO.Pipelines/5.0.2": {
+        "type": "package",
+        "compile": {
+          "ref/netcoreapp2.0/System.IO.Pipelines.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netcoreapp3.0/System.IO.Pipelines.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "System.Runtime/4.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.0.1",
+          "Microsoft.NETCore.Targets": "1.0.1"
+        },
+        "compile": {
+          "ref/netstandard1.5/System.Runtime.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "System.Security.Cryptography.ProtectedData/9.0.9": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/System.Security.Cryptography.ProtectedData.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/System.Security.Cryptography.ProtectedData.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
+        }
+      },
+      "SIS.Tech.App/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "SIS.Tech.IApp": "1.0.0",
+          "SIS.Tech.IDomain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/SIS.Tech.App.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/SIS.Tech.App.dll": {}
+        }
+      },
+      "SIS.Tech.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "SIS.Tech.IDomain": "1.0.0",
+          "SIS.Tech.IRepository": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/SIS.Tech.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/SIS.Tech.Domain.dll": {}
+        }
+      },
+      "SIS.Tech.Domain.Model/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "Microsoft.AspNetCore.Http.Features": "5.0.17"
+        },
+        "compile": {
+          "bin/placeholder/SIS.Tech.Domain.Model.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/SIS.Tech.Domain.Model.dll": {}
+        }
+      },
+      "SIS.Tech.IApp/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "SIS.Tech.Domain.Model": "1.0.0",
+          "SIS.Tech.IServices": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/SIS.Tech.IApp.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/SIS.Tech.IApp.dll": {}
+        }
+      },
+      "SIS.Tech.IDomain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "SIS.Tech.Domain.Model": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/SIS.Tech.IDomain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/SIS.Tech.IDomain.dll": {}
+        }
+      },
+      "SIS.Tech.IRepository/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "SIS.Tech.Domain.Model": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/SIS.Tech.IRepository.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/SIS.Tech.IRepository.dll": {}
+        }
+      },
+      "SIS.Tech.IServices/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/SIS.Tech.IServices.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/SIS.Tech.IServices.dll": {}
+        }
+      },
+      "SIS.Tech.Repository/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "SIS.Tech.IRepository": "1.0.0",
+          "SIS.Tech.Util": "1.0.0",
+          "System.Data.SqlClient": "4.9.0"
+        },
+        "compile": {
+          "bin/placeholder/SIS.Tech.Repository.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/SIS.Tech.Repository.dll": {}
+        }
+      },
+      "SIS.Tech.Services/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "Newtonsoft.Json": "13.0.3",
+          "SIS.Tech.Domain.Model": "1.0.0",
+          "SIS.Tech.IServices": "1.0.0",
+          "SIS.Tech.Util": "1.0.0",
+          "System.Configuration.ConfigurationManager": "9.0.9"
+        },
+        "compile": {
+          "bin/placeholder/SIS.Tech.Services.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/SIS.Tech.Services.dll": {}
+        }
+      },
+      "SIS.Tech.Util/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "System.Data.SqlClient": "4.9.0",
+          "System.Diagnostics.EventLog": "8.0.0"
+        },
+        "compile": {
+          "bin/placeholder/SIS.Tech.Util.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/SIS.Tech.Util.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Microsoft.AspNet.Mvc/3.0.20105.1": {
+      "sha512": "CjEb1ExBqe3DceDCg4EhdimdoDTMuBOmA490lRKgl3EN8L4G8+lBRHDF7Ho8QkFsY7C5Y4pTfqhD7Zl8VPOtWQ==",
+      "type": "package",
+      "path": "microsoft.aspnet.mvc/3.0.20105.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net40/System.Web.Mvc.dll",
+        "microsoft.aspnet.mvc.3.0.20105.1.nupkg.sha512",
+        "microsoft.aspnet.mvc.nuspec"
+      ]
+    },
+    "Microsoft.AspNet.Razor/1.0.20105.408": {
+      "sha512": "vRmwL/G31Xc9DusVQUJXmDpTYEVB7xUoIjKqCyuOHrCyG9kzM66MadNjdPLzplSsDoWqiae35US8XiiI3e6SBw==",
+      "type": "package",
+      "path": "microsoft.aspnet.razor/1.0.20105.408",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net40/System.Web.Razor.dll",
+        "microsoft.aspnet.razor.1.0.20105.408.nupkg.sha512",
+        "microsoft.aspnet.razor.nuspec"
+      ]
+    },
+    "Microsoft.AspNet.WebPages/1.0.20105.408": {
+      "sha512": "da1//kx0b6GXJG6V8vGl7PmvhPJE/aNs2mK0QJ9bojgy059BDdYhmAwpTT1ucDgbImbFDdmNGi/XJj2SU0QJeA==",
+      "type": "package",
+      "path": "microsoft.aspnet.webpages/1.0.20105.408",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net40/System.Web.Helpers.dll",
+        "lib/net40/System.Web.WebPages.Deployment.dll",
+        "lib/net40/System.Web.WebPages.Razor.dll",
+        "lib/net40/System.Web.WebPages.dll",
+        "microsoft.aspnet.webpages.1.0.20105.408.nupkg.sha512",
+        "microsoft.aspnet.webpages.nuspec"
+      ]
+    },
+    "Microsoft.AspNetCore.Http.Features/5.0.17": {
+      "sha512": "3jG2xS+dx8DDCGV/F+STdPTg89lX3ao3dF/VEPvJaz3wzBIjuadipTtYNEXDIVuOPZwb6jdmhrX9jkzOIBm5cw==",
+      "type": "package",
+      "path": "microsoft.aspnetcore.http.features/5.0.17",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net461/Microsoft.AspNetCore.Http.Features.dll",
+        "lib/net461/Microsoft.AspNetCore.Http.Features.xml",
+        "lib/net5.0/Microsoft.AspNetCore.Http.Features.dll",
+        "lib/net5.0/Microsoft.AspNetCore.Http.Features.xml",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Http.Features.dll",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Http.Features.xml",
+        "microsoft.aspnetcore.http.features.5.0.17.nupkg.sha512",
+        "microsoft.aspnetcore.http.features.nuspec"
+      ]
+    },
+    "Microsoft.Extensions.Primitives/5.0.1": {
+      "sha512": "5WPSmL4YeP7eW+Vc8XZ4DwjYWBAiSwDV9Hm63JJWcz1Ie3Xjv4KuJXzgCstj48LkLfVCYa7mLcx7y+q6yqVvtw==",
+      "type": "package",
+      "path": "microsoft.extensions.primitives/5.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net461/Microsoft.Extensions.Primitives.dll",
+        "lib/net461/Microsoft.Extensions.Primitives.xml",
+        "lib/netcoreapp3.0/Microsoft.Extensions.Primitives.dll",
+        "lib/netcoreapp3.0/Microsoft.Extensions.Primitives.xml",
+        "lib/netstandard2.0/Microsoft.Extensions.Primitives.dll",
+        "lib/netstandard2.0/Microsoft.Extensions.Primitives.xml",
+        "microsoft.extensions.primitives.5.0.1.nupkg.sha512",
+        "microsoft.extensions.primitives.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
+    "Microsoft.NETCore.Platforms/1.0.1": {
+      "sha512": "2G6OjjJzwBfNOO8myRV/nFrbTw5iA+DEm0N+qUqhrOmaVtn4pC77h38I1jsXGw5VH55+dPfQsqHD0We9sCl9FQ==",
+      "type": "package",
+      "path": "microsoft.netcore.platforms/1.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "ThirdPartyNotices.txt",
+        "dotnet_library_license.txt",
+        "lib/netstandard1.0/_._",
+        "microsoft.netcore.platforms.1.0.1.nupkg.sha512",
+        "microsoft.netcore.platforms.nuspec",
+        "runtime.json"
+      ]
+    },
+    "Microsoft.NETCore.Targets/1.0.1": {
+      "sha512": "rkn+fKobF/cbWfnnfBOQHKVKIOpxMZBvlSHkqDWgBpwGDcLRduvs3D9OLGeV6GWGvVwNlVi2CBbTjuPmtHvyNw==",
+      "type": "package",
+      "path": "microsoft.netcore.targets/1.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "ThirdPartyNotices.txt",
+        "dotnet_library_license.txt",
+        "lib/netstandard1.0/_._",
+        "microsoft.netcore.targets.1.0.1.nupkg.sha512",
+        "microsoft.netcore.targets.nuspec",
+        "runtime.json"
+      ]
+    },
+    "Microsoft.Web.Infrastructure/1.0.0": {
+      "sha512": "FNmvLn5m2LTU/Rs2KWVo0SIIh9Ek+U0ojex7xeDaSHw/zgEP77A8vY5cVWgUtBGS8MJfDGNn8rpXJWEIQaPwTg==",
+      "type": "package",
+      "path": "microsoft.web.infrastructure/1.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net40/Microsoft.Web.Infrastructure.dll",
+        "microsoft.web.infrastructure.1.0.0.nupkg.sha512",
+        "microsoft.web.infrastructure.nuspec"
+      ]
+    },
+    "Newtonsoft.Json/13.0.3": {
+      "sha512": "HrC5BXdl00IP9zeV+0Z848QWPAoCr9P3bDEZguI+gkLcBKAOxix/tLEAAHC+UvDNPv4a2d18lOReHMOagPa+zQ==",
+      "type": "package",
+      "path": "newtonsoft.json/13.0.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.md",
+        "README.md",
+        "lib/net20/Newtonsoft.Json.dll",
+        "lib/net20/Newtonsoft.Json.xml",
+        "lib/net35/Newtonsoft.Json.dll",
+        "lib/net35/Newtonsoft.Json.xml",
+        "lib/net40/Newtonsoft.Json.dll",
+        "lib/net40/Newtonsoft.Json.xml",
+        "lib/net45/Newtonsoft.Json.dll",
+        "lib/net45/Newtonsoft.Json.xml",
+        "lib/net6.0/Newtonsoft.Json.dll",
+        "lib/net6.0/Newtonsoft.Json.xml",
+        "lib/netstandard1.0/Newtonsoft.Json.dll",
+        "lib/netstandard1.0/Newtonsoft.Json.xml",
+        "lib/netstandard1.3/Newtonsoft.Json.dll",
+        "lib/netstandard1.3/Newtonsoft.Json.xml",
+        "lib/netstandard2.0/Newtonsoft.Json.dll",
+        "lib/netstandard2.0/Newtonsoft.Json.xml",
+        "newtonsoft.json.13.0.3.nupkg.sha512",
+        "newtonsoft.json.nuspec",
+        "packageIcon.png"
+      ]
+    },
+    "runtime.native.System.Data.SqlClient.sni/4.4.0": {
+      "sha512": "A8v6PGmk+UGbfWo5Ixup0lPM4swuSwOiayJExZwKIOjTlFFQIsu3QnDXECosBEyrWSPryxBVrdqtJyhK3BaupQ==",
+      "type": "package",
+      "path": "runtime.native.system.data.sqlclient.sni/4.4.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
+        "runtime.native.system.data.sqlclient.sni.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
+    "runtime.win-arm64.runtime.native.System.Data.SqlClient.sni/4.4.0": {
+      "sha512": "LbrynESTp3bm5O/+jGL8v0Qg5SJlTV08lpIpFesXjF6uGNMWqFnUQbYBJwZTeua6E/Y7FIM1C54Ey1btLWupdg==",
+      "type": "package",
+      "path": "runtime.win-arm64.runtime.native.system.data.sqlclient.sni/4.4.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "ThirdPartyNotices.txt",
+        "dotnet_library_license.txt",
+        "runtime.win-arm64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
+        "runtime.win-arm64.runtime.native.system.data.sqlclient.sni.nuspec",
+        "runtimes/win-arm64/native/sni.dll",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
+    "runtime.win-x64.runtime.native.System.Data.SqlClient.sni/4.4.0": {
+      "sha512": "38ugOfkYJqJoX9g6EYRlZB5U2ZJH51UP8ptxZgdpS07FgOEToV+lS11ouNK2PM12Pr6X/PpT5jK82G3DwH/SxQ==",
+      "type": "package",
+      "path": "runtime.win-x64.runtime.native.system.data.sqlclient.sni/4.4.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "ThirdPartyNotices.txt",
+        "dotnet_library_license.txt",
+        "runtime.win-x64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
+        "runtime.win-x64.runtime.native.system.data.sqlclient.sni.nuspec",
+        "runtimes/win-x64/native/sni.dll",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
+    "runtime.win-x86.runtime.native.System.Data.SqlClient.sni/4.4.0": {
+      "sha512": "YhEdSQUsTx+C8m8Bw7ar5/VesXvCFMItyZF7G1AUY+OM0VPZUOeAVpJ4Wl6fydBGUYZxojTDR3I6Bj/+BPkJNA==",
+      "type": "package",
+      "path": "runtime.win-x86.runtime.native.system.data.sqlclient.sni/4.4.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "ThirdPartyNotices.txt",
+        "dotnet_library_license.txt",
+        "runtime.win-x86.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
+        "runtime.win-x86.runtime.native.system.data.sqlclient.sni.nuspec",
+        "runtimes/win-x86/native/sni.dll",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
+    "SimpleInjector/5.5.0": {
+      "sha512": "ybPs0RE2x3mmBdXD/ZsPUwKGNSa8bZnI2HWeO2irwVHvzBkvYb+KQRaK2dIcKIWPD8cBgxekZdIi3YhRLfq8Xw==",
+      "type": "package",
+      "path": "simpleinjector/5.5.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net45/SimpleInjector.dll",
+        "lib/net45/SimpleInjector.xml",
+        "lib/net461/SimpleInjector.dll",
+        "lib/net461/SimpleInjector.xml",
+        "lib/netstandard1.0/SimpleInjector.dll",
+        "lib/netstandard1.0/SimpleInjector.xml",
+        "lib/netstandard1.3/SimpleInjector.dll",
+        "lib/netstandard1.3/SimpleInjector.xml",
+        "lib/netstandard2.0/SimpleInjector.dll",
+        "lib/netstandard2.0/SimpleInjector.xml",
+        "lib/netstandard2.1/SimpleInjector.dll",
+        "lib/netstandard2.1/SimpleInjector.xml",
+        "simpleinjector.5.5.0.nupkg.sha512",
+        "simpleinjector.nuspec",
+        "simpleinjector.png"
+      ]
+    },
+    "SimpleInjector.Integration.Web/5.5.0": {
+      "sha512": "DycG/s8gwv3eoAyHd1AlwYEt9Pcf+ErnqRNZGilXZ983ZFw8jw6oZHujCx5/P8HmYHF8/09SGM4Fm+t9lv3mFw==",
+      "type": "package",
+      "path": "simpleinjector.integration.web/5.5.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net45/SimpleInjector.Integration.Web.dll",
+        "lib/net45/SimpleInjector.Integration.Web.xml",
+        "simpleinjector.integration.web.5.5.0.nupkg.sha512",
+        "simpleinjector.integration.web.nuspec",
+        "simpleinjector.png"
+      ]
+    },
+    "SimpleInjector.Integration.Web.Mvc/5.5.0": {
+      "sha512": "LW2UVc0XYXzIHMF+Inyq6gAVXcR8AT6kJXtn+QwZhmOF9llVdexAEi9yRZ2zso1i7rr3w3+VfDMtadRFDcRJRw==",
+      "type": "package",
+      "path": "simpleinjector.integration.web.mvc/5.5.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net45/SimpleInjector.Integration.Web.Mvc.dll",
+        "lib/net45/SimpleInjector.Integration.Web.Mvc.xml",
+        "simpleinjector.integration.web.mvc.5.5.0.nupkg.sha512",
+        "simpleinjector.integration.web.mvc.nuspec",
+        "simpleinjector.png"
+      ]
+    },
+    "System.ComponentModel/4.0.1": {
+      "sha512": "oBZFnm7seFiVfugsIyOvQCWobNZs7FzqDV/B7tx20Ep/l3UUFCPDkdTnCNaJZTU27zjeODmy2C/cP60u3D4c9w==",
+      "type": "package",
+      "path": "system.componentmodel/4.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "ThirdPartyNotices.txt",
+        "dotnet_library_license.txt",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net45/_._",
+        "lib/netcore50/System.ComponentModel.dll",
+        "lib/netstandard1.3/System.ComponentModel.dll",
+        "lib/portable-net45+win8+wp8+wpa81/_._",
+        "lib/win8/_._",
+        "lib/wp80/_._",
+        "lib/wpa81/_._",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net45/_._",
+        "ref/netcore50/System.ComponentModel.dll",
+        "ref/netcore50/System.ComponentModel.xml",
+        "ref/netcore50/de/System.ComponentModel.xml",
+        "ref/netcore50/es/System.ComponentModel.xml",
+        "ref/netcore50/fr/System.ComponentModel.xml",
+        "ref/netcore50/it/System.ComponentModel.xml",
+        "ref/netcore50/ja/System.ComponentModel.xml",
+        "ref/netcore50/ko/System.ComponentModel.xml",
+        "ref/netcore50/ru/System.ComponentModel.xml",
+        "ref/netcore50/zh-hans/System.ComponentModel.xml",
+        "ref/netcore50/zh-hant/System.ComponentModel.xml",
+        "ref/netstandard1.0/System.ComponentModel.dll",
+        "ref/netstandard1.0/System.ComponentModel.xml",
+        "ref/netstandard1.0/de/System.ComponentModel.xml",
+        "ref/netstandard1.0/es/System.ComponentModel.xml",
+        "ref/netstandard1.0/fr/System.ComponentModel.xml",
+        "ref/netstandard1.0/it/System.ComponentModel.xml",
+        "ref/netstandard1.0/ja/System.ComponentModel.xml",
+        "ref/netstandard1.0/ko/System.ComponentModel.xml",
+        "ref/netstandard1.0/ru/System.ComponentModel.xml",
+        "ref/netstandard1.0/zh-hans/System.ComponentModel.xml",
+        "ref/netstandard1.0/zh-hant/System.ComponentModel.xml",
+        "ref/portable-net45+win8+wp8+wpa81/_._",
+        "ref/win8/_._",
+        "ref/wp80/_._",
+        "ref/wpa81/_._",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "system.componentmodel.4.0.1.nupkg.sha512",
+        "system.componentmodel.nuspec"
+      ]
+    },
+    "System.Configuration.ConfigurationManager/9.0.9": {
+      "sha512": "Q1LknxnRmmsUXt/ElBp739Gexppy0HeDYxvExpJq09jAYhpTHRRRkZIwfNKfM4BGRlFzRDVdnerZawxoE8naMg==",
+      "type": "package",
+      "path": "system.configuration.configurationmanager/9.0.9",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "PACKAGE.md",
+        "THIRD-PARTY-NOTICES.TXT",
+        "buildTransitive/net461/System.Configuration.ConfigurationManager.targets",
+        "buildTransitive/net462/_._",
+        "buildTransitive/net8.0/_._",
+        "buildTransitive/netcoreapp2.0/System.Configuration.ConfigurationManager.targets",
+        "lib/net462/System.Configuration.ConfigurationManager.dll",
+        "lib/net462/System.Configuration.ConfigurationManager.xml",
+        "lib/net8.0/System.Configuration.ConfigurationManager.dll",
+        "lib/net8.0/System.Configuration.ConfigurationManager.xml",
+        "lib/net9.0/System.Configuration.ConfigurationManager.dll",
+        "lib/net9.0/System.Configuration.ConfigurationManager.xml",
+        "lib/netstandard2.0/System.Configuration.ConfigurationManager.dll",
+        "lib/netstandard2.0/System.Configuration.ConfigurationManager.xml",
+        "system.configuration.configurationmanager.9.0.9.nupkg.sha512",
+        "system.configuration.configurationmanager.nuspec",
+        "useSharedDesignerContext.txt"
+      ]
+    },
+    "System.Data.SqlClient/4.9.0": {
+      "sha512": "j4KJO+vC62NyUtNHz854njEqXbT8OmAa5jb1nrGfYWBOcggyYUQE0w/snXeaCjdvkSKWuUD+hfvlbN8pTrJTXg==",
+      "type": "package",
+      "path": "system.data.sqlclient/4.9.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "PACKAGE.md",
+        "buildTransitive/net461/System.Data.SqlClient.targets",
+        "buildTransitive/net462/_._",
+        "buildTransitive/net6.0/_._",
+        "buildTransitive/netcoreapp2.0/System.Data.SqlClient.targets",
+        "lib/net462/System.Data.SqlClient.dll",
+        "lib/net462/System.Data.SqlClient.xml",
+        "lib/net6.0/System.Data.SqlClient.dll",
+        "lib/net6.0/System.Data.SqlClient.xml",
+        "lib/net8.0/System.Data.SqlClient.dll",
+        "lib/net8.0/System.Data.SqlClient.xml",
+        "lib/netstandard2.0/System.Data.SqlClient.dll",
+        "lib/netstandard2.0/System.Data.SqlClient.xml",
+        "runtimes/unix/lib/net6.0/System.Data.SqlClient.dll",
+        "runtimes/unix/lib/net6.0/System.Data.SqlClient.xml",
+        "runtimes/unix/lib/net8.0/System.Data.SqlClient.dll",
+        "runtimes/unix/lib/net8.0/System.Data.SqlClient.xml",
+        "runtimes/win/lib/net6.0/System.Data.SqlClient.dll",
+        "runtimes/win/lib/net6.0/System.Data.SqlClient.xml",
+        "runtimes/win/lib/net8.0/System.Data.SqlClient.dll",
+        "runtimes/win/lib/net8.0/System.Data.SqlClient.xml",
+        "system.data.sqlclient.4.9.0.nupkg.sha512",
+        "system.data.sqlclient.nuspec"
+      ]
+    },
+    "System.Diagnostics.EventLog/9.0.9": {
+      "sha512": "wpsUfnyv8E5K4WQaok6weewvAbQhcLwXFcHBm5U0gdEaBs85N//ssuYvRPFWwz2rO/9/DFP3A1sGMzUFBj8y3w==",
+      "type": "package",
+      "path": "system.diagnostics.eventlog/9.0.9",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "PACKAGE.md",
+        "THIRD-PARTY-NOTICES.TXT",
+        "buildTransitive/net461/System.Diagnostics.EventLog.targets",
+        "buildTransitive/net462/_._",
+        "buildTransitive/net8.0/_._",
+        "buildTransitive/netcoreapp2.0/System.Diagnostics.EventLog.targets",
+        "lib/net462/System.Diagnostics.EventLog.dll",
+        "lib/net462/System.Diagnostics.EventLog.xml",
+        "lib/net8.0/System.Diagnostics.EventLog.dll",
+        "lib/net8.0/System.Diagnostics.EventLog.xml",
+        "lib/net9.0/System.Diagnostics.EventLog.dll",
+        "lib/net9.0/System.Diagnostics.EventLog.xml",
+        "lib/netstandard2.0/System.Diagnostics.EventLog.dll",
+        "lib/netstandard2.0/System.Diagnostics.EventLog.xml",
+        "runtimes/win/lib/net8.0/System.Diagnostics.EventLog.Messages.dll",
+        "runtimes/win/lib/net8.0/System.Diagnostics.EventLog.dll",
+        "runtimes/win/lib/net8.0/System.Diagnostics.EventLog.xml",
+        "runtimes/win/lib/net9.0/System.Diagnostics.EventLog.Messages.dll",
+        "runtimes/win/lib/net9.0/System.Diagnostics.EventLog.dll",
+        "runtimes/win/lib/net9.0/System.Diagnostics.EventLog.xml",
+        "system.diagnostics.eventlog.9.0.9.nupkg.sha512",
+        "system.diagnostics.eventlog.nuspec",
+        "useSharedDesignerContext.txt"
+      ]
+    },
+    "System.IO.Pipelines/5.0.2": {
+      "sha512": "Iew+dfa6FFiyvWBdRmXApixRY1db+beyutpIck4SOSe0NLM8FD/7AD54MscqVLhvfSMLHO7KadjTRT7fqxOGTA==",
+      "type": "package",
+      "path": "system.io.pipelines/5.0.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net461/System.IO.Pipelines.dll",
+        "lib/net461/System.IO.Pipelines.xml",
+        "lib/netcoreapp3.0/System.IO.Pipelines.dll",
+        "lib/netcoreapp3.0/System.IO.Pipelines.xml",
+        "lib/netstandard1.3/System.IO.Pipelines.dll",
+        "lib/netstandard1.3/System.IO.Pipelines.xml",
+        "lib/netstandard2.0/System.IO.Pipelines.dll",
+        "lib/netstandard2.0/System.IO.Pipelines.xml",
+        "ref/netcoreapp2.0/System.IO.Pipelines.dll",
+        "ref/netcoreapp2.0/System.IO.Pipelines.xml",
+        "system.io.pipelines.5.0.2.nupkg.sha512",
+        "system.io.pipelines.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
+    "System.Runtime/4.1.0": {
+      "sha512": "v6c/4Yaa9uWsq+JMhnOFewrYkgdNHNG2eMKuNqRn8P733rNXeRCGvV5FkkjBXn2dbVkPXOsO0xjsEeM1q2zC0g==",
+      "type": "package",
+      "path": "system.runtime/4.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "ThirdPartyNotices.txt",
+        "dotnet_library_license.txt",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net45/_._",
+        "lib/net462/System.Runtime.dll",
+        "lib/portable-net45+win8+wp80+wpa81/_._",
+        "lib/win8/_._",
+        "lib/wp80/_._",
+        "lib/wpa81/_._",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net45/_._",
+        "ref/net462/System.Runtime.dll",
+        "ref/netcore50/System.Runtime.dll",
+        "ref/netcore50/System.Runtime.xml",
+        "ref/netcore50/de/System.Runtime.xml",
+        "ref/netcore50/es/System.Runtime.xml",
+        "ref/netcore50/fr/System.Runtime.xml",
+        "ref/netcore50/it/System.Runtime.xml",
+        "ref/netcore50/ja/System.Runtime.xml",
+        "ref/netcore50/ko/System.Runtime.xml",
+        "ref/netcore50/ru/System.Runtime.xml",
+        "ref/netcore50/zh-hans/System.Runtime.xml",
+        "ref/netcore50/zh-hant/System.Runtime.xml",
+        "ref/netstandard1.0/System.Runtime.dll",
+        "ref/netstandard1.0/System.Runtime.xml",
+        "ref/netstandard1.0/de/System.Runtime.xml",
+        "ref/netstandard1.0/es/System.Runtime.xml",
+        "ref/netstandard1.0/fr/System.Runtime.xml",
+        "ref/netstandard1.0/it/System.Runtime.xml",
+        "ref/netstandard1.0/ja/System.Runtime.xml",
+        "ref/netstandard1.0/ko/System.Runtime.xml",
+        "ref/netstandard1.0/ru/System.Runtime.xml",
+        "ref/netstandard1.0/zh-hans/System.Runtime.xml",
+        "ref/netstandard1.0/zh-hant/System.Runtime.xml",
+        "ref/netstandard1.2/System.Runtime.dll",
+        "ref/netstandard1.2/System.Runtime.xml",
+        "ref/netstandard1.2/de/System.Runtime.xml",
+        "ref/netstandard1.2/es/System.Runtime.xml",
+        "ref/netstandard1.2/fr/System.Runtime.xml",
+        "ref/netstandard1.2/it/System.Runtime.xml",
+        "ref/netstandard1.2/ja/System.Runtime.xml",
+        "ref/netstandard1.2/ko/System.Runtime.xml",
+        "ref/netstandard1.2/ru/System.Runtime.xml",
+        "ref/netstandard1.2/zh-hans/System.Runtime.xml",
+        "ref/netstandard1.2/zh-hant/System.Runtime.xml",
+        "ref/netstandard1.3/System.Runtime.dll",
+        "ref/netstandard1.3/System.Runtime.xml",
+        "ref/netstandard1.3/de/System.Runtime.xml",
+        "ref/netstandard1.3/es/System.Runtime.xml",
+        "ref/netstandard1.3/fr/System.Runtime.xml",
+        "ref/netstandard1.3/it/System.Runtime.xml",
+        "ref/netstandard1.3/ja/System.Runtime.xml",
+        "ref/netstandard1.3/ko/System.Runtime.xml",
+        "ref/netstandard1.3/ru/System.Runtime.xml",
+        "ref/netstandard1.3/zh-hans/System.Runtime.xml",
+        "ref/netstandard1.3/zh-hant/System.Runtime.xml",
+        "ref/netstandard1.5/System.Runtime.dll",
+        "ref/netstandard1.5/System.Runtime.xml",
+        "ref/netstandard1.5/de/System.Runtime.xml",
+        "ref/netstandard1.5/es/System.Runtime.xml",
+        "ref/netstandard1.5/fr/System.Runtime.xml",
+        "ref/netstandard1.5/it/System.Runtime.xml",
+        "ref/netstandard1.5/ja/System.Runtime.xml",
+        "ref/netstandard1.5/ko/System.Runtime.xml",
+        "ref/netstandard1.5/ru/System.Runtime.xml",
+        "ref/netstandard1.5/zh-hans/System.Runtime.xml",
+        "ref/netstandard1.5/zh-hant/System.Runtime.xml",
+        "ref/portable-net45+win8+wp80+wpa81/_._",
+        "ref/win8/_._",
+        "ref/wp80/_._",
+        "ref/wpa81/_._",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "system.runtime.4.1.0.nupkg.sha512",
+        "system.runtime.nuspec"
+      ]
+    },
+    "System.Security.Cryptography.ProtectedData/9.0.9": {
+      "sha512": "XN37933FTzEkqGJoOTunvnvzAv/4VO/9wQ0QwsGcrR5KyQpYT0z4Ssm+f+fpY9bea6srypFp3JjNPHHC26xzLw==",
+      "type": "package",
+      "path": "system.security.cryptography.protecteddata/9.0.9",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "PACKAGE.md",
+        "THIRD-PARTY-NOTICES.TXT",
+        "buildTransitive/net461/System.Security.Cryptography.ProtectedData.targets",
+        "buildTransitive/net462/_._",
+        "buildTransitive/net8.0/_._",
+        "buildTransitive/netcoreapp2.0/System.Security.Cryptography.ProtectedData.targets",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net462/System.Security.Cryptography.ProtectedData.dll",
+        "lib/net462/System.Security.Cryptography.ProtectedData.xml",
+        "lib/net8.0/System.Security.Cryptography.ProtectedData.dll",
+        "lib/net8.0/System.Security.Cryptography.ProtectedData.xml",
+        "lib/net9.0/System.Security.Cryptography.ProtectedData.dll",
+        "lib/net9.0/System.Security.Cryptography.ProtectedData.xml",
+        "lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll",
+        "lib/netstandard2.0/System.Security.Cryptography.ProtectedData.xml",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "system.security.cryptography.protecteddata.9.0.9.nupkg.sha512",
+        "system.security.cryptography.protecteddata.nuspec",
+        "useSharedDesignerContext.txt"
+      ]
+    },
+    "SIS.Tech.App/1.0.0": {
+      "type": "project",
+      "path": "../SIS.Tech.App/SIS.Tech.App.csproj",
+      "msbuildProject": "../SIS.Tech.App/SIS.Tech.App.csproj"
+    },
+    "SIS.Tech.Domain/1.0.0": {
+      "type": "project",
+      "path": "../SIS.Tech.Domain/SIS.Tech.Domain.csproj",
+      "msbuildProject": "../SIS.Tech.Domain/SIS.Tech.Domain.csproj"
+    },
+    "SIS.Tech.Domain.Model/1.0.0": {
+      "type": "project",
+      "path": "../SIS.Tech.Domain.Model/SIS.Tech.Domain.Model.csproj",
+      "msbuildProject": "../SIS.Tech.Domain.Model/SIS.Tech.Domain.Model.csproj"
+    },
+    "SIS.Tech.IApp/1.0.0": {
+      "type": "project",
+      "path": "../SIS.Tech.IApp/SIS.Tech.IApp.csproj",
+      "msbuildProject": "../SIS.Tech.IApp/SIS.Tech.IApp.csproj"
+    },
+    "SIS.Tech.IDomain/1.0.0": {
+      "type": "project",
+      "path": "../SIS.Tech.IDomain/SIS.Tech.IDomain.csproj",
+      "msbuildProject": "../SIS.Tech.IDomain/SIS.Tech.IDomain.csproj"
+    },
+    "SIS.Tech.IRepository/1.0.0": {
+      "type": "project",
+      "path": "../SIS.Tech.IRepository/SIS.Tech.IRepository.csproj",
+      "msbuildProject": "../SIS.Tech.IRepository/SIS.Tech.IRepository.csproj"
+    },
+    "SIS.Tech.IServices/1.0.0": {
+      "type": "project",
+      "path": "../SIS.Tech.IServices/SIS.Tech.IServices.csproj",
+      "msbuildProject": "../SIS.Tech.IServices/SIS.Tech.IServices.csproj"
+    },
+    "SIS.Tech.Repository/1.0.0": {
+      "type": "project",
+      "path": "../SIS.Tech.Repository/SIS.Tech.Repository.csproj",
+      "msbuildProject": "../SIS.Tech.Repository/SIS.Tech.Repository.csproj"
+    },
+    "SIS.Tech.Services/1.0.0": {
+      "type": "project",
+      "path": "../SIS.Tech.Services/SIS.Tech.Services.csproj",
+      "msbuildProject": "../SIS.Tech.Services/SIS.Tech.Services.csproj"
+    },
+    "SIS.Tech.Util/1.0.0": {
+      "type": "project",
+      "path": "../SIS.Tech.Util/SIS.Tech.Util.csproj",
+      "msbuildProject": "../SIS.Tech.Util/SIS.Tech.Util.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net8.0": [
+      "SIS.Tech.App >= 1.0.0",
+      "SIS.Tech.Domain >= 1.0.0",
+      "SIS.Tech.IApp >= 1.0.0",
+      "SIS.Tech.IDomain >= 1.0.0",
+      "SIS.Tech.IRepository >= 1.0.0",
+      "SIS.Tech.IServices >= 1.0.0",
+      "SIS.Tech.Repository >= 1.0.0",
+      "SIS.Tech.Services >= 1.0.0",
+      "SimpleInjector >= 5.5.0",
+      "SimpleInjector.Integration.Web >= 5.5.0",
+      "SimpleInjector.Integration.Web.Mvc >= 5.5.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\User\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\User\\Documents\\SINDPETSHOP\\SIND PROJECTS\\SIS.Tech\\SIS.Tech.Ioc\\SIS.Tech.Ioc.csproj",
+      "projectName": "SIS.Tech.Ioc",
+      "projectPath": "C:\\Users\\User\\Documents\\SINDPETSHOP\\SIND PROJECTS\\SIS.Tech\\SIS.Tech.Ioc\\SIS.Tech.Ioc.csproj",
+      "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\User\\Documents\\SINDPETSHOP\\SIND PROJECTS\\SIS.Tech\\SIS.Tech.Ioc\\obj\\",
+      "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
+      "configFilePaths": [
+        "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net8.0"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "projectReferences": {
+            "C:\\Users\\User\\Documents\\SINDPETSHOP\\SIND PROJECTS\\SIS.Tech\\SIS.Tech.App\\SIS.Tech.App.csproj": {
+              "projectPath": "C:\\Users\\User\\Documents\\SINDPETSHOP\\SIND PROJECTS\\SIS.Tech\\SIS.Tech.App\\SIS.Tech.App.csproj"
+            },
+            "C:\\Users\\User\\Documents\\SINDPETSHOP\\SIND PROJECTS\\SIS.Tech\\SIS.Tech.Domain\\SIS.Tech.Domain.csproj": {
+              "projectPath": "C:\\Users\\User\\Documents\\SINDPETSHOP\\SIND PROJECTS\\SIS.Tech\\SIS.Tech.Domain\\SIS.Tech.Domain.csproj"
+            },
+            "C:\\Users\\User\\Documents\\SINDPETSHOP\\SIND PROJECTS\\SIS.Tech\\SIS.Tech.IApp\\SIS.Tech.IApp.csproj": {
+              "projectPath": "C:\\Users\\User\\Documents\\SINDPETSHOP\\SIND PROJECTS\\SIS.Tech\\SIS.Tech.IApp\\SIS.Tech.IApp.csproj"
+            },
+            "C:\\Users\\User\\Documents\\SINDPETSHOP\\SIND PROJECTS\\SIS.Tech\\SIS.Tech.IDomain\\SIS.Tech.IDomain.csproj": {
+              "projectPath": "C:\\Users\\User\\Documents\\SINDPETSHOP\\SIND PROJECTS\\SIS.Tech\\SIS.Tech.IDomain\\SIS.Tech.IDomain.csproj"
+            },
+            "C:\\Users\\User\\Documents\\SINDPETSHOP\\SIND PROJECTS\\SIS.Tech\\SIS.Tech.IRepository\\SIS.Tech.IRepository.csproj": {
+              "projectPath": "C:\\Users\\User\\Documents\\SINDPETSHOP\\SIND PROJECTS\\SIS.Tech\\SIS.Tech.IRepository\\SIS.Tech.IRepository.csproj"
+            },
+            "C:\\Users\\User\\Documents\\SINDPETSHOP\\SIND PROJECTS\\SIS.Tech\\SIS.Tech.IServices\\SIS.Tech.IServices.csproj": {
+              "projectPath": "C:\\Users\\User\\Documents\\SINDPETSHOP\\SIND PROJECTS\\SIS.Tech\\SIS.Tech.IServices\\SIS.Tech.IServices.csproj"
+            },
+            "C:\\Users\\User\\Documents\\SINDPETSHOP\\SIND PROJECTS\\SIS.Tech\\SIS.Tech.Repository\\SIS.Tech.Repository.csproj": {
+              "projectPath": "C:\\Users\\User\\Documents\\SINDPETSHOP\\SIND PROJECTS\\SIS.Tech\\SIS.Tech.Repository\\SIS.Tech.Repository.csproj"
+            },
+            "C:\\Users\\User\\Documents\\SINDPETSHOP\\SIND PROJECTS\\SIS.Tech\\SIS.Tech.Services\\SIS.Tech.Services.csproj": {
+              "projectPath": "C:\\Users\\User\\Documents\\SINDPETSHOP\\SIND PROJECTS\\SIS.Tech\\SIS.Tech.Services\\SIS.Tech.Services.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
+      },
+      "SdkAnalysisLevel": "9.0.300"
+    },
+    "frameworks": {
+      "net8.0": {
+        "targetAlias": "net8.0",
+        "dependencies": {
+          "SimpleInjector": {
+            "target": "Package",
+            "version": "[5.5.0, )"
+          },
+          "SimpleInjector.Integration.Web": {
+            "target": "Package",
+            "version": "[5.5.0, )"
+          },
+          "SimpleInjector.Integration.Web.Mvc": {
+            "target": "Package",
+            "version": "[5.5.0, )"
+          }
+        },
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
+      }
+    }
+  },
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Microsoft.AspNet.Mvc 3.0.20105.1' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net8.0'. This package may not be fully compatible with your project.",
+      "libraryId": "Microsoft.AspNet.Mvc",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Microsoft.AspNet.Razor 1.0.20105.408' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net8.0'. This package may not be fully compatible with your project.",
+      "libraryId": "Microsoft.AspNet.Razor",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Microsoft.AspNet.WebPages 1.0.20105.408' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net8.0'. This package may not be fully compatible with your project.",
+      "libraryId": "Microsoft.AspNet.WebPages",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Microsoft.Web.Infrastructure 1.0.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net8.0'. This package may not be fully compatible with your project.",
+      "libraryId": "Microsoft.Web.Infrastructure",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'SimpleInjector.Integration.Web 5.5.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net8.0'. This package may not be fully compatible with your project.",
+      "libraryId": "SimpleInjector.Integration.Web",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'SimpleInjector.Integration.Web.Mvc 5.5.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net8.0'. This package may not be fully compatible with your project.",
+      "libraryId": "SimpleInjector.Integration.Web.Mvc",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    }
+  ]
+}

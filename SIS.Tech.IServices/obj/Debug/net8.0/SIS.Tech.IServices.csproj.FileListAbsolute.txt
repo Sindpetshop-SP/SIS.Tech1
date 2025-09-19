@@ -1,0 +1,29 @@
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJETOS GIT\SIS.Tech\SIS.Tech.IServices\bin\Debug\net8.0\SIS.Tech.IServices.deps.json
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJETOS GIT\SIS.Tech\SIS.Tech.IServices\bin\Debug\net8.0\SIS.Tech.IServices.dll
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJETOS GIT\SIS.Tech\SIS.Tech.IServices\bin\Debug\net8.0\SIS.Tech.IServices.pdb
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJETOS GIT\SIS.Tech\SIS.Tech.IServices\bin\Debug\net8.0\SIS.ControleAcesso.Model.dll
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJETOS GIT\SIS.Tech\SIS.Tech.IServices\obj\Debug\net8.0\SIS.Tech.IServices.csproj.AssemblyReference.cache
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJETOS GIT\SIS.Tech\SIS.Tech.IServices\obj\Debug\net8.0\SIS.Tech.IServices.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJETOS GIT\SIS.Tech\SIS.Tech.IServices\obj\Debug\net8.0\SIS.Tech.IServices.AssemblyInfoInputs.cache
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJETOS GIT\SIS.Tech\SIS.Tech.IServices\obj\Debug\net8.0\SIS.Tech.IServices.AssemblyInfo.cs
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJETOS GIT\SIS.Tech\SIS.Tech.IServices\obj\Debug\net8.0\SIS.Tech.IServices.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJETOS GIT\SIS.Tech\SIS.Tech.IServices\obj\Debug\net8.0\SIS.Tech.IServices.sourcelink.json
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJETOS GIT\SIS.Tech\SIS.Tech.IServices\obj\Debug\net8.0\SIS.Tech.B9ED4C70.Up2Date
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJETOS GIT\SIS.Tech\SIS.Tech.IServices\obj\Debug\net8.0\SIS.Tech.IServices.dll
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJETOS GIT\SIS.Tech\SIS.Tech.IServices\obj\Debug\net8.0\refint\SIS.Tech.IServices.dll
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJETOS GIT\SIS.Tech\SIS.Tech.IServices\obj\Debug\net8.0\SIS.Tech.IServices.pdb
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJETOS GIT\SIS.Tech\SIS.Tech.IServices\obj\Debug\net8.0\ref\SIS.Tech.IServices.dll
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJECTS\SIS.Tech\SIS.Tech.IServices\bin\Debug\net8.0\SIS.Tech.IServices.deps.json
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJECTS\SIS.Tech\SIS.Tech.IServices\bin\Debug\net8.0\SIS.Tech.IServices.dll
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJECTS\SIS.Tech\SIS.Tech.IServices\bin\Debug\net8.0\SIS.Tech.IServices.pdb
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJECTS\SIS.Tech\SIS.Tech.IServices\bin\Debug\net8.0\SIS.ControleAcesso.Model.dll
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJECTS\SIS.Tech\SIS.Tech.IServices\obj\Debug\net8.0\SIS.Tech.IServices.csproj.AssemblyReference.cache
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJECTS\SIS.Tech\SIS.Tech.IServices\obj\Debug\net8.0\SIS.Tech.IServices.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJECTS\SIS.Tech\SIS.Tech.IServices\obj\Debug\net8.0\SIS.Tech.IServices.AssemblyInfoInputs.cache
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJECTS\SIS.Tech\SIS.Tech.IServices\obj\Debug\net8.0\SIS.Tech.IServices.AssemblyInfo.cs
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJECTS\SIS.Tech\SIS.Tech.IServices\obj\Debug\net8.0\SIS.Tech.IServices.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJECTS\SIS.Tech\SIS.Tech.IServices\obj\Debug\net8.0\SIS.Tech.B9ED4C70.Up2Date
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJECTS\SIS.Tech\SIS.Tech.IServices\obj\Debug\net8.0\SIS.Tech.IServices.dll
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJECTS\SIS.Tech\SIS.Tech.IServices\obj\Debug\net8.0\refint\SIS.Tech.IServices.dll
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJECTS\SIS.Tech\SIS.Tech.IServices\obj\Debug\net8.0\SIS.Tech.IServices.pdb
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJECTS\SIS.Tech\SIS.Tech.IServices\obj\Debug\net8.0\ref\SIS.Tech.IServices.dll

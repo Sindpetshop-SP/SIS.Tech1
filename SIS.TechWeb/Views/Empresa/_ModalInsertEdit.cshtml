@@ -1,0 +1,192 @@
+@model SIS.Tech.Models.Empresas.EmpresaViewModel
+
+@{
+
+    if (Model.Empresa.CodEmpresa > 0)
+    {
+        ViewData["Title"] = "Editar Empresa";
+    }
+    else
+    {
+        ViewData["Title"] = "Inserir Empresa";
+    }
+
+    var ramoAtividade = (SelectList)ViewBag.ViewRamoAtividades;
+}
+
+<div class="modal fade" id="modalInsertEditEmpresa" data-bs-backdrop="static" tabindex="-1">
+
+    <div class="modal-dialog modal-xl">
+
+        @using (Html.BeginForm("InsertEdit", "Empresa", FormMethod.Post, new { @id = "formEditEmpresa", @class = "modal-content", @enctype = "multipart/form-data" }))
+        {
+            @Html.Hidden("hdnCodEmpresa", Model.Empresa.CodEmpresa)
+            @Html.TextBoxFor(model => model.Empresa.CodEmpresa, new { @id = "CodEmpresa", @class = "form-control", @style = "display: none;", autocomplete = "off" })
+
+            <div class="modal-header">
+                <h5 class="modal-title" id="backDropModalTitle">
+
+                    @if (Model.Empresa.CodEmpresa > 0)
+                    {
+                        <h5 class="modal-title" id="exampleModalLabel4">Editar - Empresa</h5>
+                    }
+                    else
+                    {
+                        <h5 class="modal-title" id="exampleModalLabel4">Inserir - Empresa</h5>
+                    }
+
+                </h5>
+                <button type="button" onclick="closeModalEmpresa()" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <div class="modal-body">
+
+                <div class="row g-4 mb-4">
+
+                    <div class="col-md-6 form-control-validation">
+
+                        <label class="form-label" for="@Model.Empresa.RazaoSocial">Razão Social</label>
+                        <input asp-for="@Model.Empresa.RazaoSocial" id="RazaoSocial" name="banana" class="form-control" maxlength="150" autocomplete="off" tabindex="1" />
+@* 
+                        @Html.TextBoxFor(model => model.Empresa.RazaoSocial, new { @id = "RazaoSocial", @name = "RazaoSocial", @class = "form-control", @maxlength = "150", autocomplete = "off", tabindex = "1" })
+ *@
+                    </div>
+
+                    <div class="col-md-6 form-control-validation">
+
+                        <label class="form-label" for="modalNomeFantasia">Nome Fantasia</label>
+                        @Html.TextBoxFor(model => model.Empresa.NomeFantasia, new { @id = "NomeFantasia", @Name = "NomeFantasia", @class = "form-control", @maxlength = "150", autocomplete = "off", tabindex = "2" })
+
+                    </div>
+
+                </div>
+
+                <div class="row g-4 mb-4">
+
+                    <div class="col-md-3 form-control-validation">
+
+                        <label class="form-label" for="modalCnpj">CNPJ</label>
+                        @Html.TextBoxFor(model => Model.Empresa.Cnpj, new { @id = "Cnpj", placeholder = "Cnpj", @class = "form-control", @onkeypress = "return somenteNumeros(event)", @onfocus = "javascript: retirarFormatacao(this); ValidaCnpj(this);", @onblur = "javascript: formatarCampo(this);", @maxlength = "14", autocomplete = "off", tabindex = "3" })
+
+                    </div>
+
+                    <div class="col-md-3 form-control-validation">
+
+                        <label class="form-label" for="modalDataAbertura">Data Abertura</label>
+                        @Html.TextBoxFor(model => model.Empresa.DataAbertura, "{0:dd/MM/yyyy}", new { @id = "DataAbertura", @type = "date", @class = "form-control", autocomplete = "off", tabindex = "4" })
+
+                    </div>
+
+                    <div class="col-md-3 form-control-validation">
+
+                        <label class="form-label" for="modalInscricaoEstadual">Inscrição Estadual</label>
+                        @Html.TextBoxFor(model => model.Empresa.InscricaoEstadual, new { id = "InscricaoEstadual", @class = "form-control", @onkeypress = "return somenteNumeros(event)", @maxlength = "15", autocomplete = "off" })
+
+                    </div>
+
+                    <div class="col-md-3 form-control-validation">
+
+                        <label class="form-label" for="modalInscricaoMunicipal">Inscrição Municipal</label>
+                        @Html.TextBoxFor(model => model.Empresa.InscricaoMunicipal, new { @class = "form-control", @onkeypress = "return somenteNumeros(event)", @maxlength = "14", autocomplete = "off" })
+
+                    </div>
+
+                </div>
+
+                <div class="row g-4 mb-4">
+
+                    <div class="col-md-3 form-control-validation">
+
+                        @* <div class="small fw-medium mb-4">Sindicalizada?</div> *@
+                        <label class="form-label" for="modalSindicalizada">Sindicalizada?</label>
+                        <label class="switch">
+                            @Html.CheckBoxFor(model => model.Empresa.Sindicalizada, new { @class = "switch-input", @checked = "checked" })
+                            <span class="switch-toggle-slider">
+                                <span class="switch-on"></span>
+                                <span class="switch-off"></span>
+                            </span>
+                        </label>
+
+                    </div>
+
+                    <div class="col-md-3 form-control-validation">
+
+                        <label class="form-label" for="modalEhMatrizFilial">Matriz</label>                        
+                        <label class="switch">
+                            @Html.CheckBoxFor(model => model.Empresa.EhMatrizFilial, new { @class = "switch-input", @checked = "checked" })
+                            <span class="switch-toggle-slider">
+                                <span class="switch-on"></span>
+                                <span class="switch-off"></span>
+                            </span>
+                        </label>
+
+
+                    </div>
+
+                    <div class="col-md-3 form-control-validation">
+
+                        <label class="form-label" for="modalEhMatrizFilial">Ativo</label>
+                        <label class="switch">
+                            @Html.CheckBoxFor(model => model.Empresa.Ativo, new { @class = "switch-input", @checked = "checked" })
+                            <span class="switch-toggle-slider">
+                                <span class="switch-on"></span>
+                                <span class="switch-off"></span>
+                            </span>
+                        </label>
+
+                    </div>
+
+                    <div class="col-md-3 form-control-validation">
+                    </div>
+
+                </div>
+
+                <div class="row g-4 mb-4">
+
+                    <div class="col-md-3 form-control-validation">
+
+                        <label class="form-label" for="modalQuantidadeFUncionarios">Qtde. Funcionários</label>
+                        @Html.TextBoxFor(model => Model.Empresa.QuantidadeFUncionarios, "{0:N}", new { @id = "QuantidadeFUncionarios", @class = "form-control", autocomplete = "off", @onkeypress = "return somenteNumeros(event)", @maxlength = "3" })
+
+                    </div>
+
+                    <div class="col-md-3 form-control-validation">
+
+                        <label class="form-label" for="modalAtivo">Informações Adicionais</label>
+                        @Html.TextBoxFor(model => Model.Empresa.ValorTotalFolha, "{0:N}", new { @id = "ValorTotalFolha", @class = "form-control", autocomplete = "off", @onInput = "formatarMoeda(event);", @onkeypress = "return somenteNumeros(event)" })
+
+                    </div>
+
+                    <div class="col-md-3 form-control-validation">
+
+                        <label class="form-label" for="modalAtivo">Informações Adicionais</label>
+                        @Html.TextBoxFor(model => Model.Empresa.CapitalSocial, "{0:N}", new { @id = "CapitalSocial", @class = "form-control", autocomplete = "off", @onInput = "formatarMoeda(event);", @onkeypress = "return somenteNumeros(event)" })
+
+                    </div>
+
+                </div>
+
+
+                <div class="row g-4 mb-4">
+
+                    <div class="col-md-3 form-control-validation">
+
+                        <label class="form-label" for="modalAtivo">Informações Adicionais</label>
+                        @Html.TextAreaFor(model => model.Empresa.Observacao, new { @class = "form-control" })
+
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-primary">Salvar</button>
+                <button type="reset" onclick="closeModalEmpresa()" class="btn btn-label-secondary" data-bs-dismiss="modal" aria-label="Close">Fechar</button>
+            </div>
+
+        }
+
+    </div>
+
+</div>

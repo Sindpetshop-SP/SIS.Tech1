@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="SimpleInjector" Version="5.5.0" />
+    <PackageReference Include="SimpleInjector.Integration.Web" Version="5.5.0" />
+    <PackageReference Include="SimpleInjector.Integration.Web.Mvc" Version="5.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SIS.Tech.App\SIS.Tech.App.csproj" />
+    <ProjectReference Include="..\SIS.Tech.Domain\SIS.Tech.Domain.csproj" />
+    <ProjectReference Include="..\SIS.Tech.IApp\SIS.Tech.IApp.csproj" />
+    <ProjectReference Include="..\SIS.Tech.IDomain\SIS.Tech.IDomain.csproj" />
+    <ProjectReference Include="..\SIS.Tech.IRepository\SIS.Tech.IRepository.csproj" />
+    <ProjectReference Include="..\SIS.Tech.IServices\SIS.Tech.IServices.csproj" />
+    <ProjectReference Include="..\SIS.Tech.Repository\SIS.Tech.Repository.csproj" />
+    <ProjectReference Include="..\SIS.Tech.Services\SIS.Tech.Services.csproj" />
+  </ItemGroup>
+
+</Project>

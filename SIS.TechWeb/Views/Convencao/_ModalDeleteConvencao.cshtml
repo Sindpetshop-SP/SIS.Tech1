@@ -1,0 +1,100 @@
+@model SIS.Tech.Domain.Model.Convencao
+
+@{
+
+    ViewData["Title"] = "Exclusão de CCTs";
+
+    var tipoCCT = (SelectList)ViewBag.ViewTipoCCt;
+    var statusCCT = (SelectList)ViewBag.ViewStatusCCt;
+}
+
+<!-- Add Convencao Modal -->
+
+
+<div class="modal fade" id="convencaoDeleteModal" data-bs-backdrop="static" tabindex="-1">
+
+    <div class="modal-dialog modal-xl">
+
+        @using (Html.BeginForm("Delete", "Convencao", FormMethod.Post, new { @id = "formDeleteConvencao", @class = "modal-content", @enctype = "multipart/form-data" }))
+        {
+            @Html.Hidden("hdnConvencao", Model.CodConvencao)
+            @Html.TextBoxFor(model => Model.CodConvencao, new { @style = "display: none;" })
+
+            <div class="modal-header">
+                <h5 class="modal-title" id="backDropModalTitle">
+
+                    @if (Model.CodConvencao > 0)
+                    {
+                        <h5 class="modal-title" id="exampleModalLabel4">Exclusão - CCT</h5>
+                    }
+
+                </h5>
+                <button type="button" onclick="closeModalDeleteConvencao()" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+
+            <div class="modal-body">
+
+                <div class="row g-4">
+                    <!-- Basic -->
+                    <div class="col-md-5">
+                        <label for="select2Basic" class="form-label">Tipo CCT</label>
+                        @Html.DisplayFor(model => Model.TipoCCT.Descricao)
+                    </div>
+
+                    <div class="col-md-5">
+                        <label for="select2Basic" class="form-label">Status CCT</label>
+                        @Html.DisplayFor(model => Model.StatusCCT.Descricao)
+
+                    </div>
+
+                    <div class="col-md-2">
+                        <div class="small fw-medium mb-4">CCT Ativa?</div>
+
+                        @if (Model.Ativo)
+                        {
+                            <span class="label label-default">Ativo</span>
+                        }
+                        else
+                        {
+                            <span class="label label-default">Inativo</span>
+                        }
+
+                    </div>
+
+                </div>
+
+                <div class="row g-4" style="margin-top:5px;">
+
+                    <div class="col-6 form-control-validation">
+
+                        <label class="form-label" for="modalNomeConvencao">Nome da Convenção</label>
+                        @Html.DisplayFor(model => Model.NomeConvencao)
+                    </div>
+
+                    <div class="col-3 form-control-validation">
+
+                        <label class="form-label" for="modalAnoVigInicial">Vigência Inicial</label>
+                        @Html.DisplayFor(model => Model.AnoVigenciaInicial)
+                    </div>
+
+                    <div class="col-3 form-control-validation">
+
+                        <label class="form-label" for="modalAnoVigFinal">Vigência Final</label>
+                        @Html.DisplayFor(model => Model.AnoVigenciaFinal)
+                    </div>
+
+                </div> 
+
+            </div>
+
+
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-primary">Excluir</button>
+                <button type="reset" onclick="closeModalDeleteConvencao()" class="btn btn-label-secondary" data-bs-dismiss="modal" aria-label="Close">Fechar</button>
+            </div>
+        }
+
+    </div>
+
+</div>

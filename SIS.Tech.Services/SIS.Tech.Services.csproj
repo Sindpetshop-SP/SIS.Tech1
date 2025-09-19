@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="System.Configuration.ConfigurationManager" Version="9.0.9" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SIS.Tech.Domain.Model\SIS.Tech.Domain.Model.csproj" />
+    <ProjectReference Include="..\SIS.Tech.IServices\SIS.Tech.IServices.csproj" />
+    <ProjectReference Include="..\SIS.Tech.Util\SIS.Tech.Util.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="SIS.ControleAcesso.Model">
+      <HintPath>..\SIS.LIB\SIS.ControleAcesso.Model.dll</HintPath>
+    </Reference>
+    <Reference Include="SISFramework.Parameter">
+      <HintPath>..\SIS.LIB\SISFramework.Parameter.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

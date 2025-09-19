@@ -1,0 +1,49 @@
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJETOS GIT\SIS.Tech\SIS.Tech.Repository\bin\Debug\net8.0\SIS.Tech.Repository.deps.json
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJETOS GIT\SIS.Tech\SIS.Tech.Repository\bin\Debug\net8.0\SIS.Tech.Repository.dll
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJETOS GIT\SIS.Tech\SIS.Tech.Repository\bin\Debug\net8.0\SIS.Tech.Repository.pdb
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJETOS GIT\SIS.Tech\SIS.Tech.Repository\bin\Debug\net8.0\SIS.Tech.Domain.Model.dll
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJETOS GIT\SIS.Tech\SIS.Tech.Repository\bin\Debug\net8.0\SIS.Tech.IRepository.dll
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJETOS GIT\SIS.Tech\SIS.Tech.Repository\bin\Debug\net8.0\SIS.Tech.Util.dll
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJETOS GIT\SIS.Tech\SIS.Tech.Repository\bin\Debug\net8.0\SISFramework.DataAccess.Ado.dll
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJETOS GIT\SIS.Tech\SIS.Tech.Repository\bin\Debug\net8.0\SISFramework.Parameter.dll
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJETOS GIT\SIS.Tech\SIS.Tech.Repository\bin\Debug\net8.0\SISFramework.Security.dll
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJETOS GIT\SIS.Tech\SIS.Tech.Repository\bin\Debug\net8.0\Microsoft.Practices.EnterpriseLibrary.Data.dll
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJETOS GIT\SIS.Tech\SIS.Tech.Repository\bin\Debug\net8.0\Microsoft.Practices.EnterpriseLibrary.Common.dll
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJETOS GIT\SIS.Tech\SIS.Tech.Repository\bin\Debug\net8.0\SIS.Tech.IRepository.pdb
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJETOS GIT\SIS.Tech\SIS.Tech.Repository\bin\Debug\net8.0\SIS.Tech.Util.pdb
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJETOS GIT\SIS.Tech\SIS.Tech.Repository\bin\Debug\net8.0\SIS.Tech.Domain.Model.pdb
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJETOS GIT\SIS.Tech\SIS.Tech.Repository\obj\Debug\net8.0\SIS.Tech.Repository.csproj.AssemblyReference.cache
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJETOS GIT\SIS.Tech\SIS.Tech.Repository\obj\Debug\net8.0\SIS.Tech.Repository.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJETOS GIT\SIS.Tech\SIS.Tech.Repository\obj\Debug\net8.0\SIS.Tech.Repository.AssemblyInfoInputs.cache
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJETOS GIT\SIS.Tech\SIS.Tech.Repository\obj\Debug\net8.0\SIS.Tech.Repository.AssemblyInfo.cs
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJETOS GIT\SIS.Tech\SIS.Tech.Repository\obj\Debug\net8.0\SIS.Tech.Repository.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJETOS GIT\SIS.Tech\SIS.Tech.Repository\obj\Debug\net8.0\SIS.Tech.Repository.sourcelink.json
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJETOS GIT\SIS.Tech\SIS.Tech.Repository\obj\Debug\net8.0\SIS.Tech.12C3675D.Up2Date
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJETOS GIT\SIS.Tech\SIS.Tech.Repository\obj\Debug\net8.0\SIS.Tech.Repository.dll
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJETOS GIT\SIS.Tech\SIS.Tech.Repository\obj\Debug\net8.0\refint\SIS.Tech.Repository.dll
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJETOS GIT\SIS.Tech\SIS.Tech.Repository\obj\Debug\net8.0\SIS.Tech.Repository.pdb
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJETOS GIT\SIS.Tech\SIS.Tech.Repository\obj\Debug\net8.0\ref\SIS.Tech.Repository.dll
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJECTS\SIS.Tech\SIS.Tech.Repository\bin\Debug\net8.0\SIS.Tech.Repository.deps.json
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJECTS\SIS.Tech\SIS.Tech.Repository\bin\Debug\net8.0\SIS.Tech.Repository.dll
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJECTS\SIS.Tech\SIS.Tech.Repository\bin\Debug\net8.0\SIS.Tech.Repository.pdb
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJECTS\SIS.Tech\SIS.Tech.Repository\bin\Debug\net8.0\SIS.Tech.Domain.Model.dll
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJECTS\SIS.Tech\SIS.Tech.Repository\bin\Debug\net8.0\SIS.Tech.IRepository.dll
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJECTS\SIS.Tech\SIS.Tech.Repository\bin\Debug\net8.0\SIS.Tech.Util.dll
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJECTS\SIS.Tech\SIS.Tech.Repository\bin\Debug\net8.0\SISFramework.DataAccess.Ado.dll
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJECTS\SIS.Tech\SIS.Tech.Repository\bin\Debug\net8.0\SISFramework.Parameter.dll
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJECTS\SIS.Tech\SIS.Tech.Repository\bin\Debug\net8.0\SISFramework.Security.dll
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJECTS\SIS.Tech\SIS.Tech.Repository\bin\Debug\net8.0\Microsoft.Practices.EnterpriseLibrary.Data.dll
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJECTS\SIS.Tech\SIS.Tech.Repository\bin\Debug\net8.0\Microsoft.Practices.EnterpriseLibrary.Common.dll
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJECTS\SIS.Tech\SIS.Tech.Repository\bin\Debug\net8.0\SIS.Tech.IRepository.pdb
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJECTS\SIS.Tech\SIS.Tech.Repository\bin\Debug\net8.0\SIS.Tech.Util.pdb
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJECTS\SIS.Tech\SIS.Tech.Repository\bin\Debug\net8.0\SIS.Tech.Domain.Model.pdb
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJECTS\SIS.Tech\SIS.Tech.Repository\obj\Debug\net8.0\SIS.Tech.Repository.csproj.AssemblyReference.cache
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJECTS\SIS.Tech\SIS.Tech.Repository\obj\Debug\net8.0\SIS.Tech.Repository.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJECTS\SIS.Tech\SIS.Tech.Repository\obj\Debug\net8.0\SIS.Tech.Repository.AssemblyInfoInputs.cache
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJECTS\SIS.Tech\SIS.Tech.Repository\obj\Debug\net8.0\SIS.Tech.Repository.AssemblyInfo.cs
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJECTS\SIS.Tech\SIS.Tech.Repository\obj\Debug\net8.0\SIS.Tech.Repository.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJECTS\SIS.Tech\SIS.Tech.Repository\obj\Debug\net8.0\SIS.Tech.12C3675D.Up2Date
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJECTS\SIS.Tech\SIS.Tech.Repository\obj\Debug\net8.0\SIS.Tech.Repository.dll
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJECTS\SIS.Tech\SIS.Tech.Repository\obj\Debug\net8.0\refint\SIS.Tech.Repository.dll
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJECTS\SIS.Tech\SIS.Tech.Repository\obj\Debug\net8.0\SIS.Tech.Repository.pdb
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJECTS\SIS.Tech\SIS.Tech.Repository\obj\Debug\net8.0\ref\SIS.Tech.Repository.dll

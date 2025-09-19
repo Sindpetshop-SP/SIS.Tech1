@@ -1,0 +1,91 @@
+@using SIS.Tech.Models.User
+@model AlterarSenhaViewModels
+
+@{
+    ViewData["Title"] = "Alterar Senha";
+}
+
+@section VendorStyles {
+    <link rel="stylesheet" href="~/vendor/libs/select2/select2.css" />
+    <link rel="stylesheet" href="~/vendor/libs/&#64;form-validation/form-validation.css" />
+}
+
+@section VendorScripts {
+    <script src="~/vendor/libs/cleave-zen/cleave-zen.js"></script>
+    <script src="~/vendor/libs/select2/select2.js"></script>
+    <script src="~/vendor/libs/&#64;form-validation/popular.js"></script>
+    <script src="~/vendor/libs/&#64;form-validation/bootstrap5.js"></script>
+    <script src="~/vendor/libs/&#64;form-validation/auto-focus.js"></script>
+}
+@section PageStyles {
+    <link rel="stylesheet" href="~/vendor/css/pages/page-user-view.css" />
+}
+
+@section PageScripts {
+    <script src="~/js/controllers/app-user-view-security.js"></script>
+}
+
+@* ************** Content ************** *@
+<div class="row">
+
+    <!-- User Content -->
+    <div class="col-lg-12 order-0 order-md-1">
+
+        <!-- Change Password -->
+        <div class="card mb-6">
+
+            <h5 class="card-header">Alterar a senha</h5>
+
+            <div class="card-body">
+
+                @using (Html.BeginForm("AlterarSenha", "User", FormMethod.Post, new { enctype = "multipart/form-data", @id = "formChangePassword", @Class = "mb-6", @autocomplete = "off" }))
+                {
+                    @Html.AntiForgeryToken()
+
+                    @Html.Hidden("hdnCodUsuario", Model.CodUsuario)
+                    @Html.TextBoxFor(model => Model.CodUsuario, new { @style = "display: none;" })
+
+                    <div class="alert alert-warning alert-dismissible" role="alert">
+                        <h5 class="alert-heading mb-1">Garanta que estes requisitos sejam cumpridos, para ter uma senha forte e confiável!</h5>
+                        <span>Mínimo de 8 caracteres, letras maiúsculas e números</span>
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                    <div class="row gx-6">
+                        <div class="mb-4 col-12 col-sm-6 form-password-toggle form-control-validation">
+                            <label class="form-label" for="newPassword">New Password</label>
+                            <div class="input-group input-group-merge">
+                                @Html.PasswordFor(model => model.newPassword, new { @class = "form-control", @id = "newPassword", @Name = "newPassword", placeholder = "Senha", tabindex = "1", autocomplete = "off" })
+                                <span class="input-group-text cursor-pointer"><i class="icon-base ti tabler-eye-off"></i></span>
+                            </div>
+                        </div>
+
+                        <div class="mb-4 col-12 col-sm-6 form-password-toggle form-control-validation">
+                            <label class="form-label" for="confirmPassword">Confirm New Password</label>
+                            <div class="input-group input-group-merge">
+                                @Html.PasswordFor(model => model.confirmPassword, new { @class = "form-control", @id = "confirmPassword", @Name = "confirmPassword", placeholder = "Confirmar Senha", tabindex = "2", autocomplete = "off" })
+                                <span class="input-group-text cursor-pointer"><i class="icon-base ti tabler-eye-off"></i></span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div>
+
+                        <button class="btn btn-primary me-2" id="btnAlterar" type="submit"><i class="tabler-device-floppy"></i>&nbsp; Salvar</button>
+                        &nbsp;&nbsp;&nbsp;
+                        <a href="@Url.Action("Index", "Home")" class="btn btn-label-dark waves-effect">
+                            <i class="tabler-arrow-back-up-double"></i>&nbsp;&nbsp;Voltar
+                        </a>
+
+                    </div>
+                }
+
+            </div>
+
+        </div>
+
+        <!--/ Change Password -->
+
+    </div>
+    <!--/ User Content -->
+</div>

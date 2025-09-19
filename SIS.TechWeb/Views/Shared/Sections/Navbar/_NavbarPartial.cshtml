@@ -1,0 +1,99 @@
+﻿@* ! Brand demo (display only for navbar-full and hide on below xl) *@
+@if (ViewData["navbarFull"] != null)
+{
+    <div class="navbar-brand app-brand demo d-none d-xl-flex py-0 me-4 ms-0">
+
+        <a asp-controller="Dashboards" asp-action="Index" class="app-brand-link">
+            <span class="app-brand-logo demo">
+                @await Html.PartialAsync("../_Partials/_Macros")
+            </span>
+            <span class="app-brand-text demo menu-text fw-bold text-heading">@TempData.Peek("appName")</span>
+        </a>
+
+        @* ! Display menu close icon only for horizontal-menu with navbar-full *@
+        @if (Convert.ToBoolean(@TempData.Peek("menuHorizontal")).ToString() == "True")
+        {
+            <a href="javascript:void(0);" class="layout-menu-toggle menu-link text-large ms-auto d-xl-none">
+                <i class="icon-base ti tabler-x icon-sm d-flex align-items-center justify-content-center"></i>
+            </a>
+        }
+    </div>
+}
+
+@* ! Not required for layout-without-menu *@
+@if (ViewData["navbarHideToggle"] == null)
+{
+    <div class='layout-menu-toggle navbar-nav align-items-xl-center me-3 me-xl-0  @((Convert.ToBoolean(@TempData.Peek("menuHorizontal")).ToString() == "True") ? "d-xl-none" : "") @((@ViewData["contentNavbar"] != null && Convert.ToBoolean(@ViewData["contentNavbar"])) ? "" : "d-xl-none")'>
+        <a class="nav-item nav-link px-0 me-xl-6" href="javascript:void(0)">
+            <i class="icon-base ti tabler-menu-2 icon-md"></i>
+        </a>
+    </div>
+}
+
+
+<div class="navbar-nav-right d-flex align-items-center justify-content-end" id="navbar-collapse">
+
+    <!-- Search -->
+    @if (Convert.ToBoolean(TempData.Peek("menuHorizontal")).ToString() != "True")
+    {
+        <div class="navbar-nav align-items-center">
+            <div class="nav-item navbar-search-wrapper px-md-0 px-2 mb-0">
+                <a class="nav-item nav-link search-toggler d-flex align-items-center px-0" href="javascript:void(0);">
+                    <span class="d-inline-block text-body-secondary fw-normal" id="autocomplete"></span>
+                </a>
+            </div>
+        </div>
+    }
+    <!-- /Search -->
+
+
+    <ul class="navbar-nav flex-row align-items-center ms-md-auto">
+
+        <!-- Search -->
+        @if (Convert.ToBoolean(TempData.Peek("menuHorizontal")).ToString() == "True")
+        {
+            <li class="nav-item navbar-search-wrapper btn btn-text-secondary btn-icon rounded-pill">
+                <a class="nav-item nav-link search-toggler px-0" href="javascript:void(0);">
+                    <span class="d-inline-block text-body-secondary fw-normal" id="autocomplete"></span>
+                </a>
+            </li>
+        }
+        <!-- /Search -->
+        <!-- Language -->
+        <li class="nav-item dropdown-language dropdown me-2 me-xl-0">
+
+            @await Html.PartialAsync("../Navbar/_NavbarLanguagePartial.cshtml")
+
+        </li>
+        <!-- /Language -->
+        <!-- Style Switcher - light, dark... -->
+        <li class="nav-item dropdown">
+
+            @await Html.PartialAsync("../Navbar/_NavbarStyleSwitcherPartial.cshtml")
+
+        </li>
+        <!-- / Style Switcher-->
+        <!-- Quick links  Atalhos -->
+        <li class="nav-item dropdown-shortcuts navbar-dropdown dropdown">
+
+            @await Html.PartialAsync("../Navbar/_NavbarAtalhosPartial.cshtml")
+
+        </li>
+        <!-- Quick links -->
+        <!-- Notificação -->
+        <li class="nav-item dropdown-notifications navbar-dropdown dropdown me-3 me-xl-2">
+
+            @await Html.PartialAsync("../Navbar/_NavbarNotificacaoPartial.cshtml")
+
+        </li>
+        <!--/ Notificação -->
+        <!-- User -->
+        <li class="nav-item navbar-dropdown dropdown-user dropdown">
+
+            @await Html.PartialAsync("../Navbar/_NavbarUserPartial.cshtml")
+
+        </li>
+        <!--/ User -->
+
+    </ul>
+</div>

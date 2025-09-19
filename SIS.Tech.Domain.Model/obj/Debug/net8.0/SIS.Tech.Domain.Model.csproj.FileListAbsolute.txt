@@ -1,0 +1,25 @@
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJETOS GIT\SIS.Tech\SIS.Tech.Domain.Model\bin\Debug\net8.0\SIS.Tech.Domain.Model.deps.json
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJETOS GIT\SIS.Tech\SIS.Tech.Domain.Model\bin\Debug\net8.0\SIS.Tech.Domain.Model.dll
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJETOS GIT\SIS.Tech\SIS.Tech.Domain.Model\bin\Debug\net8.0\SIS.Tech.Domain.Model.pdb
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJETOS GIT\SIS.Tech\SIS.Tech.Domain.Model\obj\Debug\net8.0\SIS.Tech.Domain.Model.csproj.AssemblyReference.cache
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJETOS GIT\SIS.Tech\SIS.Tech.Domain.Model\obj\Debug\net8.0\SIS.Tech.Domain.Model.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJETOS GIT\SIS.Tech\SIS.Tech.Domain.Model\obj\Debug\net8.0\SIS.Tech.Domain.Model.AssemblyInfoInputs.cache
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJETOS GIT\SIS.Tech\SIS.Tech.Domain.Model\obj\Debug\net8.0\SIS.Tech.Domain.Model.AssemblyInfo.cs
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJETOS GIT\SIS.Tech\SIS.Tech.Domain.Model\obj\Debug\net8.0\SIS.Tech.Domain.Model.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJETOS GIT\SIS.Tech\SIS.Tech.Domain.Model\obj\Debug\net8.0\SIS.Tech.Domain.Model.sourcelink.json
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJETOS GIT\SIS.Tech\SIS.Tech.Domain.Model\obj\Debug\net8.0\SIS.Tech.Domain.Model.dll
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJETOS GIT\SIS.Tech\SIS.Tech.Domain.Model\obj\Debug\net8.0\refint\SIS.Tech.Domain.Model.dll
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJETOS GIT\SIS.Tech\SIS.Tech.Domain.Model\obj\Debug\net8.0\SIS.Tech.Domain.Model.pdb
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJETOS GIT\SIS.Tech\SIS.Tech.Domain.Model\obj\Debug\net8.0\ref\SIS.Tech.Domain.Model.dll
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJECTS\SIS.Tech\SIS.Tech.Domain.Model\bin\Debug\net8.0\SIS.Tech.Domain.Model.deps.json
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJECTS\SIS.Tech\SIS.Tech.Domain.Model\bin\Debug\net8.0\SIS.Tech.Domain.Model.dll
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJECTS\SIS.Tech\SIS.Tech.Domain.Model\bin\Debug\net8.0\SIS.Tech.Domain.Model.pdb
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJECTS\SIS.Tech\SIS.Tech.Domain.Model\obj\Debug\net8.0\SIS.Tech.Domain.Model.csproj.AssemblyReference.cache
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJECTS\SIS.Tech\SIS.Tech.Domain.Model\obj\Debug\net8.0\SIS.Tech.Domain.Model.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJECTS\SIS.Tech\SIS.Tech.Domain.Model\obj\Debug\net8.0\SIS.Tech.Domain.Model.AssemblyInfoInputs.cache
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJECTS\SIS.Tech\SIS.Tech.Domain.Model\obj\Debug\net8.0\SIS.Tech.Domain.Model.AssemblyInfo.cs
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJECTS\SIS.Tech\SIS.Tech.Domain.Model\obj\Debug\net8.0\SIS.Tech.Domain.Model.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJECTS\SIS.Tech\SIS.Tech.Domain.Model\obj\Debug\net8.0\SIS.Tech.Domain.Model.dll
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJECTS\SIS.Tech\SIS.Tech.Domain.Model\obj\Debug\net8.0\refint\SIS.Tech.Domain.Model.dll
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJECTS\SIS.Tech\SIS.Tech.Domain.Model\obj\Debug\net8.0\SIS.Tech.Domain.Model.pdb
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJECTS\SIS.Tech\SIS.Tech.Domain.Model\obj\Debug\net8.0\ref\SIS.Tech.Domain.Model.dll

@@ -1,0 +1,39 @@
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJETOS GIT\SIS.Tech\SIS.Tech.Domain\bin\Debug\net8.0\SIS.Tech.Domain.deps.json
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJETOS GIT\SIS.Tech\SIS.Tech.Domain\bin\Debug\net8.0\SIS.Tech.Domain.dll
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJETOS GIT\SIS.Tech\SIS.Tech.Domain\bin\Debug\net8.0\SIS.Tech.Domain.pdb
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJETOS GIT\SIS.Tech\SIS.Tech.Domain\bin\Debug\net8.0\SIS.Tech.Domain.Model.dll
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJETOS GIT\SIS.Tech\SIS.Tech.Domain\bin\Debug\net8.0\SIS.Tech.IDomain.dll
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJETOS GIT\SIS.Tech\SIS.Tech.Domain\bin\Debug\net8.0\SIS.Tech.IRepository.dll
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJETOS GIT\SIS.Tech\SIS.Tech.Domain\bin\Debug\net8.0\SIS.Tech.IDomain.pdb
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJETOS GIT\SIS.Tech\SIS.Tech.Domain\bin\Debug\net8.0\SIS.Tech.IRepository.pdb
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJETOS GIT\SIS.Tech\SIS.Tech.Domain\bin\Debug\net8.0\SIS.Tech.Domain.Model.pdb
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJETOS GIT\SIS.Tech\SIS.Tech.Domain\obj\Debug\net8.0\SIS.Tech.Domain.csproj.AssemblyReference.cache
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJETOS GIT\SIS.Tech\SIS.Tech.Domain\obj\Debug\net8.0\SIS.Tech.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJETOS GIT\SIS.Tech\SIS.Tech.Domain\obj\Debug\net8.0\SIS.Tech.Domain.AssemblyInfoInputs.cache
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJETOS GIT\SIS.Tech\SIS.Tech.Domain\obj\Debug\net8.0\SIS.Tech.Domain.AssemblyInfo.cs
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJETOS GIT\SIS.Tech\SIS.Tech.Domain\obj\Debug\net8.0\SIS.Tech.Domain.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJETOS GIT\SIS.Tech\SIS.Tech.Domain\obj\Debug\net8.0\SIS.Tech.Domain.sourcelink.json
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJETOS GIT\SIS.Tech\SIS.Tech.Domain\obj\Debug\net8.0\SIS.Tech.B1B0F40F.Up2Date
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJETOS GIT\SIS.Tech\SIS.Tech.Domain\obj\Debug\net8.0\SIS.Tech.Domain.dll
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJETOS GIT\SIS.Tech\SIS.Tech.Domain\obj\Debug\net8.0\refint\SIS.Tech.Domain.dll
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJETOS GIT\SIS.Tech\SIS.Tech.Domain\obj\Debug\net8.0\SIS.Tech.Domain.pdb
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJETOS GIT\SIS.Tech\SIS.Tech.Domain\obj\Debug\net8.0\ref\SIS.Tech.Domain.dll
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJECTS\SIS.Tech\SIS.Tech.Domain\bin\Debug\net8.0\SIS.Tech.Domain.deps.json
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJECTS\SIS.Tech\SIS.Tech.Domain\bin\Debug\net8.0\SIS.Tech.Domain.dll
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJECTS\SIS.Tech\SIS.Tech.Domain\bin\Debug\net8.0\SIS.Tech.Domain.pdb
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJECTS\SIS.Tech\SIS.Tech.Domain\bin\Debug\net8.0\SIS.Tech.Domain.Model.dll
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJECTS\SIS.Tech\SIS.Tech.Domain\bin\Debug\net8.0\SIS.Tech.IDomain.dll
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJECTS\SIS.Tech\SIS.Tech.Domain\bin\Debug\net8.0\SIS.Tech.IRepository.dll
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJECTS\SIS.Tech\SIS.Tech.Domain\bin\Debug\net8.0\SIS.Tech.IDomain.pdb
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJECTS\SIS.Tech\SIS.Tech.Domain\bin\Debug\net8.0\SIS.Tech.IRepository.pdb
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJECTS\SIS.Tech\SIS.Tech.Domain\bin\Debug\net8.0\SIS.Tech.Domain.Model.pdb
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJECTS\SIS.Tech\SIS.Tech.Domain\obj\Debug\net8.0\SIS.Tech.Domain.csproj.AssemblyReference.cache
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJECTS\SIS.Tech\SIS.Tech.Domain\obj\Debug\net8.0\SIS.Tech.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJECTS\SIS.Tech\SIS.Tech.Domain\obj\Debug\net8.0\SIS.Tech.Domain.AssemblyInfoInputs.cache
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJECTS\SIS.Tech\SIS.Tech.Domain\obj\Debug\net8.0\SIS.Tech.Domain.AssemblyInfo.cs
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJECTS\SIS.Tech\SIS.Tech.Domain\obj\Debug\net8.0\SIS.Tech.Domain.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJECTS\SIS.Tech\SIS.Tech.Domain\obj\Debug\net8.0\SIS.Tech.B1B0F40F.Up2Date
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJECTS\SIS.Tech\SIS.Tech.Domain\obj\Debug\net8.0\SIS.Tech.Domain.dll
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJECTS\SIS.Tech\SIS.Tech.Domain\obj\Debug\net8.0\refint\SIS.Tech.Domain.dll
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJECTS\SIS.Tech\SIS.Tech.Domain\obj\Debug\net8.0\SIS.Tech.Domain.pdb
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJECTS\SIS.Tech\SIS.Tech.Domain\obj\Debug\net8.0\ref\SIS.Tech.Domain.dll

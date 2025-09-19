@@ -1,0 +1,265 @@
+@model SIS.Tech.Models.Login.UsuarioLoginViewModels
+
+@{
+    ViewData["Title"] = "Lista de Usuários";
+
+    var departamentos = (SelectList)ViewBag.ViewDepartamento;
+}
+
+@section VendorStyles {
+    <link rel="stylesheet" href="~/vendor/libs/datatables-bs5/datatables.bootstrap5.css" />
+    <link rel="stylesheet" href="~/vendor/libs/datatables-responsive-bs5/responsive.bootstrap5.css" />
+    <link rel="stylesheet" href="~/vendor/libs/datatables-buttons-bs5/buttons.bootstrap5.css" />
+    <link rel="stylesheet" href="~/vendor/libs/select2/select2.css" />
+    <link rel="stylesheet" href="~/vendor/libs/&#64;form-validation/form-validation.css" />
+}
+
+@section VendorScripts {
+    <script src="~/vendor/libs/moment/moment.js"></script>
+    <script src="~/vendor/libs/datatables-bs5/datatables-bootstrap5.js"></script>
+    <script src="~/vendor/libs/select2/select2.js"></script>
+    <script src="~/vendor/libs/&#64;form-validation/popular.js"></script>
+    <script src="~/vendor/libs/&#64;form-validation/bootstrap5.js"></script>
+    <script src="~/vendor/libs/&#64;form-validation/auto-focus.js"></script>
+    <script src="~/vendor/libs/cleave-zen/cleave-zen.js"></script>
+}
+
+@section PageScripts {
+    <script src="~/js/controllers/app-user-list.js"></script>
+    <script src="~/js/controllers/sindMasks.js"></script>
+
+}
+
+@* ************** Content ************** *@
+
+<div class="row g-6 mb-6">
+
+    <div class="col-sm-6 col-xl-4">
+        <div class="card">
+            <div class="card-body">
+                <div class="d-flex align-items-start justify-content-between">
+                    <div class="content-left">
+                        <span class="text-heading">Total Geral</span>
+                        <div class="d-flex align-items-center my-1">
+
+                            <h4 class="mb-0 me-2">
+                                @Model.UsuarioLogin.UserTotalizadores.TotalGeral
+                            </h4>
+
+                            @* <p class="text-success mb-0">(+29%)</p> *@
+                        </div>
+                        <small class="mb-0">Usuários</small>
+                    </div>
+                    <div class="avatar">
+                        <span class="avatar-initial rounded bg-label-primary">
+                            <i class="icon-base ti tabler-users icon-26px"></i>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-6 col-xl-4">
+        <div class="card">
+            <div class="card-body">
+                <div class="d-flex align-items-start justify-content-between">
+                    <div class="content-left">
+                        <span class="text-heading">Total Ativos</span>
+                        <div class="d-flex align-items-center my-1">
+                            <h4 class="mb-0 me-2">
+                                @Model.UsuarioLogin.UserTotalizadores.TotalAtivo
+                            </h4>
+                            @* <p class="text-danger mb-0">(-14%)</p> *@
+                        </div>
+                        <small class="mb-0">Usuários</small>
+                    </div>
+                    <div class="avatar">
+                        <span class="avatar-initial rounded bg-label-success">
+                            <i class="icon-base ti tabler-user-check icon-26px"></i>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-6 col-xl-4">
+        <div class="card">
+            <div class="card-body">
+                <div class="d-flex align-items-start justify-content-between">
+                    <div class="content-left">
+                        <span class="text-heading">Total Inativos</span>
+                        <div class="d-flex align-items-center my-1">
+                            <h4 class="mb-0 me-2">
+                                @Model.UsuarioLogin.UserTotalizadores.TotalInativo
+                            </h4>
+                            @* <p class="text-success mb-0">(+18%)</p> *@
+                        </div>
+                        <small class="mb-0">Usuários </small>
+                    </div>
+                    <div class="avatar">
+                        <span class="avatar-initial rounded bg-label-danger">
+                            <i class="icon-base ti tabler-user-plus icon-26px"></i>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<!-- Users List Table -->
+
+<div class="card">
+
+    <div class="card-header border-bottom">
+        <h5 class="card-title mb-0">Filtros</h5>
+        <div class="d-flex justify-content-between align-items-center row pt-4 gap-4 gap-md-0">
+
+            @using (Html.BeginForm("List", "User", FormMethod.Get, new { @enctype = "multipart/form-data", @id = "FormListarUsuarios" }))
+            {
+                <div class="row">
+
+                    <div class="col-md-3">
+                        <label>Nome Usuário</label>
+                        @Html.TextBox("nomeUsuario", "", new { @class = "form-control", @placeholder = "Nome", tabindex = "1", autocomplete = "off" })
+                    </div>
+
+                    <div class="col-md-2">
+                        <label>Login Usuário</label>
+                        @Html.TextBox("nmeLoginUsuario", "", new { @class = "form-control", @placeholder = "Login", tabindex = "2", autocomplete = "off" })
+                    </div>
+
+                    <div class="col-md-3">
+                        <label class="form-label">Departamento</label>
+                        @Html.DropDownList("codDepartamento", departamentos, "Todos", new { @id = "ddlCodDepartamento", @class = "select2 form-select", tabindex = "3" })
+                    </div>
+
+                    <div class="col-md-2">
+                        <label>Cpf</label>
+                        @Html.TextBox("numeroCpf", "", new { @id = "txtCpf", placeholder = "CPF", @class = "form-control", @onkeypress = "return somenteNumeros(event)", @onfocus = "javascript: retirarFormatacao(this);", @onblur = "javascript: formatarCampo(this);", @maxlength = "11", autocomplete = "off", tabindex = "4" })
+                    </div>
+
+                    <div class="col-md-2" style="text-align:right;">
+
+                        <br />
+
+                        @if (ViewBag.PermitidoPesquisar)
+                        {
+                            <button class="btn btn-secondary btn-sm" type="submit">
+                                <i class="icon-base ti tabler-search"></i>&nbsp;
+                                Pesquisar
+                            </button>
+                        }
+
+                    </div>
+
+                </div>
+
+            }
+
+        </div>
+    </div>
+
+    <div class="card-datatable">
+
+        <table class="datatables-generic table">
+
+            <thead class="border-top">
+                <tr>
+                    <th>Código</th>
+                    <th>Departamento</th>
+                    <th>Cpf</th>
+                    <th>Nome</th>
+                    <th>Usuário</th>
+                    <th>Email</th>
+                    <th>Ativo</th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+
+                @if (Model.UsuarioLogin.lstUsuariosLogin != null)
+                {
+
+                    foreach (var item in Model.UsuarioLogin.lstUsuariosLogin)
+                    {
+                        <tr class="gradeX">
+                            <td>
+                                @Html.DisplayFor(modelItem => item.CodUsuario)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Departamento.Descricao)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Cpf)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.NmeUsuario)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.NmeLoginUsuario)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Email)
+                            </td>
+                            <td style="text-align:center;">
+
+                                @if (item.SitSenha == "B")
+                                {
+                                    <span class="badge bg-label-danger me-4">Inativo</span>
+                                }
+                                else if (item.Ativo)
+                                {
+                                    <span class="badge bg-label-success me-4">Ativo</span>
+                                }
+                                else
+                                {
+                                    <span class="badge bg-label-danger me-4">Inativo</span>
+                                }
+
+                            </td>
+                            <td style="text-align:center;">
+
+                                @if (ViewBag.PermitidoBloqueiaUsuario)
+                                {
+                                    <a href="@Url.Action("BloqueiaUsuario", "User", new { codUsuario = item.CodUsuario })" class="btn btn-white btn-sm" data-toggle="tooltip" data-placement="top" title="Bloquear Usuário">
+                                        <i style="color:#FF6F0F;" class="icon-base ti tabler-lock"></i>&nbsp;
+                                    </a>
+                                }
+
+                            </td>
+                            <td style="text-align:center;">
+
+                                @if (ViewBag.PermitidoDesbloqueiaUsuario)
+                                {
+                                    <a href="@Url.Action("DesbloqueiaUsuario", "User", new { codUsuario = item.CodUsuario })" class="btn btn-white btn-sm" data-toggle="tooltip" data-placement="top" title="Desbloquear Usuário">
+                                        <i style="color:#FF6F0F;" class="icon-base ti tabler-lock-open-2"></i>&nbsp;
+                                    </a>
+
+                                }
+
+                            </td>
+                            <td style="text-align:center;">
+
+                                @if (ViewBag.PermitidoResetarSenha)
+                                {
+                                    <a href="@Url.Action("ResetarSenha", "User", new { codUsuario = item.CodUsuario })" class="btn btn-white btn-sm" data-toggle="tooltip" data-placement="top" title="Resetar Senha">
+                                        <i style="color:#FF6F0F;" class="icon-base ti tabler-repeat"></i>&nbsp;
+                                    </a>
+                                }
+                            </td>
+
+                        </tr>
+                    }
+                }
+
+            </tbody>
+        </table>
+
+    </div>
+
+</div>

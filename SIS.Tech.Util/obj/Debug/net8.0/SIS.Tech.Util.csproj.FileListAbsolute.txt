@@ -1,0 +1,25 @@
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJETOS GIT\SIS.Tech\SIS.Tech.Util\bin\Debug\net8.0\SIS.Tech.Util.deps.json
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJETOS GIT\SIS.Tech\SIS.Tech.Util\bin\Debug\net8.0\SIS.Tech.Util.dll
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJETOS GIT\SIS.Tech\SIS.Tech.Util\bin\Debug\net8.0\SIS.Tech.Util.pdb
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJETOS GIT\SIS.Tech\SIS.Tech.Util\obj\Debug\net8.0\SIS.Tech.Util.csproj.AssemblyReference.cache
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJETOS GIT\SIS.Tech\SIS.Tech.Util\obj\Debug\net8.0\SIS.Tech.Util.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJETOS GIT\SIS.Tech\SIS.Tech.Util\obj\Debug\net8.0\SIS.Tech.Util.AssemblyInfoInputs.cache
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJETOS GIT\SIS.Tech\SIS.Tech.Util\obj\Debug\net8.0\SIS.Tech.Util.AssemblyInfo.cs
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJETOS GIT\SIS.Tech\SIS.Tech.Util\obj\Debug\net8.0\SIS.Tech.Util.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJETOS GIT\SIS.Tech\SIS.Tech.Util\obj\Debug\net8.0\SIS.Tech.Util.sourcelink.json
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJETOS GIT\SIS.Tech\SIS.Tech.Util\obj\Debug\net8.0\SIS.Tech.Util.dll
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJETOS GIT\SIS.Tech\SIS.Tech.Util\obj\Debug\net8.0\refint\SIS.Tech.Util.dll
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJETOS GIT\SIS.Tech\SIS.Tech.Util\obj\Debug\net8.0\SIS.Tech.Util.pdb
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJETOS GIT\SIS.Tech\SIS.Tech.Util\obj\Debug\net8.0\ref\SIS.Tech.Util.dll
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJECTS\SIS.Tech\SIS.Tech.Util\bin\Debug\net8.0\SIS.Tech.Util.deps.json
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJECTS\SIS.Tech\SIS.Tech.Util\bin\Debug\net8.0\SIS.Tech.Util.dll
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJECTS\SIS.Tech\SIS.Tech.Util\bin\Debug\net8.0\SIS.Tech.Util.pdb
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJECTS\SIS.Tech\SIS.Tech.Util\obj\Debug\net8.0\SIS.Tech.Util.csproj.AssemblyReference.cache
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJECTS\SIS.Tech\SIS.Tech.Util\obj\Debug\net8.0\SIS.Tech.Util.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJECTS\SIS.Tech\SIS.Tech.Util\obj\Debug\net8.0\SIS.Tech.Util.AssemblyInfoInputs.cache
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJECTS\SIS.Tech\SIS.Tech.Util\obj\Debug\net8.0\SIS.Tech.Util.AssemblyInfo.cs
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJECTS\SIS.Tech\SIS.Tech.Util\obj\Debug\net8.0\SIS.Tech.Util.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJECTS\SIS.Tech\SIS.Tech.Util\obj\Debug\net8.0\SIS.Tech.Util.dll
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJECTS\SIS.Tech\SIS.Tech.Util\obj\Debug\net8.0\refint\SIS.Tech.Util.dll
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJECTS\SIS.Tech\SIS.Tech.Util\obj\Debug\net8.0\SIS.Tech.Util.pdb
+C:\Users\User\Documents\SINDPETSHOP\SIND PROJECTS\SIS.Tech\SIS.Tech.Util\obj\Debug\net8.0\ref\SIS.Tech.Util.dll

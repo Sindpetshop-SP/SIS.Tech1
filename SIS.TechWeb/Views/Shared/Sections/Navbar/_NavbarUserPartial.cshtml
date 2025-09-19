@@ -1,0 +1,173 @@
+@using Newtonsoft.Json;
+@using Microsoft.AspNetCore.Http;
+@using SIS.ControleAcesso.Model
+@using SIS.Tech.Models.Login
+
+@inject IHttpContextAccessor HttpContextAccessor
+@{
+    string sessionvalue = HttpContextAccessor.HttpContext.Session.GetString(SessoesViewModels.Logado);
+    var usuario = JsonConvert.DeserializeObject<UsuarioSistemaPerfilInfo>(sessionvalue);
+    var nomeUsuario = usuario == null ? string.Empty : usuario.mUsuario.nmeUsuario;
+    var nomeDepartamento = usuario == null ? string.Empty : usuario.mUsuario.mDepartamento.nmeDepto;
+
+    var FormLoginACESSO = false;
+    var FormRegistroACESSO = false;
+    var FormProfileACESSO = false;
+    var FormSettingsACESSO = false;
+    var FormAlterarSenhaACESSO = false;
+    var FormRolesACESSO = false;
+    var FormControlsACESSO = false;
+    var FormPermissionACESSO = false;
+    var FormListUserACESSO = false;
+    var FormConvencaoACESSO = false;
+    var FormHistConvencaoACESSO = false;
+
+
+    if (usuario != null)
+    {
+        foreach (var item in usuario.mUsuario.mControle)
+        {
+            if (item.mFormulario.nmeFormulario == "Login")
+            {
+                if (item.mControle.nmeControle == "ACESSO")
+                {
+                    FormLoginACESSO = true;
+                }
+            }
+
+            if (item.mFormulario.nmeFormulario == "Profile")
+            {
+                if (item.mControle.nmeControle == "ACESSO")
+                {
+                    FormProfileACESSO = true;
+                }
+            }
+
+            if (item.mFormulario.nmeFormulario == "Settings")
+            {
+                if (item.mControle.nmeControle == "ACESSO")
+                {
+                    FormSettingsACESSO = true;
+                }
+            }
+
+            if (item.mFormulario.nmeFormulario == "AlterarSenha")
+            {
+                if (item.mControle.nmeControle == "ACESSO")
+                {
+                    FormAlterarSenhaACESSO = true;
+                }
+            }
+
+            if (item.mFormulario.nmeFormulario == "Permission")
+            {
+                if (item.mControle.nmeControle == "ACESSO")
+                {
+                    FormPermissionACESSO = true;
+                }
+            }
+
+
+        }
+    }
+}
+
+@if (FormLoginACESSO)
+{
+    <a class="nav-link dropdown-toggle hide-arrow p-0" href="javascript:void(0);" data-bs-toggle="dropdown">
+        <div class="avatar avatar-online">
+            <img src="~/img/avatars/1.png" alt class="rounded-circle" />
+        </div>
+    </a>
+}
+
+<ul class="dropdown-menu dropdown-menu-end">
+
+    <li>
+        <a class="dropdown-item mt-0" asp-controller="Pages" asp-action="AccountSettings">
+
+            <div class="d-flex align-items-center">
+
+                <div class="flex-shrink-0 me-2">
+                    <div class="avatar avatar-online">
+                        <img src="~/img/avatars/1.png" alt class="rounded-circle" />
+                    </div>
+                </div>
+
+                <div class="flex-grow-1">
+                    <h6 class="mb-0">@nomeUsuario</h6>
+                    <small class="text-body-secondary">@nomeDepartamento</small>
+                </div>
+
+            </div>
+        </a>
+    </li>
+
+    <li>
+        <div class="dropdown-divider my-1 mx-n2"></div>
+    </li>
+
+    <li>
+        @if (FormProfileACESSO)
+        {
+            <a class="dropdown-item" asp-controller="Pages" asp-action="ProfileUser">
+                <i class="icon-base ti tabler-user me-3 icon-md"></i>
+                <span class="align-middle">
+                    Meu perfil
+                </span>
+            </a>
+        }
+    </li>
+
+    <li>
+
+        @if (FormAlterarSenhaACESSO)
+        {
+            <a class="dropdown-item" asp-controller="User" asp-action="AlterarSenha">
+                <i class="icon-base ti tabler-key me-3 icon-md"></i>
+                <span class="align-middle">
+                    Alterar Senha
+                </span>
+            </a>
+        }
+
+    </li>
+
+    <li>
+        <div class="dropdown-divider my-1 mx-n2"></div>
+    </li>
+
+    <li>
+
+        @if (FormPermissionACESSO)
+        {
+            <a class="dropdown-item" asp-controller="Access" asp-action="Permission">
+                <i class="icon-base ti tabler-lock-access me-3 icon-md"></i>
+                <span class="align-middle">Acessos</span>
+            </a>
+        }
+
+    </li>
+
+    <li>
+
+        @if (FormSettingsACESSO)
+        {
+            <a class="dropdown-item" asp-controller="User" asp-action="Settings">
+                <i class="icon-base ti tabler-lock-access me-3 icon-md"></i>
+                <span class="align-middle">Configurações</span>
+            </a>
+        }
+
+    </li>
+
+    <li>
+        <div class="d-grid px-2 pt-2 pb-1">
+            <a class="btn btn-sm btn-danger d-flex" asp-controller="Auth" asp-action="EfetuarLogoff">
+                <small class="align-middle">Sair</small>
+                <i class="icon-base ti tabler-logout ms-2 icon-14px"></i>
+            </a>
+        </div>
+    </li>
+
+</ul>

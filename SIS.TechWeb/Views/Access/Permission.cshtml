@@ -1,0 +1,149 @@
+@model SIS.Tech.Domain.Model.Permissions
+
+@{
+    ViewData["Title"] = "Permissões Usuários";
+
+    var perfis = (SelectList)ViewBag.ViewPerfis;
+}
+
+@section VendorStyles {
+    <link rel="stylesheet" href="~/vendor/libs/datatables-bs5/datatables.bootstrap5.css" />
+    <link rel="stylesheet" href="~/vendor/libs/datatables-responsive-bs5/responsive.bootstrap5.css" />
+    <link rel="stylesheet" href="~/vendor/libs/datatables-buttons-bs5/buttons.bootstrap5.css" />    
+}
+
+@section VendorScripts {
+    <script src="~/vendor/libs/datatables-bs5/datatables-bootstrap5.js"></script>    
+}
+
+@section PageScripts {
+    <script src="~/js/controllers/app-access-permission.js"></script>
+}
+
+<div class="card">
+
+    <div class="card-header border-bottom">
+        <h5 class="card-title mb-0">Filtros</h5>
+        <div class="d-flex justify-content-between align-items-center row pt-4 gap-4 gap-md-0">
+
+            @using (Html.BeginForm("Permission", "Access", FormMethod.Get, new { @enctype = "multipart/form-data", @id = "FormPermissions" }))
+            {
+                <div class="row">
+
+                    <div class="col-md-3">
+                        <label>Nome Usuário</label>
+                        @Html.TextBox("nomeUsuario", "", new { @class = "form-control", @placeholder = "Nome", tabindex = "1", autocomplete = "off" })
+                    </div>
+
+                    <div class="col-md-3">
+                        <label>Login Usuário</label>
+                        @Html.TextBox("nmeLoginUsuario", "", new { @class = "form-control", @placeholder = "Login", tabindex = "2", autocomplete = "off" })
+                    </div>
+
+                    <div class="col-md-3">
+                        <label class="form-label">Departamento</label>
+                        @Html.DropDownList("codDepartamento", perfis, "Todos", new { @id = "ddlCodDepartamento", @class = "select2 form-select", tabindex = "3" })
+                    </div>
+
+                    <div class="col-md-3" style="text-align:right;">
+
+                        <br />
+
+                        @if (ViewBag.PermitidoPesquisar)
+                        {
+                            <button class="btn btn-secondary btn-sm" type="submit">
+                                <i class="fa fa-search"></i>&nbsp;
+                                Pesquisar
+                            </button>
+                        }
+
+                    </div>
+
+                </div>
+
+            }
+
+        </div>
+    </div>
+
+    <div class="card-datatable">
+
+        <table class="datatables-generic table">
+
+            <thead class="border-top">
+                <tr>
+                    @* <th>Código</th> *@
+                    <th>Ativo</th>
+                    <th>Nome</th>
+                    @* <th>Cpf</th>
+                    <th>Email</th> *@                    
+                    <th>Perfil</th>
+                    <th>Formulario</th>
+                    <th>Controle</th>
+                    <th>Tem Acesso</th>                    
+                </tr>
+            </thead>
+            <tbody>
+
+                @if (Model.lstPermissions != null)
+                {
+
+                    foreach (var item in Model.lstPermissions)
+                    {
+                        <tr class="gradeX">
+                           @*  <td>
+                                @Html.DisplayFor(modelItem => item.CodUsuario)
+                            </td> *@
+                            <td>
+
+                                @if (item.FlgAtivo)
+                                {
+                                    <span class="badge bg-label-success me-4">Ativo</span>
+                                }
+                                else
+                                {
+                                    <span class="badge bg-label-danger me-4">Inativo</span>
+                                }
+
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.NmeUsuario)
+                            </td>
+                            @* <td>
+                                @Html.DisplayFor(modelItem => item.NroCnpjCpf)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.DscEmail)
+                            </td> *@
+                            
+                            <td>
+                                @Html.DisplayFor(modelItem => item.NmePerfil)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.NmeFormulario)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.NmeControle)
+                            </td>                            
+                            <td>
+
+                                @if (item.FlgTemAcesso)
+                                {
+                                    <span class="badge bg-label-success me-4">Com Acesso</span>
+                                }
+                                else
+                                {
+                                    <span class="badge bg-label-danger me-4">Sem Acesso</span>
+                                }
+
+                            </td>
+                        </tr>
+                    }
+                }
+
+            </tbody>
+        </table>
+
+    </div>
+
+</div>
